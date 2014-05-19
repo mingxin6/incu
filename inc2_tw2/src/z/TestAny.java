@@ -14,6 +14,8 @@ public class TestAny {
 		String x = DateFormat.getDateInstance().format(new Date());
 		System.out.println(x);
 
+		System.out.println("test");
+		
 		Date date = new Date();
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
 		System.out.println(dateFormat.format(date));
