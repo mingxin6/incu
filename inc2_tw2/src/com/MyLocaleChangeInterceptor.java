@@ -1,12 +1,8 @@
 package com;
 
-import java.util.Locale;
-import java.util.ResourceBundle;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
