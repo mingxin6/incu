@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="outsourceList.htm">
+					outsourceListController
+                </prop>
+
+				<prop key="outsourceView.htm">
+					outsourceViewController
+                </prop>
+
+				<prop key="outsourceAdd.htm">
+					outsourceAddController
+                </prop>
+
+
+				<prop key="/outsourceEdit.htm">
+					outsourceEditController
+                </prop>
+
+				<prop key="/outsourceDelete.htm">
+					outsourceDeleteController
+                </prop>
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="outsourceListController" class="com.mod.outsource.controller.OutsourceListController">
+		<property name="formView" value="outsourceList" />
+		<property name="successView" value="outsourceList" />
+	</bean>
+
+	<bean id="outsourceViewController" class="com.mod.outsource.controller.OutsourceViewController">
+	</bean>
+
+	<bean id="outsourceAddController" class="com.mod.outsource.controller.OutsourceAddController">
+		<property name="validator">
+			<bean class="com.mod.outsource.controller.OutsourceValidator" />
+		</property>
+	</bean>
+
+	<bean id="outsourceEditController" class="com.mod.outsource.controller.OutsourceEditController">
+	</bean>
+
+	<bean id="outsourceDeleteController" class="com.mod.outsource.controller.OutsourceDeleteController">
+	</bean>
+
+
+</beans>

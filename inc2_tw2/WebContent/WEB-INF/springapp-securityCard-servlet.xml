@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="securityCardList.htm">
+					securityCardListController
+                </prop>
+
+				<prop key="securityCardView.htm">
+					securityCardViewController
+                </prop>
+
+				<prop key="securityCardAdd.htm">
+					securityCardAddController
+                </prop>
+
+
+				<prop key="/securityCardEdit.htm">
+					securityCardEditController
+                </prop>
+
+				<prop key="/securityCardDelete.htm">
+					securityCardDeleteController
+                </prop>
+
+				<prop key="/securityCardClear.htm">
+					securityCardClearController
+                </prop>
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="securityCardListController"
+		class="com.mod.securityCard.controller.SecurityCardListController">
+		<property name="formView" value="securityCardList" />
+		<property name="successView" value="securityCardList" />
+	</bean>
+
+	<bean id="securityCardViewController"
+		class="com.mod.securityCard.controller.SecurityCardViewController">
+	</bean>
+
+	<bean id="securityCardAddController"
+		class="com.mod.securityCard.controller.SecurityCardAddController">
+		<property name="validator">
+			<bean class="com.mod.securityCard.controller.SecurityCardValidator" />
+		</property>
+	</bean>
+
+	<bean id="securityCardEditController"
+		class="com.mod.securityCard.controller.SecurityCardEditController">
+	</bean>
+
+	<bean id="securityCardDeleteController"
+		class="com.mod.securityCard.controller.SecurityCardDeleteController">
+	</bean>
+
+	<bean id="securityCardClearController"
+		class="com.mod.securityCard.controller.SecurityCardClearController">
+	</bean>
+
+</beans>

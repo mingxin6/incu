@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/inc2_src/!svn/ver/67/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator
+END
+ManagementDeptValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/ManagementDeptValidator.java
+END
+AnnouncementValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/AnnouncementValidator.java
+END
+ProvidesValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/ProvidesValidator.java
+END
+UserAccountValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/inc2_src/!svn/ver/67/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/UserAccountValidator.java
+END
+ActivityValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/ActivityValidator.java
+END
+SharedThingValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/SharedThingValidator.java
+END
+NewMonthlyReportValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/NewMonthlyReportValidator.java
+END
+UserAuthValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/inc2_src/!svn/ver/67/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/UserAuthValidator.java
+END
+UserServiceResourceAcceptAddValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/inc2_src/!svn/ver/67/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/UserServiceResourceAcceptAddValidator.java
+END
+SharedResourcesValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/SharedResourcesValidator.java
+END
+EquipmentDataValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/EquipmentDataValidator.java
+END
+CustomerValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/CustomerValidator.java
+END
+ServiceResourceDataValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/ServiceResourceDataValidator.java
+END
+UserAccountNewValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/inc2_src/!svn/ver/67/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/UserAccountNewValidator.java
+END
+ChangePasswordValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/ChangePasswordValidator.java
+END
+LoginValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/inc2_src/!svn/ver/67/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/LoginValidator.java
+END
+A_Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/A_Validator.java
+END
+ProblemsValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/ProblemsValidator.java
+END
+EquipmentAcceptValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/EquipmentAcceptValidator.java
+END
+ActVisitorValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mkyong/customer/validator/ActVisitorValidator.java
+END

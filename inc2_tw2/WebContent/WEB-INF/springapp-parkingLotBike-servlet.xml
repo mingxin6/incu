@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="parkingLotBikeList.htm">
+					parkingLotBikeListController
+                </prop>
+
+				<prop key="parkingLotBikeView.htm">
+					parkingLotBikeViewController
+                </prop>
+
+				<prop key="parkingLotBikeAdd.htm">
+					parkingLotBikeAddController
+                </prop>
+
+
+				<prop key="/parkingLotBikeEdit.htm">
+					parkingLotBikeEditController
+                </prop>
+
+				<prop key="/parkingLotBikeDelete.htm">
+					parkingLotBikeDeleteController
+                </prop>
+
+
+				<prop key="/parkingLotBikeClear.htm">
+					parkingLotBikeClearController
+                </prop>
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="parkingLotBikeListController"
+		class="com.mod.parkingLotBike.controller.ParkingLotBikeListController">
+		<property name="formView" value="parkingLotBikeList" />
+		<property name="successView" value="parkingLotBikeList" />
+	</bean>
+
+	<bean id="parkingLotBikeViewController"
+		class="com.mod.parkingLotBike.controller.ParkingLotBikeViewController">
+	</bean>
+
+	<bean id="parkingLotBikeAddController"
+		class="com.mod.parkingLotBike.controller.ParkingLotBikeAddController">
+		<property name="validator">
+			<bean class="com.mod.parkingLotBike.controller.ParkingLotBikeValidator" />
+		</property>
+	</bean>
+
+	<bean id="parkingLotBikeEditController"
+		class="com.mod.parkingLotBike.controller.ParkingLotBikeEditController">
+	</bean>
+
+	<bean id="parkingLotBikeDeleteController"
+		class="com.mod.parkingLotBike.controller.ParkingLotBikeDeleteController">
+	</bean>
+
+	<bean id="parkingLotBikeClearController"
+		class="com.mod.parkingLotBike.controller.ParkingLotBikeClearController">
+	</bean>
+</beans>

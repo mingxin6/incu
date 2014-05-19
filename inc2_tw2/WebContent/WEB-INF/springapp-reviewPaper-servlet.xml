@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="reviewPaperList.htm">
+					reviewPaperListController
+                </prop>
+				<prop key="reviewPaperAdd.htm">
+					reviewPaperAddController
+                </prop>
+				<prop key="reviewPaperView.htm">
+					reviewPaperViewController
+                </prop>
+				<prop key="reviewPaperEdit.htm">
+					reviewPaperEditController
+                </prop>
+				<prop key="reviewPaperDel.htm">
+					reviewPaperDelController
+                </prop>
+				<prop key="reviewPaperJob.htm">
+					reviewPaperJobController
+                </prop>
+
+				<prop key="reviewPaperAskP.htm">
+					reviewPaperAskPController
+                </prop>
+				<prop key="reviewPaperAskM.htm">
+					reviewPaperAskMController
+                </prop>
+				<prop key="reviewPaperClose.htm">
+					reviewPaperCloseController
+                </prop>
+
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+
+
+	<bean id="reviewPaperListController"
+		class="com.mod.reviewPaper.controller.ReviewPaperListController">
+		<property name="formView" value="reviewPaperList" />
+	</bean>
+
+	<bean id="reviewPaperAddController" class="com.mod.reviewPaper.controller.ReviewPaperAddController">
+		<property name="formView" value="reviewPaperAdd" />
+		<property name="validator">
+			<bean class="com.mod.reviewPaper.controller.ReviewPaperValidator" />
+		</property>
+	</bean>
+
+	<bean id="reviewPaperViewController"
+		class="com.mod.reviewPaper.controller.ReviewPaperViewController">
+	</bean>
+
+	<bean id="reviewPaperEditController"
+		class="com.mod.reviewPaper.controller.ReviewPaperEditController">
+	</bean>
+
+	<bean id="reviewPaperDelController" class="com.mod.reviewPaper.controller.ReviewPaperDelController">
+	</bean>
+
+	<bean id="reviewPaperJobController" class="com.mod.reviewPaper.controller.ReviewPaperJobController">
+		<property name="formView" value="reviewPaperJob" />
+	</bean>
+
+	<bean id="reviewPaperAskPController"
+		class="com.mod.reviewPaper.controller.ReviewPaperAskPController">
+		<property name="formView" value="reviewPaperAskP" />
+	</bean>
+
+	<bean id="reviewPaperAskMController"
+		class="com.mod.reviewPaper.controller.ReviewPaperAskMController">
+		<property name="formView" value="reviewPaperAskM" />
+	</bean>
+
+	<bean id="reviewPaperCloseController"
+		class="com.mod.reviewPaper.controller.ReviewPaperCloseController">
+		<property name="formView" value="reviewPaperClose" />
+	</bean>
+</beans>

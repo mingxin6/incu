@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyTeacherMapper">
+
+	<select id="findAllTeachers" resultType="Teacher">
+		<![CDATA[
+		select 
+		uid as uid
+		,domain AS domain
+		,name AS name
+		,email AS email
+		,phone AS phone
+		,title AS title
+		,unit AS	unit
+		,remark AS remark
+		,status AS status
+		,officeHour AS officeHour
+		,userLoginId AS userLoginId
+		,userLoginPwd AS userLoginPwd
+		,createdBy AS createdBy
+		,createdTime AS createdTime
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from Teachers
+		]]>
+	</select>
+
+	<select id="findTeacherById" parameterType="string" resultType="Teacher">
+		<![CDATA[
+		select
+		uid as uid
+		,domain AS domain
+		,name AS name
+		,email AS email
+		,phone AS phone
+		,title AS title
+		,unit AS	unit
+		,remark AS remark
+		,status AS status
+		,officeHour AS officeHour
+		,userLoginId AS userLoginId
+		,userLoginPwd AS userLoginPwd
+		,createdBy AS createdBy
+		,createdTime AS createdTime
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from Teachers 
+		WHERE uid=#{uid}
+		]]>
+	</select>
+
+
+	<insert id="insertTeachers" parameterType="Teacher">
+		<![CDATA[
+		INSERT INTO teachers
+		(uID, domain, name,email,phone, title,unit,	remark, status, officeHour
+		,userLoginId, userLoginPwd
+		,createdBy,createdTime,lastUpdateUser,lastUpdateTime
+		)VALUES(
+		#{uid},#{domain},#{name},#{email},#{phone},#{title},#{unit},#{remark},#{status},#{officeHour}
+		,#{userLoginId},#{userLoginPwd}
+		,#{createdBy},#{createdTime},#{lastUpdateUser},#{lastUpdateTime}
+		)
+		]]>
+	</insert>
+
+
+	<update id="updateTeacher" parameterType="Teacher">
+		<![CDATA[
+		UPDATE teachers SET
+		domain=#{domain}
+		,name=#{name}
+		,email=#{email}
+		,phone=#{phone}
+		,title=#{title}	
+		,unit=#{unit}
+		,remark=#{remark}
+		,status=#{status}
+		,officeHour=#{officeHour}
+		,userLoginId=#{userLoginId}
+		,userLoginPwd=#{userLoginPwd}
+		,lastUpdateUser=#{lastUpdateUser}
+		,lastUpdateTime=#{lastUpdateTime}
+		where uid=#{uid}
+		]]>
+	</update>
+
+	<delete id="deleteTeacher" parameterType="string">
+		<![CDATA[
+		DELETE FROM teachers where uid =#{uid}
+		]]>
+	</delete>
+
+</mapper>

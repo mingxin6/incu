@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="staffList.htm">
+					staffListController
+                </prop>
+
+				<prop key="staffView.htm">
+					staffViewController
+                </prop>
+
+				<prop key="staffAdd.htm">
+					staffAddController
+                </prop>
+
+
+				<prop key="/staffEdit.htm">
+					staffEditController
+                </prop>
+
+				<prop key="/staffDelete.htm">
+					staffDeleteController
+                </prop>
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="staffListController" class="com.mod.staff.controller.StaffListController">
+		<property name="formView" value="staffList" />
+		<property name="successView" value="staffList" />
+	</bean>
+
+	<bean id="staffViewController" class="com.mod.staff.controller.StaffViewController">
+	</bean>
+
+	<bean id="staffAddController" class="com.mod.staff.controller.StaffAddController">
+		<property name="validator">
+			<bean class="com.mod.staff.controller.StaffValidator" />
+		</property>
+	</bean>
+
+	<bean id="staffEditController" class="com.mod.staff.controller.StaffEditController">
+		<property name="validator">
+			<bean class="com.mod.staff.controller.StaffEditValidator" />
+		</property>
+	</bean>
+
+	<bean id="staffDeleteController" class="com.mod.staff.controller.StaffDeleteController">
+	</bean>
+
+
+</beans>

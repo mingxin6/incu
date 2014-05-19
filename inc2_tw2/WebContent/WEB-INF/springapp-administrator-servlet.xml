@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="administratorList.htm">
+					administratorListController
+                </prop>
+
+				<prop key="administratorView.htm">
+					administratorViewController
+                </prop>
+
+				<prop key="administratorAdd.htm">
+					administratorAddController
+                </prop>
+
+				<prop key="/administratorEdit.htm">
+					administratorEditController
+                </prop>
+
+				<prop key="/administratorDelete.htm">
+					administratorDeleteController
+                </prop>
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="administratorListController"
+		class="com.mod.administrator.controller.AdministratorListController">
+		<property name="formView" value="administratorList" />
+		<property name="successView" value="administratorList" />
+	</bean>
+
+	<bean id="administratorViewController"
+		class="com.mod.administrator.controller.AdministratorViewController">
+	</bean>
+
+	<bean id="administratorAddController"
+		class="com.mod.administrator.controller.AdministratorAddController">
+		<property name="formView" value="administratorAdd" />
+		<property name="validator">
+			<bean class="com.mod.administrator.controller.AdministratorValidator" />
+		</property>
+	</bean>
+
+	<bean id="administratorEditController"
+		class="com.mod.administrator.controller.AdministratorEditController">
+		<property name="validator">
+			<bean class="com.mod.administrator.controller.AdministratorValidator" />
+		</property>
+	</bean>
+
+	<bean id="administratorDeleteController"
+		class="com.mod.administrator.controller.AdministratorDeleteController">
+	</bean>
+
+
+</beans>

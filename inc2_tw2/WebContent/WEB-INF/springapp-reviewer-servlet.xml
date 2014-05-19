@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="reviewerList.htm">
+					reviewerListController
+                </prop>
+
+				<prop key="reviewerView.htm">
+					reviewerViewController
+                </prop>
+
+				<prop key="reviewerAdd.htm">
+					reviewerAddController
+                </prop>
+
+				<prop key="/reviewerEdit.htm">
+					reviewerEditController
+                </prop>
+
+				<prop key="/reviewerDelete.htm">
+					reviewerDeleteController
+                </prop>
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="reviewerListController" class="com.mod.reviewer.controller.ReviewerListController">
+		<property name="formView" value="reviewerList" />
+		<property name="successView" value="reviewerList" />
+	</bean>
+
+	<bean id="reviewerViewController" class="com.mod.reviewer.controller.ReviewerViewController">
+	</bean>
+
+	<bean id="reviewerAddController" class="com.mod.reviewer.controller.ReviewerAddController">
+		<property name="formView" value="reviewerAdd" />
+		<property name="validator">
+			<bean class="com.mod.reviewer.controller.ReviewerValidator" />
+		</property>
+	</bean>
+
+	<bean id="reviewerEditController" class="com.mod.reviewer.controller.ReviewerEditController">
+	<property name="validator">
+			<bean class="com.mod.reviewer.controller.ReviewerValidator" />
+		</property>
+	</bean>
+
+	<bean id="reviewerDeleteController" class="com.mod.reviewer.controller.ReviewerDeleteController">
+	</bean>
+
+
+</beans>

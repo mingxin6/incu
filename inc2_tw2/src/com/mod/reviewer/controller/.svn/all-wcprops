@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/mod/reviewer/controller
+END
+ReviewerDeleteController.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mod/reviewer/controller/ReviewerDeleteController.java
+END
+MySQLAccessReviewer.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mod/reviewer/controller/MySQLAccessReviewer.java
+END
+ReviewerEditController.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/mod/reviewer/controller/ReviewerEditController.java
+END
+ReviewerEditValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/inc2_src/!svn/ver/67/tag1/tpe/inc2_tw/src/com/mod/reviewer/controller/ReviewerEditValidator.java
+END
+ReviewerAddController.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/mod/reviewer/controller/ReviewerAddController.java
+END
+ReviewerViewController.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/mod/reviewer/controller/ReviewerViewController.java
+END
+ReviewerListController.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/mod/reviewer/controller/ReviewerListController.java
+END
+ReviewerValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/inc2_src/!svn/ver/67/tag1/tpe/inc2_tw/src/com/mod/reviewer/controller/ReviewerValidator.java
+END

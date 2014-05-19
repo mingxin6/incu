@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyOutsourceMapper">
+
+	<select id="findAllOutsources" resultType="Outsource">
+		<![CDATA[
+		select 
+		uid as uid
+		,proj AS proj
+		,contractName AS contractName
+		,contractStartDate AS contractStartDate
+		,contractEndDate AS contractEndDate
+		,outSourceCompany AS outSourceCompany
+		,amount AS amount
+		,email AS email
+		,phone AS phone
+		,status AS status
+		,remark AS remark
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from Outsource
+		]]>
+	</select>
+
+	<select id="findOutsourceById" parameterType="string" resultType="Outsource">
+		<![CDATA[
+		select
+		uid as uid
+		,proj AS proj
+		,contractName AS contractName
+		,contractStartDate AS contractStartDate
+		,contractEndDate AS contractEndDate
+		,outSourceCompany AS outSourceCompany
+		,amount AS amount
+		,email AS email
+		,phone AS phone
+		,status AS status
+		,remark AS remark
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from Outsource
+		WHERE uid=#{uid}
+		]]>
+	</select>
+
+
+	<insert id="insertOutsources" parameterType="Outsource">
+		<![CDATA[
+		INSERT INTO Outsource
+		(uID, proj,contractName,contractStartDate,contractEndDate,outSourceCompany
+		,amount,email,phone,status,remark,lastUpdateUser,lastUpdateTime)
+		VALUES
+		(
+		#{uid},#{proj},#{contractName},#{contractStartDate},#{contractEndDate},#{outSourceCompany}
+		,#{amount},#{email},#{phone},#{status},#{remark},#{lastUpdateUser},#{lastUpdateTime}
+		)
+		]]>
+	</insert>
+
+
+	<update id="updateOutsource" parameterType="Outsource">
+		<![CDATA[
+		UPDATE Outsource SET
+		proj=#{proj}
+		,contractName=#{contractName}
+		,contractStartDate=#{contractStartDate}
+		,contractEndDate=#{contractEndDate}
+		,outSourceCompany=#{outSourceCompany}
+		,amount=#{amount}
+		,email=#{email}
+		,phone=#{phone}
+		,status=#{status}
+		,remark=#{remark}
+		,lastUpdateUser=#{lastUpdateUser}	
+		,lastUpdateTime=#{lastUpdateTime}
+		where uid=#{uid}
+		]]>
+	</update>
+
+	<delete id="deleteOutsource" parameterType="string">
+		<![CDATA[
+		DELETE FROM Outsource where uid =#{uid}
+		]]>
+	</delete>
+
+</mapper>

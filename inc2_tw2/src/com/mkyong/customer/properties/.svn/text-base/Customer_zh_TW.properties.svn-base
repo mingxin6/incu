@@ -1,0 +1,356 @@
+
+UserAccountValidator.userComp     = \u4F7F\u7528\u8005\u516C\u53F8\u540D\u7A31\u4E0D\u53EF\u7A7A\u767D.
+UserAccountValidator.userLoginId  = \u4F7F\u7528\u8005\u5E33\u865F\u4E0D\u53EF\u7A7A\u767D.
+UserAccountValidator.userLoginPwd = \u4F7F\u7528\u8005\u5BC6\u78BC\u4E0D\u53EF\u7A7A\u767D.
+UserAccountValidator.userName     = \u4F7F\u7528\u8005\u540D\u7A31\u4E0D\u53EF\u7A7A\u767D.
+
+UserAuthValidator.roleChineseName = \u89D2\u8272\u540D\u79F0\u4E0D\u53EF\u7A7A\u767D.
+UserAuthValidator.roleName        = \u89D2\u8272\u4EE3\u53F7\u4E0D\u53EF\u7A7A\u767D.
+
+UserServiceResourceAcceptAddValidator.contacts   = \u8054\u7EDC\u4EBA\u4E0D\u53EF\u7A7A\u767D.
+UserServiceResourceAcceptAddValidator.srdid      = \u8BF7\u9009\u62E9\u8D44\u6E90\u9879\u76EE.
+UserServiceResourceAcceptAddValidator.tel        = \u7535\u8BDD\u4E0D\u53EF\u7A7A\u767D.
+UserServiceResourceAcceptAddValidator.wrongdate  = \u9700\u6C42\u65F6\u95F4\u6BB5\u987A\u5E8F\u4E0D\u7B26.
+UserServiceResourceAcceptAddValidator.wrongdate2 = \u65F6\u95F4\u683C\u5F0F\u9519\u8BEF.
+
+activityrecadd.content = \u5185\u5BB9
+activityrecadd.date    = \u6642\u9593
+activityrecadd.subject = \u6A19\u984C
+
+activityreclist.date        = \u65E5\u671F
+activityreclist.keyword     = \u95DC\u9375\u8A5E
+activityreclist.month       = \u6708
+activityreclist.newactivity = \u65B0\u589E\u6D3B\u52D5
+activityreclist.theme       = \u4E3B\u9898
+activityreclist.year        = \u5E74
+
+activityrecview.content      = \u5185\u5BB9
+activityrecview.date         = \u6642\u9593
+activityrecview.filedownload = \u6587\u4EF6\u4E0B\u8F09
+activityrecview.subject      = \u6A19\u984C
+
+administratoradd.account  = \u5E33\u865F
+administratoradd.mailbox  = \u90F5\u7BB1
+administratoradd.name     = \u59D3\u540D
+administratoradd.password = \u5BC6\u78BC
+administratoradd.status   = \u72C0\u614B
+administratoradd.tel      = \u96FB\u8A71
+administratoradd.tip      = \u82E5\u8981\u66F4\u6539\u5BC6\u78BC, \u8ACB\u65BC\u5DE6\u5074\u7A7A\u767D\u8655\u8F38\u5165\u65B0\u5BC6\u78BC.
+
+administratorlist.mailbox  = \u90F5\u7BB1
+administratorlist.name     = \u59D3\u540D
+administratorlist.newadmin = \u65B0\u589E\u7CFB\u7D71\u7BA1\u7406\u54E1
+administratorlist.status   = \u72C0\u614B
+administratorlist.tel      = \u96FB\u8A71
+
+button.addfile     = \u589E\u52A0\u4E0A\u50B3\u6A94
+button.back        = \u8FD4\u56DE
+button.backcontent = \u56DE\u5167\u5BB9
+button.backlist    = \u56DE\u5217\u8868
+button.confirm     = \u78BA\u5B9A
+button.confirmin   = \u78BA\u5B9A\u9032\u99D0
+button.dataready   = \u8CC7\u6599\u5099\u9F4A
+button.delete      = \u5220\u9664
+button.edit        = \u7DE8\u8F2F
+button.filter      = \u904E\u6FFE
+button.inventory   = \u9032\u99D0\u524D\u76E4\u9EDE
+button.modify      = \u4FEE\u6539
+button.readyclear  = \u6E96\u5099\u7D50\u6848
+button.save        = \u5132\u5B58
+button.send        = \u767C\u9001
+button.stopapply   = \u4E2D\u6B62\u7533\u8ACB
+
+changepwd.changepwd   = \u8B8A\u66F4\u5BC6\u78BC
+changepwd.newpwd      = \u65B0\u5BC6\u78BC
+changepwd.newpwdagain = \u518D\u8F38\u5165\u4E00\u6B21\u65B0\u5BC6\u78BC
+changepwd.oldpwd      = \u539F\u5BC6\u78BC
+
+comp.duplicate.in.other.review    = \u4F01\u696D" {0} "\u5DF2\u5B58\u5728\u65BC\u5176\u4ED6\u5BE9\u67E5 ->" {1}"
+
+company.name.invalid        = \u7121\u6548\u7684\u516C\u53F8\u540D\u7A31
+company.name.notexist       = \u516C\u53F8\u540D\u7A31\u4E0D\u5B58\u5728.
+company.uid.already.existed = \u516C\u53F8\u7DE8\u865F\u5DF2\u5B58\u5728
+company.uid.required        = \u8ACB\u8F38\u5165\u516C\u53F8\u7DE8\u865F
+
+compboadd.area              = \u9700\u6C42\u576A\u6578
+compboadd.capital           = \u8CC7\u672C\u984D\uFF08\u5143\uFF09
+compboadd.compfield         = \u4F01\u696D\u9818\u57DF
+compboadd.compinfo          = \u4F01\u696D\u8CC7\u8A0A
+compboadd.compname          = \u4F01\u696D\u540D\u7A31
+compboadd.contacts          = \u806F\u7D61\u4EBA
+compboadd.contactsinfo      = \u806F\u7D61\u4EBA\u8CC7\u8A0A
+compboadd.contactsmailbox   = \u806F\u7D61\u4EBA\u4FE1\u7BB1
+compboadd.contactsphone     = \u806F\u7D61\u4EBA\u624B\u6A5F
+compboadd.contactstel       = \u806F\u7D61\u4EBA\u96FB\u8A71
+compboadd.establishmentdate = \u6210\u7ACB\u65E5\u671F
+compboadd.head              = \u8CA0\u8CAC\u4EBA
+compboadd.id                = \u7D71\u4E00\u7DE8\u865F
+compboadd.staffnum          = \u54E1\u5DE5\u4EBA\u6578
+
+compdetail.addotherfile           = \u589E\u52A0\u4E0A\u50B3\u6A94
+compdetail.compstatus             = \u4F01\u696D\u72C0\u614B
+compdetail.modify_upload          = \u4FEE\u6539\u53CA\u8CC7\u6599\u4E0A\u50B3
+compdetail.otherfile              = \u5176\u4ED6\u6587\u4EF6
+compdetail.otherfiledownload      = \u5176\u4ED6\u6587\u4EF6\u4E0B\u8F09
+compdetail.reviewdata             = \u5BE9\u67E5\u8CC7\u6599
+compdetail.reviewdata1            = \u9032\u99D0\u7533\u8ACB\u8868
+compdetail.reviewdata2            = \u4F01\u696D\u8A2D\u7ACB\u51FD\u6587
+compdetail.reviewdata3            = \u71DF\u904B\u8A08\u5283\u66F8
+compdetail.reviewdata4            = \u6703\u8A08\u5E2B\u7C3D\u8B49
+compdetail.reviewdata5            = 401 \u5831\u8868
+
+compdetailview.account            = \u5E33\u865F
+compdetailview.accountdata        = \u5E33\u865F\u8CC7\u6599
+compdetailview.accountstatus      = \u72C0\u614B
+compdetailview.area               = \u7C3D\u7D04\u576A\u6578
+compdetailview.attachmentdata     = \u9644\u4EF6\u8CC7\u6599
+compdetailview.awardboolean       = \u6709\u7121\u734E\u91D1
+compdetailview.awardcountry       = \u9812\u767C\u55AE\u4F4D\u570B\u5BB6
+compdetailview.awarddata          = \u7372\u734E\u8CC7\u6599
+compdetailview.awarddate          = \u5F97\u734E\u5E74\u6708
+compdetailview.awardname          = \u734E\u9805\u540D\u7A31
+compdetailview.coachdata          = \u8F14\u5C0E\u8CC7\u6599
+compdetailview.coachdate          = \u6642\u9593
+compdetailview.coachid            = \u7DE8\u865F
+compdetailview.coachtheme         = \u4E3B\u984C
+compdetailview.compdata           = \u4F01\u696D\u8CC7\u6599
+compdetailview.patentcountry      = \u53D6\u5F97\u5C08\u5229\u570B\u5BB6
+compdetailview.patentdata         = \u5C08\u5229\u8CC7\u6599
+compdetailview.patentdate         = \u53D6\u5F97\u5C08\u5229\u65E5\u671F
+compdetailview.patentid           = \u5C08\u5229\u8B49\u865F
+compdetailview.patentname         = \u5C08\u5229\u540D\u7A31
+compdetailview.room               = \u9032\u99D0\u57F9\u80B2\u9593
+compdetailview.subsidyamount      = \u8A08\u756B\u88DC\u52A9\u91D1\u984D
+compdetailview.subsidydata        = \u88DC\u52A9\u8CC7\u6599
+compdetailview.subsidydate        = \u53D6\u5F97\u88DC\u52A9\u5E74\u6708
+compdetailview.subsidyfrom        = \u6388\u8207\u55AE\u4F4D
+compdetailview.subsidyname        = \u7533\u8ACB\u8A08\u756B\u540D\u7A31
+compdetailview.subsidytarget      = \u7533\u8ACB\u8A08\u756B\u6A19\u7684
+compdetailview.subsidytotalamount = \u8A08\u756B\u7E3D\u91D1\u984D
+compdetailview.tab1               = \u57FA\u672C\u8CC7\u6599
+compdetailview.tab2               = \u5C08\u5229/\u7372\u734E/\u88DC\u52A9
+compdetailview.tab3               = \u5BE9\u67E5\u8CC7\u6599
+compdetailview.tab4               = \u5176\u4ED6\u9644\u4EF6
+compdetailview.tab5               = \u8F14\u5C0E\u8CC7\u6599
+compdetailview.tab6               = \u5E33\u865F\u8CC7\u6599
+
+complist.capital         = \u8CC7\u672C\u984D
+complist.compname        = \u4F01\u696D\u540D\u7A31
+complist.compstatus      = \u4F01\u696D\u72C0\u614B
+complist.contacts        = \u806F\u7D61\u4EBA
+complist.establishment   = \u6210\u7ACB\u65E5\u671F
+complist.field           = \u9818\u57DF
+complist.id              = \u7DE8\u865F
+complist.mainproduct     = \u4E3B\u529B\u7522\u54C1
+complist.newapply        = \u65B0\u589E\u4F01\u696D
+complist.tel             = \u96FB\u8A71
+
+complist_b.apply         = \u7533\u8ACB
+complist_b.capital       = \u8CC7\u672C\u984D
+complist_b.compname      = \u4F01\u696D\u540D\u7A31
+complist_b.compstatus    = \u4F01\u696D\u72C0\u614B
+complist_b.contacts      = \u806F\u7D61\u4EBA
+complist_b.establishment = \u6210\u7ACB
+complist_b.field         = \u9818\u57DF
+complist_b.filter        = \u904E\u6FFE
+complist_b.newapply      = \u65B0\u589E\u9032\u99D0\u7533\u8ACB
+complist_b.status        = \u72C0\u614B
+complist_b.tel           = \u96FB\u8A71
+
+compnew.autogen         = \u81EA\u52D5\u7522\u751F
+compnew.basicinfo       = \u57FA\u672C\u8CC7\u8A0A
+compnew.capital         = \u8CC7\u672C\u984D(\u5143)
+compnew.code            = \u65B0\u5275\u4EE3\u865F 
+compnew.compenname      = \u4F01\u696D\u82F1\u6587\u540D\u7A31
+compnew.compfield       = \u4F01\u696D\u9818\u57DF
+compnew.compintro       = \u4F01\u696D\u7C21\u4ECB
+compnew.complogo        = \u4F01\u696D logo
+compnew.compname        = \u4F01\u696D\u540D\u7A31
+compnew.compshortname   = \u4F01\u696D\u7C21\u7A31
+compnew.comptype        = \u4F01\u696D\u985E\u5225
+compnew.compwebsite     = \u4F01\u696D\u7DB2\u5740
+compnew.contacts        = \u806F\u7D61\u4EBA
+compnew.contactsinfo    = \u806F\u7D61\u4EBA\u8CC7\u8A0A
+compnew.contactsmailbox = \u806F\u7D61\u4EBA\u4FE1\u7BB1
+compnew.contactsphone   = \u806F\u7D61\u4EBA\u624B\u6A5F
+compnew.contactstel     = \u806F\u7D61\u4EBA\u96FB\u8A71
+compnew.contractbegin   = \u5408\u7D04\u8D77\u65E5
+compnew.contractend     = \u5408\u7D04\u8FC4\u65E5
+compnew.contractid      = \u5408\u7D04\u7DE8\u865F
+compnew.contractinfo    = \u5408\u7D04\u8CC7\u8A0A
+compnew.deposit         = \u62BC\u91D1
+compnew.deposit2        = \u65BD\u5DE5\u4FDD\u8B49\u91D1
+compnew.establishment   = \u4F01\u696D\u6210\u7ACB\u65E5\u671F
+compnew.finishaddress   = \u7562\u696D\u806F\u7D61\u5730\u5740
+compnew.finishdate      = \u7562\u696D\u65E5
+compnew.finishinfo      = \u7562\u696D\u8CC7\u8A0A
+compnew.firstindate     = \u9996\u6B21\u9032\u99D0\u65E5
+compnew.gm              = \u7E3D\u7D93\u7406
+compnew.gmmailbox       = \u7E3D\u7D93\u7406\u4FE1\u7BB1
+compnew.gmphone         = \u7E3D\u7D93\u7406\u624B\u6A5F
+compnew.gmtel           = \u7E3D\u7D93\u7406\u96FB\u8A71
+compnew.head            = \u8CA0\u8CAC\u4EBA
+compnew.id              = \u7DE8\u865F
+compnew.id2             = \u7D71\u4E00\u7DE8\u865F
+compnew.mainproduct     = \u4E3B\u529B\u7522\u54C1
+compnew.realcapital     = \u5BE6\u6536\u8CC7\u672C\u984D(\u5143)
+compnew.remark          = \u5099\u8A3B
+compnew.staffnum        = \u54E1\u5DE5\u4EBA\u6578
+compnew.status          = \u72C0\u614B
+
+compwaittransfer.account   = \u5E33\u865F
+compwaittransfer.area      = \u576A\u6578
+compwaittransfer.choose    = \u9078\u64C7
+compwaittransfer.company   = \u516C\u53F8
+compwaittransfer.deposit   = \u62BC\u91D1
+compwaittransfer.deposit2  = \u65BD\u5DE5\u4FDD\u8B49\u91D1
+compwaittransfer.floor     = \u6A13\u5C64
+compwaittransfer.insetting = \u9032\u99D0\u8A2D\u5B9A
+compwaittransfer.number    = \u865F\u78BC
+compwaittransfer.password  = \u5BC6\u78BC
+compwaittransfer.remark    = \u5099\u8A3B
+compwaittransfer.room      = \u57F9\u80B2\u9593
+compwaittransfer.status    = \u72C0\u614B
+
+date.format.invalid = \u65E5\u671F\u683C\u5F0F\uFF1Ayyyy/MM/dd
+
+duplicate.account           = \u5E33\u865F\u5BC6\u78BC\u5DF2\u5B58\u5728
+duplicate.compNyear.invalid = \u8A72\u6708\u5831\u8868\u5DF2\u5B58\u5728, \u8ACB\u52FF\u91CD\u8907\u586B\u5831
+
+inconsistent.password = \u5169\u6B21\u5BC6\u78BC\u8F38\u5165\u4E0D\u4E00\u81F4
+
+incubate.resource          = \u80B2\u6210\u8CC7\u6E90
+incubate.resource.reviewer = \u5BE9\u67E5\u59D4\u54E1
+incubate.resource.staff    = \u4E2D\u5FC3\u4EBA\u54E1
+incubate.resource.teacher  = \u8F14\u5C0E\u696D\u5E2B
+
+menuPart.activity           = \u6D3B\u52D5\u7BA1\u7406
+menuPart.change.pwd         = \u8B8A\u66F4\u5BC6\u78BC
+menuPart.consult.AM         = \u6211\u7684 AM \u8F14\u5C0E\u8A18\u9304
+menuPart.consult.PM         = \u6211\u7684 PM \u8F14\u5C0E\u8A18\u9304
+menuPart.consult.all        = \u6240\u6709\u8F14\u5C0E\u8A18\u9304
+menuPart.consult.management = \u8F14\u5C0E\u7BA1\u7406
+menuPart.consult.other      = \u6211\u7684\u5176\u4ED6\u8F14\u5C0E\u8A18\u9304
+menuPart.consult.teacher    = \u696D\u5E2B\u8F14\u5C0E\u8A18\u9304
+menuPart.logout             = \u767B\u51FA
+menuPart.movin              = \u9032\u99D0\u7BA1\u7406
+menuPart.movin.apply        = \u9032\u99D0\u7533\u8ACB
+menuPart.movin.business     = \u9032\u99D0\u4F01\u696D
+menuPart.movin.check        = \u5F85\u8F49\u9032\u99D0
+menuPart.movin.management   = \u9032\u99D0\u7BA1\u7406
+menuPart.movin.review       = \u5BE9\u67E5\u7BA1\u7406
+menuPart.my.business.info   = \u6211\u7684\u4FE1\u606F
+menuPart.s1                 = \u9996\u9801
+menuPart.service.AM         = AM \u670D\u52D9
+menuPart.service.PM         = PM \u670D\u52D9
+menuPart.service.apply      = \u670D\u52D9\u7533\u8ACB
+menuPart.service.teacher    = \u696D\u5E2B\u7533\u8ACB
+menuPart.system.manager     = \u7CFB\u7D71\u7BA1\u7406\u8005\u8A2D\u5B9A
+menuPart.system.setting     = \u7CFB\u7D71\u8A2D\u5B9A
+menuPart.tag                = Tag \u8A2D\u5B9A
+menuPart.todo               = \u5F85\u8FA6\u4E8B\u9805
+
+my.clear   = \u6E05\u9664\u4F7F\u7528\u4EBA
+my.confirm = \u8ACB\u78BA\u5B9A
+
+newpwd.invalid = \u5169\u6B21\u65B0\u5BC6\u78BC\u8F38\u5165\u4E0D\u4E00\u81F4
+
+notmatch.password = Password and Conform password is not match!
+
+outsource.management = \u63A1\u8CFC\u7BA1\u7406
+
+parkingBike.management = \u6A5F\u8ECA\u505C\u8ECA\u4F4D\u7BA1\u7406
+
+parkingCar.management = \u6C7D\u8ECA\u505C\u8ECA\u4F4D\u7BA1\u7406
+
+required.address               = Address is required!
+required.compname              = \u4F01\u696D\u540D\u7A31\u4E0D\u53EF\u7A7A\u767D.
+required.confirmPassword       = Confirm password is required!
+required.contractEndDate       = \u5408\u7D04\u7D50\u675F\u65E5\u671F\u4E0D\u53EF\u7A7A\u767D.
+required.contractName          = \u5408\u7D04\u540D\u7A31\u4E0D\u53EF\u7A7A\u767D.
+required.contractStartDate     = \u5408\u7D04\u958B\u59CB\u65E5\u671F\u4E0D\u53EF\u7A7A\u767D.
+required.country               = Please select a country!
+required.email                 = \u96FB\u5B50\u90F5\u7BB1\u4E0D\u53EF\u7A7A\u767D.
+required.favFrameworks         = Please select at least a web frameworks!
+required.favNumber             = Please select a number!
+required.javaSkills            = Please select a java Skill\!\u4E0D\u80FD\u7A7A\u767D
+required.meeting.reviewer      = \u8ACB\u6311\u9078\u9762\u5BE9\u59D4\u54E1
+required.name                  = \u540D\u7A31\u4E0D\u53EF\u7A7A\u767D.
+required.paper.reviewer        = \u8ACB\u6311\u9078\u66F8\u5BE9\u59D4\u54E1
+required.parkinglotbikeno      = \u505C\u8ECA\u4F4D\u865F\u78BC\u4E0D\u53EF\u7A7A\u767D.
+required.password              = \u5BC6\u78BC\u4E0D\u80FD\u7A7A\u767D
+required.phone                 = \u96FB\u8A71\u4E0D\u53EF\u7A7A\u767D.
+required.proj                  = \u59D4\u5916\u9805\u76EE\u4E0D\u53EF\u7A7A\u767D.
+required.roomno                = \u57F9\u80B2\u9593\u865F\u78BC\u4E0D\u53EF\u7A7A\u767D.
+required.securitycardno        = \u9580\u7981\u5361\u865F\u78BC\u4E0D\u53EF\u7A7A\u767D
+required.sex                   = Please select a sex!
+required.theme                 = \u6807\u9898\u4E0D\u53EF\u7A7A\u767D.
+required.userLoginId           = \u4F7F\u7528\u8005\u5E33\u865F\u4E0D\u53EF\u7A7A\u767D.
+required.userLoginPwdClearText = \u4F7F\u7528\u8005\u5BC6\u78BC\u4E0D\u53EF\u7A7A\u767D.
+required.userName              = \u5E33\u865F\u4E0D\u80FD\u7A7A\u767D
+required.username2             = \u4F7F\u7528\u8005\u540D\u7A31\u4E0D\u53EF\u7A7A\u767D.
+
+reuired.compay = \u8ACB\u6311\u9078\u4F01\u696D
+
+reviewpaperadd.bookreviewer = \u66F8\u5BE9\u59D4\u54E1
+reviewpaperadd.facereviewer = \u9762\u5BE9\u59D4\u54E1
+reviewpaperadd.pickcomp     = \u6311\u9078\u4F01\u696D
+reviewpaperadd.pickreviewer = \u6311\u9078\u5BE9\u67E5\u59D4\u54E1
+reviewpaperadd.reviewername = \u59D3\u540D
+
+reviewpaperask.content    = \u5185\u5BB9
+reviewpaperask.recipient  = \u6536\u4EF6\u4EBA
+reviewpaperask.sentrecord = \u767C\u9001\u7D00\u9304
+reviewpaperask.theme      = \u4E3B\u65E8
+
+reviewpaperclose.content   = \u5167\u5BB9
+reviewpaperclose.recipient = \u6536\u4EF6\u4EBA
+reviewpaperclose.subject   = \u4E3B\u65E8
+
+reviewpaperjob.filedownload = \u6587\u4EF6\u4E0B\u8F09
+reviewpaperjob.remark       = \u5099\u8A3B
+reviewpaperjob.review       = \u59D4\u54E1\u5BE9\u67E5\u610F\u898B
+reviewpaperjob.score        = \u5206\u6578
+
+reviewpaperlist.applycomp     = \u7533\u8ACB\u9032\u99D0\u4F01\u696D
+reviewpaperlist.applycompdata = \u7533\u8ACB\u9032\u99D0\u4F01\u696D\u8CC7\u6599
+reviewpaperlist.date          = \u65E5\u671F
+reviewpaperlist.filter        = \u904E\u6FFE
+reviewpaperlist.newreview     = \u65B0\u589E\u5BE9\u67E5
+reviewpaperlist.remark        = \u5099\u8A3B
+reviewpaperlist.reviewer      = \u5BE9\u67E5\u6703
+reviewpaperlist.reviewerdata  = \u5BE9\u67E5\u6703\u8CC7\u6599
+reviewpaperlist.status        = \u72C0\u614B
+reviewpaperlist.theme         = \u4E3B\u984C
+
+reviewpaperview.bookreview  = \u66F8\u5BE9
+reviewpaperview.comp        = \u4F01\u696D
+reviewpaperview.facereview  = \u9762\u5BE9
+reviewpaperview.readynotify = \u6E96\u5099\u901A\u77E5
+reviewpaperview.result      = \u7D50\u679C
+reviewpaperview.totalavg    = \u7E3D\u5E73\u5747
+
+room.management = \u57F9\u80B2\u9593\u7BA1\u7406
+
+securityCard.management = \u9580\u7981\u5361\u7BA1\u7406
+
+taglist.newtag = \u589E\u52A0Tag
+
+talknotes.datetime = \u65E5\u671F\u4E0D\u53EF\u7A7A\u767D.
+talknotes.theme    = \u6A19\u984C\u4E0D\u53EF\u7A7A\u767D.
+
+todolist.acceptedCompanies = \u7B49\u5F85\u5BE9\u67E5\u7684\u4F01\u696D{0} \u5BB6
+todolist.unFinishedAM      = \u5C1A\u672A\u7D50\u6848\u7684 AM \u7533\u8ACB{0}\u4EF6
+todolist.unFinishedPM      = \u5C1A\u672A\u7D50\u6848\u7684 PM \u7533\u8ACB{0}\u4EF6
+todolist.unFinishedReview  = \u5C1A\u672A\u7D50\u6848\u7684\u5BE9\u67E5\u6848{0}\u4EF6
+todolist.unFinishedTeacher = \u5C1A\u672A\u7D50\u6848\u7684\u696D\u5E2B\u7533\u8ACB{0}\u4EF6
+todolist.waitTransferList  = \u5BE9\u67E5\u901A\u904E, \u5F85\u9032\u99D0\u7684\u4F01\u696D{0}\u5BB6
+
+userid.invalid         = \u7121\u6548\u7684\u5E33\u865F
+userid.userpwd.invalid = \u767B\u5165\u932F\u8AA4\!
+
+userpwd.invalid = \u7121\u6548\u7684\u5BC6\u78BC
+
+welcome.springmvc = \u6E2C\u8A66
+
+yourposition = \u60A8\u7684\u4F4D\u7F6E

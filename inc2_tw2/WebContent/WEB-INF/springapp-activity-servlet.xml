@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="activityRecList.htm">
+					activityRecListController
+                </prop>
+				<prop key="activityRecAdd.htm">
+					activityRecAddController
+                </prop>
+
+				<prop key="activityRecView.htm">
+					activityRecViewController
+                </prop>
+				<prop key="/activityRecEdit.htm">
+					activityRecEditController
+                </prop>
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="activityRecListController"
+		class="com.mod.activityrec.controller.ActivityRecListController">
+	</bean>
+
+	<bean id="activityRecAddController" class="com.mod.activityrec.controller.ActivityRecAddController">
+	</bean>
+
+	<bean id="activityRecViewController"
+		class="com.mod.activityrec.controller.ActivityRecViewController">
+	</bean>
+
+	<bean id="activityRecEditController"
+		class="com.mod.activityrec.controller.ActivityRecEditController">
+	</bean>
+
+
+
+</beans>

@@ -1,0 +1,34 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean id="ExcelRevenueSummary"
+     class="com.mkyong.common.view.ExcelRevenueReportView">
+    </bean>
+    
+    <bean id="ExcelMonthlyReportView"
+     class="com.mkyong.common.view.ExcelMonthlyReportView">
+    </bean>
+    
+    <bean id="ExcelQuarterlyReportView"
+     class="com.mkyong.common.view.ExcelQuarterlyReportView">
+    </bean>
+    
+    <bean id="ExcelYearlyReportView"
+     class="com.mkyong.common.view.ExcelYearlyReportView">
+    </bean>
+    
+    <bean id="MonthlyReportOfCompsConfirmedExcelController"
+     class="com.mkyong.common.view.MonthlyReportOfCompsConfirmedExcelController">
+    </bean>
+    
+    <bean id="QuarterlyReportOfCompsConfirmedExcelController"
+     class="com.mkyong.common.view.QuarterlyReportOfCompsConfirmedExcelController">
+    </bean>
+    
+    <bean id="YearlyReportOfCompsConfirmedExcelController"
+     class="com.mkyong.common.view.YearlyReportOfCompsConfirmedExcelController">
+    </bean>
+    
+    
+</beans>

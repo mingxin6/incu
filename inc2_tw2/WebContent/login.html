@@ -1,0 +1,73 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ include file="/include.jsp"%>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" href="pkg/jquery/mu.css" rel="stylesheet" />
+<link rel="stylesheet" href="pkg/login/index.css" />
+
+<style>
+#sysname {
+	/*background: url(../images/systemName.jpg) no-repeat center bottom;*/
+	position: relative;
+	top: 60px;
+	left:600px;
+	margin-bottom:100px;
+}
+</style>
+</head>
+
+<body>
+
+	<div id="container">
+
+		<div id="banner"></div>
+
+		<div id="sysname"><img src="pkg/login/systemName.jpg"  height="50" width="400"></img></div>
+		<!-- 
+		<h1>智慧園區管理系統</h1>
+-->
+		<div id="login">
+			<div class="leftImg">
+				<img src="pkg/login/people.gif" width="292" height="287" />
+			</div>
+			<div class="rightImg">
+				<form:form method="POST" commandName="userForm">
+
+					<!-- 
+					<form:errors path="*" cssClass="errorblock" element="div" />
+-->
+					<table>
+						<tr>
+							<td height="40">帳號：</td>
+							<td height="40"><form:input path="userid" cssClass="loginN" /></td>
+							<td height="40"><form:errors path="userid" cssClass="error" /></td>
+						</tr>
+
+						<tr>
+							<td height="40">密碼：<strong></td>
+							<td height="40">
+								<!-- div class="loginPwrap"--> <form:password path="userpwd"
+									cssClass="loginP" /> <!-- /div-->
+							</td>
+							<td height="40"><form:errors path="userpwd" cssClass="error" /></td>
+						</tr>
+
+
+						<tr>
+							<td height="80" colspan="3"><input type="submit" value="提交"
+								class="btnS" /></td>
+
+						</tr>
+					</table>
+				</form:form>
+
+
+			</div>
+		</div>
+	</div>
+	<!--container ends here--><%@ include file="/footer.jsp"%>
+</body>
+</html> 

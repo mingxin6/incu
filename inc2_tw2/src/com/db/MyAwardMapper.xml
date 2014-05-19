@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyAwardMapper">
+
+	<select id="findAwardRecordsByCompId" parameterType="string"
+		resultType="AwardRecord">
+		select * from AWARDREC WHERE COMPID=#{compId} order by
+		AWARDDate desc
+  	</select>
+
+	<insert id="insertAwardRecord" parameterType="AwardRecord">
+		<![CDATA[
+		INSERT INTO	awardrec
+		(UID, CompId, AWARDNAME, AWARDISSUER,HASAWARDMONEY, AWARDDate, REMARK)
+		VALUES
+		(#{uid},#{compId},#{awardName},#{awardIssuer},#{awardDate},#{hasAwardMoney},#{remark})
+		]]>
+	</insert>
+
+	<delete id="deleteAward" parameterType="string">
+		<![CDATA[
+		DELETE FROM awardrec where uid =#{uid}
+		]]>
+	</delete>
+
+	<update id="updateAward" parameterType="Awardrecord">
+		<![CDATA[
+		UPDATE AwardRec SET
+		compid=#{compId}
+		,AWARDNAME=#{awardName}
+		,AWARDISSUER=#{awardIssuer}
+		,HASAWARDMONEY=#{hasAwardMoney}
+		,AWARDDate=#{awardDate}
+		,remark=#{remark}		
+		where uid=#{uid}
+		]]>
+	</update>
+
+
+</mapper>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/compList.htm">
+					companyListController
+                </prop>
+				<prop key="/compList_B.htm">
+					companyListController_B
+                </prop>
+				<prop key="/compDetailView.htm">
+					companyDetailViewController
+                </prop>
+				<prop key="/compDetailView_B.htm">
+					companyDetailViewController_B
+                </prop>
+				<prop key="/compDetailView_B_transfer.htm">
+
+					companyDetailViewController_B_transfer
+                </prop>
+				<prop key="/compDetailEdit.htm">
+					companyDetailEditController
+                </prop>
+				<prop key="/compDetailEditIp.htm">
+					companyDetailEditIpController
+                </prop>
+				<prop key="/compDetailEditAward.htm">
+					companyDetailEditAwardController
+                </prop>
+				<prop key="/compDetailEditGrant.htm">
+					companyDetailEditGrantController
+                </prop>
+				<prop key="compDetailEditAccount.htm">
+					companyDetailEditAccountController
+                </prop>
+
+				<prop key="compTalkNote.htm">
+					companyTalkNoteController
+                </prop>
+
+
+				<prop key="/compDetailEdit_B.htm">
+					companyDetailEditController_B
+                </prop>
+				<prop key="/compDetailEditDocument.htm">
+					companyDetailEditDocumentController
+                </prop>
+				<prop key="/compDetailEditReview.htm">
+					companyDetailEditReviewController
+                </prop>
+
+				<prop key="/compNew.htm">
+					companyNewController
+                </prop>
+
+
+				<prop key="/companyExcelList.htm">
+					companyExcelListController
+                </prop>
+
+				<prop key="/compAccept_B.htm">
+					companyAcceptController_B
+                </prop>
+
+				<prop key="/compDeny_B.htm">
+					companyDenyController_B
+                </prop>
+
+
+				<!-- wait to transfer -->
+
+				<prop key="compWaitList_B.htm">
+					CompanyWaitListController_B
+                </prop>
+				<prop key="compWaitDetailView_B.htm">
+					CompanyWaitDetailViewController_B
+                </prop>
+				<prop key="compWaitTrasfer.htm">
+					CompanyWaitTransferController_B
+                </prop>
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+
+
+	<bean id="companyDenyController_B" class="com.mod.company.controller.CompanyDenyController_B">
+		<property name="formView" value="companyDeny_B" />
+	</bean>
+
+	<bean id="companyAcceptController_B" class="com.mod.company.controller.CompanyAcceptController_B">
+		<property name="formView" value="companyAcceptConfirm" />
+	</bean>
+
+	<bean id="companyListController" class="com.mod.company.controller.CompanyListController">
+		<property name="formView" value="companyList" />
+		<property name="successView" value="companyList" />
+	</bean>
+
+	<bean id="companyListController_B" class="com.mod.company.controller.CompanyListController_B">
+		<property name="formView" value="companyList_B" />
+		<property name="successView" value="companyList_B" />
+	</bean>
+
+	<bean id="companyDetailViewController" class="com.mod.company.controller.CompanyDetailViewController">
+	</bean>
+
+	<bean id="companyTalkNoteController" class="com.mod.company.controller.CompanyTalkNoteController">
+	</bean>
+
+
+	<bean id="companyDetailViewController_B"
+		class="com.mod.company.controller.CompanyDetailViewController_B">
+	</bean>
+
+	<bean id="companyDetailViewController_B_transfer"
+		class="com.mod.company.controller.CompanyDetailViewController_B_Transfer">
+		<property name="formView" value="companyDetailView_B_transfer" />
+		<property name="successView" value="companyList_B" />
+	</bean>
+
+	<bean id="companyExcelListController" class="com.mod.company.controller.CompanyExcelListController">
+	</bean>
+
+
+	<bean id="companyDetailEditController" class="com.mod.company.controller.CompanyDetailEditController">
+		<property name="formView" value="companyDetailEdit" />
+		<property name="successView" value="companyDetailView" />
+		<property name="validator">
+			<bean class="com.mod.company.controller.CompanyValidator" />
+		</property>
+	</bean>
+
+	<bean id="companyDetailEditIpController"
+		class="com.mod.company.controller.CompanyDetailEditIpController">
+		<property name="formView" value="companyDetailEditIP" />
+		<property name="successView" value="companyDetailView" />
+		<property name="validator">
+			<bean class="com.mod.company.controller.CompanyDetailEditIpValidator" />
+		</property>
+	</bean>
+
+	<bean id="companyDetailEditAwardController"
+		class="com.mod.company.controller.CompanyDetailEditAwardController">
+		<property name="formView" value="companyDetailEditAward" />
+		<property name="successView" value="companyDetailView" />
+	</bean>
+
+	<bean id="companyDetailEditGrantController"
+		class="com.mod.company.controller.CompanyDetailEditGrantController">
+		<property name="formView" value="companyDetailEditGrant" />
+		<property name="successView" value="companyDetailView" />
+	</bean>
+
+	<bean id="companyDetailEditAccountController"
+		class="com.mod.company.controller.CompanyDetailEditAccountController">
+		<property name="formView" value="companyDetailEditAccount" />
+	</bean>
+
+	<bean id="companyDetailEditDocumentController"
+		class="com.mod.company.controller.CompanyDetailEditDocumentController">
+		<property name="formView" value="companyDetailEditDocument" />
+		<property name="successView" value="companyDetailView" />
+	</bean>
+
+	<bean id="companyDetailEditReviewController"
+		class="com.mod.company.controller.companyDetailEditReviewController">
+		<property name="formView" value="companyDetailEditReview" />
+		<property name="successView" value="companyDetailView" />
+	</bean>
+
+	<bean id="companyDetailEditController_B"
+		class="com.mod.company.controller.CompanyDetailEditController_B">
+		<property name="formView" value="companyDetailEdit_B" />
+	</bean>
+
+	<bean id="companyNewController" class="com.mod.company.controller.CompanyNewController">
+		<property name="formView" value="companyDetailEdit" />
+		<property name="successView" value="companyList" />
+		<property name="validator">
+			<bean class="com.mod.company.controller.CompanyValidator" />
+		</property>
+	</bean>
+
+
+	<bean id="CompanyWaitListController_B" class="com.mod.company.controller.CompanyWaitListController_B">
+		<property name="formView" value="companyWaitList_B" />
+	</bean>
+	<bean id="CompanyWaitDetailViewController_B"
+		class="com.mod.company.controller.CompanyWaitDetailViewController_B">
+	</bean>
+	<bean id="CompanyWaitTransferController_B"
+		class="com.mod.companyB0.controller.CompanyWaitTransferController_B0">
+		<property name="formView" value="companyWaitTransfer_B0" />
+		<property name="validator">
+			<bean
+				class="com.mod.company.controller.CompanyWaitTransferController_B0Validator" />
+		</property>
+	</bean>
+
+</beans>

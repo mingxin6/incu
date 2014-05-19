@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyCompanyMapper">
+
+	<select id="findCompanyMaxCustomId" resultType="string">
+		<![CDATA[
+		select max(customId)from isi_company
+		]]>
+	</select>
+
+
+
+	<select id="findCompanyNameByCompId" parameterType="string"
+		resultType="string">
+		<![CDATA[
+		select CompanyName
+		from isi_company WHERE ID=#{compId} 
+		]]>
+	</select>
+
+	<select id="findCompanyByWhereString" parameterType="com.db.DbWhere"
+		resultType="Company">
+		<![CDATA[
+		select 
+		CompanyStatus AS compStatus
+		,ID AS uid
+		,customId as customId
+		,CompanyName AS compName
+		,compEngName AS	compEngName
+		,companyShortName AS compShortName
+		,logoFileName AS logoFileName
+		,CompanyID AS registerId
+		,EstablishDate AS registerDate
+		,representative AS representative
+		,kind AS kind
+		,domain AS domain
+		,compAddress AS compAddress
+		,ResidentDate AS moveInDate
+		,EmployeeAmount	AS totalEmployees
+		,RegisterCapital AS registerCaptial
+		,actualCaptial AS actualCaptial
+		,compIntroduction AS compIntroduction
+		,CompanyWebURL AS compWebURL
+		,ProjContent AS prod
+		,OfficeLocation AS	room
+		,OfficeSize	AS roomArea
+		,OwnerName AS boss
+		,OwnerTelphone AS phone
+		,OwnerMobilePhone AS mobilePhone
+		,OwnerEmail AS email
+		,AdminOwnerName	AS adminContact
+		,AdminOwnerTelphone AS	adminContactPhone
+		,AdminOwnerMobilePhone AS adminContactMobilePhone
+		,AdminOwnerEmail AS	adminContactEmail
+		,contractNumber AS contractNumber
+		,contractStartDate	AS contractStartDate
+		,contractEndDate AS	contractEndDate
+		,innoKind AS innoKind
+		,Remark AS remark
+		,moveoutDate AS	moveOutDate
+		,moveOutAddesss	AS moveOutAddesss
+		,manager AS manager
+		,reviewPaperUid as reviewPaperUid
+		,amId AS amId
+		,pmId AS pmId
+		,deposit as deposit
+		,bond as bond
+		from isi_company 
+		where ${where}
+		]]>
+	</select>
+
+
+
+	<select id="findCompanyByCompId" parameterType="string"
+		resultType="Company">
+		<![CDATA[
+		select 
+		CompanyStatus AS compStatus
+		,ID AS uid
+		,customId as customId
+		,CompanyName AS compName
+		,compEngName AS	compEngName
+		,companyShortName AS compShortName
+		,logoFileName AS logoFileName
+		,CompanyID AS registerId
+		,EstablishDate AS registerDate
+		,representative AS representative
+		,kind AS kind
+		,domain AS domain
+		,compAddress AS compAddress
+		,ResidentDate AS moveInDate
+		,EmployeeAmount	AS totalEmployees
+		,RegisterCapital AS registerCaptial
+		,actualCaptial AS actualCaptial
+		,compIntroduction AS compIntroduction
+		,CompanyWebURL AS compWebURL
+		,ProjContent AS prod
+		,OfficeLocation AS	room
+		,OfficeSize	AS roomArea
+		,OwnerName AS boss
+		,OwnerTelphone AS phone
+		,OwnerMobilePhone AS mobilePhone
+		,OwnerEmail AS email
+		,AdminOwnerName	AS adminContact
+		,AdminOwnerTelphone AS	adminContactPhone
+		,AdminOwnerMobilePhone AS adminContactMobilePhone
+		,AdminOwnerEmail AS	adminContactEmail
+		,contractNumber AS contractNumber
+		,contractStartDate	AS contractStartDate
+		,contractEndDate AS	contractEndDate
+		,innoKind AS innoKind
+		,Remark AS remark
+		,moveoutDate AS	moveOutDate
+		,moveOutAddesss	AS moveOutAddesss
+		,manager AS manager 
+		,reviewPaperUid as reviewPaperUid
+		,amId AS amId
+		,pmId AS pmId
+		,deposit as deposit
+		,bond as bond
+		from isi_company 
+		WHERE ID=#{compId} 
+		]]>
+	</select>
+
+	<select id="findCompanyByCompName" parameterType="string"
+		resultType="Company">
+		<![CDATA[
+		select 
+		CompanyStatus AS compStatus
+		,ID AS uid
+		,customId as customId
+		,CompanyName AS compName
+		,compEngName AS	compEngName
+		,companyShortName AS compShortName
+		,logoFileName AS logoFileName
+		,CompanyID AS registerId
+		,EstablishDate AS registerDate
+		,representative AS representative
+		,kind AS kind
+		,domain AS domain
+		,compAddress AS compAddress
+		,ResidentDate AS moveInDate
+		,EmployeeAmount	AS totalEmployees
+		,RegisterCapital AS registerCaptial
+		,actualCaptial AS actualCaptial
+		,compIntroduction AS compIntroduction
+		,CompanyWebURL AS compWebURL
+		,ProjContent AS prod
+		,OfficeLocation AS	room
+		,OfficeSize	AS roomArea
+		,OwnerName AS boss
+		,OwnerTelphone AS phone
+		,OwnerMobilePhone AS mobilePhone
+		,OwnerEmail AS email
+		,AdminOwnerName	AS adminContact
+		,AdminOwnerTelphone AS	adminContactPhone
+		,AdminOwnerMobilePhone AS adminContactMobilePhone
+		,AdminOwnerEmail AS	adminContactEmail
+		,contractNumber AS contractNumber
+		,contractStartDate	AS contractStartDate
+		,contractEndDate AS	contractEndDate
+		,innoKind AS innoKind
+		,Remark AS remark
+		,moveoutDate AS	moveOutDate
+		,moveOutAddesss	AS moveOutAddesss
+		,manager AS manager 
+		,reviewPaperUid as reviewPaperUid
+		,amId AS amId
+		,pmId AS pmId
+		,deposit as deposit
+		,bond as bond
+		from isi_company 
+		WHERE CompanyName=#{compName} 
+		order by customId desc
+		]]>
+	</select>
+	<!--
+
+		<select id="findAllCompanys" parameterType="hashmap"
+		resultType="Company"> <![CDATA[ select CompanyStatus AS compStatus ,ID
+		AS uid ,customId as customId ,CompanyName AS compName ,compEngName AS
+		compEngName ,companyShortName AS compShortName ,logoFileName AS
+		logoFileName ,CompanyID AS registerId ,EstablishDate AS registerDate
+		,representative AS representative ,kind AS kind ,domain AS domain
+		,compAddress AS compAddress ,ResidentDate AS moveInDate
+		,EmployeeAmount AS totalEmployees ,RegisterCapital AS registerCaptial
+		,actualCaptial AS actualCaptial ,compIntroduction AS compIntroduction
+		,CompanyWebURL AS compWebURL ,ProjContent AS prod ,OfficeLocation AS
+		room ,OfficeSize AS roomArea ,OwnerName AS boss ,OwnerTelphone AS
+		phone ,OwnerMobilePhone AS mobilePhone ,OwnerEmail AS email
+		,AdminOwnerName AS adminContact ,AdminOwnerTelphone AS
+		adminContactPhone ,AdminOwnerMobilePhone AS adminContactMobilePhone
+		,AdminOwnerEmail AS adminContactEmail ,contractNumber AS
+		contractNumber ,contractStartDate AS contractStartDate
+		,contractEndDate AS contractEndDate ,innoKind AS innoKind ,Remark AS
+		remark ,moveoutDate AS moveOutDate ,moveOutAddesss AS moveOutAddesss
+		,manager AS manager ,reviewPaperUid as reviewPaperUid ,amId AS amId
+		,pmId AS pmId ,deposit as deposit ,bond as bond from isi_company where
+		1=1 ]]> <if test="companyName != ''"> AND CompanyName LIKE
+		#{companyName} </if> <if test="compStatus != 'NONE'"> AND
+		CompanyStatus = #{compStatus} </if> <if test="compStatus == 'NONE'">
+		AND CompanyStatus = '進駐中' desc </if> order by customId desc </select>
+	-->
+	<!--
+		<select id="findAllCompanysByCondition"
+		parameterType="com.vo.VOCompListCondition" resultType="Company">
+		<![CDATA[ select CompanyStatus AS compStatus ,ID AS uid ,customId as
+		customId ,CompanyName AS compName ,compEngName AS compEngName
+		,companyShortName AS compShortName ,logoFileName AS logoFileName
+		,CompanyID AS registerId ,EstablishDate AS registerDate
+		,representative AS representative ,kind AS kind ,domain AS domain
+		,compAddress AS compAddress ,ResidentDate AS moveInDate
+		,EmployeeAmount AS totalEmployees ,RegisterCapital AS registerCaptial
+		,actualCaptial AS actualCaptial ,compIntroduction AS compIntroduction
+		,CompanyWebURL AS compWebURL ,ProjContent AS prod ,OfficeLocation AS
+		room ,OfficeSize AS roomArea ,OwnerName AS boss ,OwnerTelphone AS
+		phone ,OwnerMobilePhone AS mobilePhone ,OwnerEmail AS email
+		,AdminOwnerName AS adminContact ,AdminOwnerTelphone AS
+		adminContactPhone ,AdminOwnerMobilePhone AS adminContactMobilePhone
+		,AdminOwnerEmail AS adminContactEmail ,contractNumber AS
+		contractNumber ,contractStartDate AS contractStartDate
+		,contractEndDate AS contractEndDate ,innoKind AS innoKind ,Remark AS
+		remark ,moveoutDate AS moveOutDate ,moveOutAddesss AS moveOutAddesss
+		,manager AS manager ,reviewPaperUid as reviewPaperUid ,amId AS amId
+		,pmId AS pmId ,deposit as deposit ,bond as bond from isi_company where
+		1=1 ]]> <if test="compName != ''"> AND CompanyName LIKE #{compName}
+		</if> <if test="compStatus != 'NONE'"> AND CompanyStatus =
+		#{compStatus} </if> <if test="compStatus == 'NONE'"> AND CompanyStatus
+		= '進駐中' </if> order by customId desc </select>
+	-->
+	<!--
+		<select id="findAllCompanysByStatus" parameterType="string"
+		resultType="Company"> <![CDATA[ select CompanyStatus AS compStatus ,ID
+		AS uid ,customId as customId ,CompanyName AS compName ,compEngName AS
+		compEngName ,companyShortName AS compShortName ,logoFileName AS
+		logoFileName ,CompanyID AS registerId ,EstablishDate AS registerDate
+		,representative AS representative ,kind AS kind ,domain AS domain
+		,compAddress AS compAddress ,ResidentDate AS moveInDate
+		,EmployeeAmount AS totalEmployees ,RegisterCapital AS registerCaptial
+		,actualCaptial AS actualCaptial ,compIntroduction AS compIntroduction
+		,CompanyWebURL AS compWebURL ,ProjContent AS prod ,OfficeLocation AS
+		room ,OfficeSize AS roomArea ,OwnerName AS boss ,OwnerTelphone AS
+		phone ,OwnerMobilePhone AS mobilePhone ,OwnerEmail AS email
+		,AdminOwnerName AS adminContact ,AdminOwnerTelphone AS
+		adminContactPhone ,AdminOwnerMobilePhone AS adminContactMobilePhone
+		,AdminOwnerEmail AS adminContactEmail ,contractNumber AS
+		contractNumber ,contractStartDate AS contractStartDate
+		,contractEndDate AS contractEndDate ,innoKind AS innoKind ,Remark AS
+		remark ,moveoutDate AS moveOutDate ,moveOutAddesss AS moveOutAddesss
+		,manager AS manager ,reviewPaperUid as reviewPaperUid ,amId AS amId
+		,pmId AS pmId ,deposit as deposit ,bond as bond from isi_company where
+		CompanyStatus #{compStatus} ]]> order by customId desc </select>
+	-->
+	<insert id="insertCompany" parameterType="Company">
+		INSERT INTO isi_company
+		(CompanyStatus, ID,customId, CompanyName,
+		compEngName,companyShortName,logoFileName, CompanyID,
+		EstablishDate,
+		representative, kind, domain,compAddress, ResidentDate,
+		EmployeeAmount, RegisterCapital, actualCaptial,
+		compIntroduction,CompanyWebURL, ProjContent,
+		OfficeLocation,
+		OfficeSize,
+		OwnerName,OwnerTelphone, OwnerMobilePhone,OwnerEmail,
+		AdminOwnerName, AdminOwnerTelphone,
+		AdminOwnerMobilePhone,AdminOwnerEmail,
+		contractNumber,
+		contractStartDate, contractEndDate,
+		innoKind, Remark,moveoutDate,
+		moveOutAddesss,manager,
+		reviewPaperUid,amId,pmId,deposit,bond,
+		createdBy,createdTime,lastUpdateUser,lastUpdateTime)
+		VALUES
+		(
+		#{compStatus},#{uid},#{customId},#{compName},#{compEngName},#{compShortName},#{logoFileName},#{registerId}
+		,#{registerDate},#{representative},#{kind},#{domain},#{compAddress},#{moveInDate}
+		,#{totalEmployees},#{registerCaptial},#{actualCaptial}
+		,#{compIntroduction},#{compWebURL},#{prod}
+		,#{room},#{roomArea}
+		,#{boss},#{phone},#{mobilePhone},#{email}
+		,#{adminContact},#{adminContactPhone},#{adminContactMobilePhone},#{adminContactEmail}
+		,#{contractNumber},#{contractStartDate},#{contractEndDate}
+		,#{innoKind},#{remark},#{moveOutDate},#{moveOutAddesss},#{manager}
+		,#{reviewPaperUid},#{amId},#{pmId},#{deposit},#{bond}
+		,#{createdBy},#{createdTime},#{lastUpdateUser},#{lastUpdateTime}
+		)
+	</insert>
+
+
+	<!--
+		<update id="updateCompIdOfCompanyTable"
+		parameterType="com.vo.VOChangeId"> <![CDATA[ UPDATE isi_company SET
+		ID=#{newId} ,CompanyStatus='進駐中' where ID=#{oldId} ]]> </update>
+	-->
+	<update id="updateCompStatus" parameterType="hashmap">
+		<![CDATA[
+		UPDATE isi_company SET
+		CompanyStatus=#{compStatus}		
+		where ID=#{compId}
+		]]>
+	</update>
+
+
+
+
+	<update id="updateCompany" parameterType="Company">
+	<![CDATA[
+		UPDATE
+		ISI_COMPANY SET
+		CompanyStatus=#{compStatus}
+		,customId=#{customId}
+		,CompanyName=#{compName}
+		,compEngName=#{compEngName}
+		,companyShortName=#{compShortName}
+		,logoFileName=#{logoFileName}
+		,CompanyID=#{registerId}
+		,EstablishDate=#{registerDate}
+		,representative=#{representative}
+		,kind=#{kind}
+		,domain=#{domain}
+		,compAddress=#{compAddress}
+		,ResidentDate=#{moveInDate}
+		,EmployeeAmount=#{totalEmployees}
+		,RegisterCapital=#{registerCaptial}
+		,actualCaptial=#{actualCaptial}
+		,compIntroduction=#{compIntroduction}
+		,CompanyWebURL=#{compWebURL}
+		,ProjContent=#{prod}
+		,OfficeLocation=#{room}
+		,OfficeSize=#{roomArea}
+		,OwnerName=#{boss}
+		,OwnerTelphone=#{phone}
+		,OwnerMobilePhone=#{mobilePhone}
+		,OwnerEmail=#{email}
+		,AdminOwnerName=#{adminContact}
+		,AdminOwnerTelphone=#{adminContactPhone}
+		,AdminOwnerMobilePhone=#{adminContactMobilePhone}
+		,AdminOwnerEmail=#{adminContactEmail}
+		,contractNumber=#{contractNumber}
+		,contractStartDate=#{contractStartDate}
+		,contractEndDate=#{contractEndDate}
+		,innoKind=#{innoKind}
+		,Remark=#{remark}
+		,moveoutDate=#{moveOutDate}
+		,moveOutAddesss=#{moveOutAddesss}
+		,manager=#{manager}
+		,reviewPaperUid=#{reviewPaperUid}
+		,amId=#{amId}
+		,pmId=#{pmId}
+		,deposit=#{deposit}
+		,bond=#{bond}
+		where ID=#{uid}
+		]]>
+	</update>
+	<!--
+
+
+		<select id="findTotalCompanysByCondition"
+		parameterType="com.vo.VOCompListCondition" resultType="int"> <![CDATA[
+		select count(1) from isi_company where 1=1 ]]> <if test="compName !=
+		''"> AND CompanyName LIKE #{compName} </if> <if test="compStatus !=
+		'NONE'"> AND CompanyStatus = #{compStatus} </if> <if test="compStatus
+		== 'NONE'"> AND CompanyStatus = '進駐中' </if> </select>
+	-->
+</mapper>

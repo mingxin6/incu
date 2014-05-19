@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="companyUserList.htm">
+					companyUserListController
+                </prop>
+
+				<prop key="companyUserView.htm">
+					companyUserViewController
+                </prop>
+
+				<prop key="companyUserAdd.htm">
+					companyUserAddController
+                </prop>
+
+
+				<prop key="/companyUserEdit.htm">
+					companyUserEditController
+                </prop>
+
+				<prop key="/companyUserDelete.htm">
+					companyUserDeleteController
+                </prop>
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="companyUserListController"
+		class="com.mod.companyUser.controller.CompanyUserListController">
+		<property name="formView" value="companyUserList" />
+		<property name="successView" value="companyUserList" />
+	</bean>
+
+	<bean id="companyUserViewController"
+		class="com.mod.companyUser.controller.CompanyUserViewController">
+	</bean>
+
+	<bean id="companyUserAddController" class="com.mod.companyUser.controller.CompanyUserAddController">
+		<property name="validator">
+			<bean class="com.mod.companyUser.controller.CompanyUserValidator" />
+		</property>
+	</bean>
+
+	<bean id="companyUserEditController"
+		class="com.mod.companyUser.controller.CompanyUserEditController">
+		<property name="validator">
+			<bean class="com.mod.companyUser.controller.CompanyUserValidator" />
+		</property>
+	</bean>
+
+	<bean id="companyUserDeleteController"
+		class="com.mod.companyUser.controller.CompanyUserDeleteController">
+	</bean>
+
+
+</beans>

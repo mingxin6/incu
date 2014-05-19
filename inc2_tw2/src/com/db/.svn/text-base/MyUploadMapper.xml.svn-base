@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyUploadMapper">
+
+	<select id="findUploadedFiles" parameterType="com.vo.VOFileCondition"
+		resultType="com.vo.VOFile">
+		<![CDATA[
+		select 
+		uID AS uid
+		,recordID AS linkedObjId
+		,modifiedFileName AS modifiedFileName
+		,originalFileName AS originalFileName
+		from uploadedfiles 
+		where  recordID= #{linkedObjId}
+		]]>
+		<if test="type != ''">
+			AND type = #{type}
+			</if>
+	</select>
+
+	<insert id="insertUploadedFileInfo" parameterType="com.vo.VOFile">
+		<![CDATA[
+		INSERT INTO uploadedfiles
+		(uID, recordID, modifiedFileName, originalFileName,type)
+		VALUES
+		(#{uid},#{linkedObjId},#{modifiedFileName},#{originalFileName},#{type})
+		]]>
+	</insert>
+
+
+	<insert id="insertUploadedCompanyFileInfo" parameterType="com.vo.VOFile">
+		<![CDATA[
+		INSERT INTO uploadedfiles
+		(uID, recordID, modifiedFileName, originalFileName,type)
+		VALUES
+		(#{uid},#{linkedObjId},#{modifiedFileName},#{originalFileName},#{type})
+		]]>
+	</insert>
+
+	<delete id="deleteUploadedFileInfo" parameterType="string">
+		<![CDATA[
+		DELETE FROM uploadedfiles where modifiedFileName =#{deletedFile}
+		]]>
+	</delete>
+
+	<update id="updateCompIdOfUploadedFilesTable" parameterType="com.vo.VOChangeId">
+		<![CDATA[
+		UPDATE uploadedfiles SET
+		recordID=#{newId}		
+		where recordID=#{oldId}
+		]]>
+	</update>
+
+</mapper>

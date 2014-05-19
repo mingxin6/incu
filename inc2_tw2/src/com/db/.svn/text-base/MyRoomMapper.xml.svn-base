@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyRoomMapper">
+
+
+
+<select id="findRoomsByWhereString" parameterType="com.db.DbWhere" resultType="Room">
+		<![CDATA[
+		select 
+		uid as uid
+		,floor AS floor
+		,roomNo AS roomNo
+		,compId AS compId
+		,compCustomid as compCustomid
+		,compName AS compName
+		,roomArea AS roomArea
+		,status AS status
+		,remark AS remark
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from Room
+		where ${where}
+		]]>
+	</select>
+	
+
+	<select id="findAllRooms" resultType="Room">
+		<![CDATA[
+		select 
+		uid as uid
+		,floor AS floor
+		,roomNo AS roomNo
+		,compId AS compId
+		,compCustomid as compCustomid
+		,compName AS compName
+		,roomArea AS roomArea
+		,status AS status
+		,remark AS remark
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from Room
+		order by floor,roomNo
+		]]>
+	</select>
+
+	<select id="findRoomById" parameterType="string" resultType="Room">
+		<![CDATA[
+		select
+		uid as uid
+		,floor AS floor
+		,roomNo AS roomNo
+		,compId AS compId
+		,compCustomid as compCustomid
+		,compName AS compName
+		,roomArea AS roomArea
+		,status AS status
+		,remark AS remark
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from Room
+		WHERE uid=#{uid}
+		]]>
+	</select>
+
+	<select id="findRoomByCompId" parameterType="string" resultType="Room">
+		<![CDATA[
+		select
+		uid as uid
+		,floor AS floor
+		,roomNo AS roomNo
+		,compId AS compId
+		,compCustomid as compCustomid
+		,compName AS compName
+		,roomArea AS roomArea
+		,status AS status
+		,remark AS remark
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from Room
+		WHERE compId=#{compId}
+		]]>
+	</select>
+
+	<insert id="insertRooms" parameterType="Room">
+		<![CDATA[
+		INSERT INTO Room
+		(uID, floor,roomNo,compId,compCustomid,compName,roomArea
+		,status,remark,lastUpdateUser,lastUpdateTime)
+		VALUES
+		(
+		#{uid},#{floor},#{roomNo},#{compId},#{compCustomid},#{compName},#{roomArea}
+		,#{status},#{remark},#{lastUpdateUser},#{lastUpdateTime}
+		)
+		]]>
+	</insert>
+
+
+	<update id="updateRoom" parameterType="Room">
+		<![CDATA[
+		UPDATE Room SET
+		floor=#{floor}
+		,roomNo=#{roomNo}
+		,compId=#{compId}
+		,compCustomid=#{compCustomid}
+		,compName=#{compName}
+		,roomArea=#{roomArea}
+		,status=#{status}
+		,remark=#{remark}
+		,lastUpdateUser=#{lastUpdateUser}	
+		,lastUpdateTime=#{lastUpdateTime}
+		where uid=#{uid}
+		]]>
+	</update>
+
+	<delete id="deleteRoom" parameterType="string">
+		<![CDATA[
+		DELETE FROM Room where uid =#{uid}
+		]]>
+	</delete>
+
+</mapper>

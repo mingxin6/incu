@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+
+			<props>
+
+				<prop key="/todo.htm">
+					TodoListController
+                </prop>
+
+				<!--Begin of 共享资源 -->
+
+				<prop key="/sharedResourcesAdd.htm">
+					sharedResourcesAddController
+                </prop>
+				<prop key="/userSharedResources.htm">
+					sharedResourcesAddController
+                </prop>
+
+				<!-- End of 共享资源 -->
+
+
+				<prop key="/fileupload.htm">
+					fileUploadController
+                </prop>
+
+				<prop key="/filedownload.htm">
+					fileDownloadController
+                </prop>
+				<prop key="/filedelete.htm">
+					fileDeleteController
+                </prop>
+
+				<!-- Begin of 园区部门信息-->
+				<prop key="/managementDeptList.htm">
+					managementDeptListController
+                </prop>
+				<prop key="/managementDeptAdd.htm">
+					managementDeptAddController
+                </prop>
+
+				<prop key="/managementDeptEdit.htm">
+					managementDeptEditController
+                </prop>
+
+				<prop key="/userManagementDeptList.htm">
+					managementDeptListController
+                </prop>
+				<!-- End of 园区部门信息 -->
+				<!-- Begin of 园区企业介绍 -->
+				<prop key="/companyIntroList.htm">
+					companyIntroListController
+                </prop>
+				<prop key="/companyIntroEdit.htm">
+					companyIntroEditController
+                </prop>
+
+				<!-- End of 园区企业介绍 -->
+				<!-- Begin of 园区交流活动-->
+				<prop key="/activityList.htm">
+					activityListController
+                </prop>
+				<prop key="/activityEdit.htm">
+					activityEditController
+                </prop>
+				<prop key="/activityAdd.htm">
+					activityAddController
+                </prop>
+				<prop key="/actVisitorAdd.htm">
+					actVisitorAddController
+                </prop>
+				<prop key="/userActivityList.htm">
+					activityListController
+                </prop>
+				<!-- End of 园区交流活动-->
+
+			</props>
+		</property>
+
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+
+	</bean>
+
+
+	<bean id="TodoListController" class="com.mod.todo.controller.TodoListController">
+		<property name="formView" value="todoList" />
+	</bean>
+
+
+
+	<!-- Begin of 园区部门信息 -->
+	<bean id="managementDeptListController"
+		class="com.mkyong.customer.controller.ManagementDeptListController">
+		<!--
+			<property name="formView" value="managementDeptList"/> <property
+			name="successView" value="managementDeptList"/>
+		-->
+	</bean>
+	<bean id="managementDeptAddController"
+		class="com.mkyong.customer.controller.ManagementDeptAddController">
+		<property name="formView" value="managementDeptAdd" />
+		<property name="successView" value="managementDeptList" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.ManagementDeptValidator" />
+		</property>
+	</bean>
+	<bean id="managementDeptEditController"
+		class="com.mkyong.customer.controller.ManagementDeptEditController">
+		<property name="formView" value="managementDeptEdit" />
+		<property name="successView" value="managementDeptList" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.ManagementDeptValidator" />
+		</property>
+	</bean>
+
+
+	<!-- End of 园区部门信息 -->
+	<!-- Begin of 园区企业介绍 -->
+	<bean id="companyIntroListController" class="com.mod.company.controller.CompanyIntroListController">
+
+	</bean>
+	<bean id="companyIntroEditController" class="com.mod.company.controller.CompanyIntroEditController">
+		<property name="formView" value="companyIntroEdit" />
+		<property name="successView" value="companyIntroList" />
+	</bean>
+	<!-- End of 园区企业介绍 -->
+
+	<!-- Begin of 园区交流活动 -->
+	<bean id="activityListController" class="com.mkyong.customer.controller.ActivityListController">
+
+	</bean>
+	<bean id="activityAddController" class="com.mkyong.customer.controller.ActivityAddController">
+		<property name="formView" value="activityAdd" />
+		<property name="successView" value="activityList" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.ActivityValidator" />
+		</property>
+	</bean>
+	<bean id="activityEditController" class="com.mkyong.customer.controller.ActivityEditController">
+		<property name="formView" value="activityEdit" />
+		<property name="successView" value="activityList" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.ActivityValidator" />
+		</property>
+	</bean>
+
+	<bean id="actVisitorAddController" class="com.mkyong.customer.controller.ActVisitorAddController">
+		<!--
+			<property name="formView" value="activityAdd"/> <property
+			name="successView" value="activityList"/>
+		-->
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.ActVisitorValidator" />
+		</property>
+
+	</bean>
+	<!-- End of 园区交流活动 -->
+
+	<!-- Begin of 资源共享 -->
+
+	<bean id="sharedResourcesAddController"
+		class="com.mkyong.customer.controller.SharedResourcesAddController">
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.SharedResourcesValidator" />
+		</property>
+	</bean>
+
+	<!-- End of 资源共享 -->
+
+
+
+
+	<bean id="fileUploadController" class="com.mkyong.customer.controller.FileUploadController">
+	</bean>
+	<bean id="fileDownloadController" class="com.mkyong.customer.controller.FileDownloadController">
+	</bean>
+	<bean id="fileDeleteController" class="com.mkyong.customer.controller.FileDeleteController">
+	</bean>
+	<bean name="urlFilenameViewController"
+		class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
+
+	<!-- 上传 下载 Resolver -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8" />
+
+	</bean>
+</beans>

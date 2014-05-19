@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="parkingLotList.htm">
+					parkingLotListController
+                </prop>
+
+				<prop key="parkingLotView.htm">
+					parkingLotViewController
+                </prop>
+
+				<prop key="parkingLotAdd.htm">
+					parkingLotAddController
+                </prop>
+
+
+				<prop key="/parkingLotEdit.htm">
+					parkingLotEditController
+                </prop>
+
+				<prop key="/parkingLotDelete.htm">
+					parkingLotDeleteController
+                </prop>
+				<prop key="/parkingLotClear.htm">
+					parkingLotClearController
+                </prop>
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="parkingLotListController" class="com.mod.parkingLot.controller.ParkingLotListController">
+		<property name="formView" value="parkingLotList" />
+		<property name="successView" value="parkingLotList" />
+	</bean>
+
+	<bean id="parkingLotViewController" class="com.mod.parkingLot.controller.ParkingLotViewController">
+	</bean>
+
+	<bean id="parkingLotAddController" class="com.mod.parkingLot.controller.ParkingLotAddController">
+		<property name="validator">
+			<bean class="com.mod.parkingLot.controller.ParkingLotValidator" />
+		</property>
+	</bean>
+
+	<bean id="parkingLotEditController" class="com.mod.parkingLot.controller.ParkingLotEditController">
+	</bean>
+
+	<bean id="parkingLotDeleteController"
+		class="com.mod.parkingLot.controller.ParkingLotDeleteController">
+	</bean>
+
+	<bean id="parkingLotClearController" class="com.mod.parkingLot.controller.ParkingLotClearController">
+	</bean>
+
+</beans>

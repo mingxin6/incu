@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="teacherList.htm">
+					teacherListController
+                </prop>
+
+				<prop key="teacherView.htm">
+					teacherViewController
+                </prop>
+
+				<prop key="teacherAdd.htm">
+					teacherAddController
+                </prop>
+
+
+				<prop key="/teacherEdit.htm">
+					teacherEditController
+                </prop>
+
+				<prop key="/teacherDelete.htm">
+					teacherDeleteController
+                </prop>
+
+				<prop key="teacherRequestList.htm">
+					teacherRequestListController
+                </prop>
+
+				<prop key="teacherRequestView.htm">
+					teacherRequestViewController
+                </prop>
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="teacherListController" class="com.mod.teacher.controller.TeacherListController">
+		<property name="formView" value="teacherList" />
+		<property name="successView" value="teacherList" />
+	</bean>
+
+	<bean id="teacherViewController" class="com.mod.teacher.controller.TeacherViewController">
+	</bean>
+
+	<bean id="teacherRequestViewController" class="com.mod.teacher.controller.TeacherRequestViewController">
+	</bean>
+
+	<bean id="teacherAddController" class="com.mod.teacher.controller.TeacherAddController">
+		<property name="validator">
+			<bean class="com.mod.teacher.controller.TeacherValidator" />
+		</property>
+	</bean>
+
+	<bean id="teacherEditController" class="com.mod.teacher.controller.TeacherEditController">
+		<property name="validator">
+			<bean class="com.mod.teacher.controller.TeacherEditValidator" />
+		</property>
+	</bean>
+
+	<bean id="teacherDeleteController" class="com.mod.teacher.controller.TeacherDeleteController">
+	</bean>
+	<bean id="teacherRequestListController" class="com.mod.teacher.controller.TeacherRequestListController">
+		<property name="formView" value="teacherRequestList" />
+		<property name="successView" value="teacherRequestList" />
+	</bean>
+
+
+</beans>

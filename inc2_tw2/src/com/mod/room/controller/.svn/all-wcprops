@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/mod/room/controller
+END
+RoomValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/inc2_src/!svn/ver/67/tag1/tpe/inc2_tw/src/com/mod/room/controller/RoomValidator.java
+END
+RoomDeleteController.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/mod/room/controller/RoomDeleteController.java
+END
+MySQLAccessRoom.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/inc2_src/!svn/ver/51/tag1/tpe/inc2_tw/src/com/mod/room/controller/MySQLAccessRoom.java
+END
+RoomEditController.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/mod/room/controller/RoomEditController.java
+END
+RoomClearController.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/mod/room/controller/RoomClearController.java
+END
+RoomAddController.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/mod/room/controller/RoomAddController.java
+END
+RoomViewController.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/mod/room/controller/RoomViewController.java
+END
+RoomListController.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/mod/room/controller/RoomListController.java
+END

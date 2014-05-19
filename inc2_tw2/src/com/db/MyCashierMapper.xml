@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyCashierMapper">
+
+	<select id="findAllCashiers" resultType="Cashier">
+		<![CDATA[
+		select 
+		uid as uid
+		,name AS name
+		,email AS email
+		,phone AS phone
+		,status AS status
+		,title AS title
+		,unit AS	unit
+		,remark AS remark
+		,status AS status
+		,userLoginId AS userLoginId
+		,userLoginPwd AS userLoginPwd
+		,createdBy AS createdBy
+		,createdTime AS createdTime
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from Cashier
+		]]>
+	</select>
+
+	<select id="findCashierById" parameterType="string" resultType="Cashier">
+		<![CDATA[
+		select
+		uid as uid
+		,name AS name
+		,email AS email
+		,phone AS phone
+		,status AS status
+		,title AS title
+		,unit AS	unit
+		,remark AS remark
+		,status AS status
+		,userLoginId AS userLoginId
+		,userLoginPwd AS userLoginPwd
+		,createdBy AS createdBy
+		,createdTime AS createdTime
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from Cashier
+		WHERE uid=#{uid}
+		]]>
+	</select>
+		
+	<insert id="insertCashiers" parameterType="Cashier">
+		<![CDATA[
+		INSERT INTO Cashier(
+		uID, name,email,phone, title,unit,remark,status
+		,userLoginId, userLoginPwd
+		,createdBy,createdTime,lastUpdateUser,lastUpdateTime
+		)VALUES(
+		#{uid},#{name},#{email},#{phone},#{title},#{unit},#{remark},#{status}
+		,#{userLoginId},#{userLoginPwd}
+		,#{createdBy},#{createdTime},#{lastUpdateUser},#{lastUpdateTime}
+		)
+		]]>
+	</insert>
+
+
+	<update id="updateCashier" parameterType="Cashier">
+		<![CDATA[
+		UPDATE Cashier SET
+		name=#{name}
+		,email=#{email}
+		,phone=#{phone}
+		,status=#{status}
+		,title=#{title}	
+		,unit=#{unit}
+		,remark=#{remark}
+		,userLoginId=#{userLoginId}
+		,userLoginPwd=#{userLoginPwd}
+		,lastUpdateUser=#{lastUpdateUser}
+		,lastUpdateTime=#{lastUpdateTime}
+		where uid=#{uid}
+		]]>
+	</update>
+
+<!--
+	<delete id="deleteCashier" parameterType="Cashier">
+		<![CDATA[
+		UPDATE Cashier SET
+		,status=#{status}
+		,lastUpdateUser=#{lastUpdateUser}
+		,lastUpdateTime=#{lastUpdateTime}
+		where uid=#{uid}
+		]]>
+	</delete>
+	
+	 
+	<delete id="deleteCashier" parameterType="string">
+		<![CDATA[
+		DELETE FROM Cashier where uid =#{uid}
+		]]>
+	</delete>
+-->
+</mapper>

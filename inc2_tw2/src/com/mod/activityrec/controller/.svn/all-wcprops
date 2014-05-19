@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mod/activityrec/controller
+END
+ActivityRecEditController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mod/activityrec/controller/ActivityRecEditController.java
+END
+ActivityRecAddController.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mod/activityrec/controller/ActivityRecAddController.java
+END
+ActivityRecViewController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mod/activityrec/controller/ActivityRecViewController.java
+END
+ActivityRecListController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mod/activityrec/controller/ActivityRecListController.java
+END
+MySQLAccessActivityRec.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/mod/activityrec/controller/MySQLAccessActivityRec.java
+END

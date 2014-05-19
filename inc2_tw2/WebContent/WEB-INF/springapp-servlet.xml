@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/login.htm">
+					loginController
+                </prop>
+
+				<prop key="/login_CN2.htm">
+					loginController_CN2
+                </prop>
+
+				<prop key="/logout.htm">
+					logoutController
+                </prop>
+
+				<prop key="/blank.htm">
+					blankViewController
+                </prop>
+
+				<prop key="/adminMain.htm">
+					adminMainController
+                </prop>
+
+				<prop key="/businessMain.htm">
+					businessMainController
+                </prop>
+
+
+
+				<prop key="warning.htm">
+					warningController
+                </prop>
+
+				<prop key="/serviceResourceDataList.htm">
+					serviceResourceDataListController
+                </prop>
+				<prop key="/serviceResourceDataView.htm">
+					serviceResourceDataViewController
+                </prop>
+				<prop key="/serviceResourceDataEdit.htm">
+					serviceResourceDataEditController
+                </prop>
+				<prop key="/serviceResourceDataAdd.htm">
+					serviceResourceDataAddController
+                </prop>
+				<prop key="/serviceResourceDataDel.htm">
+					serviceResourceDataDelController
+                </prop>
+
+				<prop key="/serviceResourceAcceptList.htm">
+					serviceResourceAcceptListController
+                </prop>
+				<prop key="/serviceResourceAcceptView.htm">
+					serviceResourceAcceptViewController
+                </prop>
+				<prop key="/serviceResourceAcceptEdit.htm">
+					serviceResourceAcceptEditController
+                </prop>
+				<prop key="/serviceResourceAcceptAdd.htm">
+					serviceResourceAcceptAddController
+                </prop>
+				<prop key="/serviceResourceAcceptDel.htm">
+					serviceResourceAcceptDelController
+                </prop>
+
+				<prop key="/userServiceResourceAcceptList.htm">
+					userServiceResourceAcceptListController
+                </prop>
+				<prop key="/userServiceResourceAcceptView.htm">
+					userServiceResourceAcceptViewController
+                </prop>
+				<prop key="/userServiceResourceAcceptEdit.htm">
+					userServiceResourceAcceptEditController
+                </prop>
+				<prop key="/userServiceResourceAcceptAdd.htm">
+					userServiceResourceAcceptAddController
+                </prop>
+				<prop key="/userServiceResourceAcceptDel.htm">
+					userServiceResourceAcceptDelController
+                </prop>
+
+
+				<prop key="/customer.htm">
+					customerFormController
+                </prop>
+
+
+
+
+
+				<prop key="/user.htm">
+					userAccountListController
+                </prop>
+				<prop key="/userEdit.htm">
+					userAccountEditController
+                </prop>
+				<prop key="/userNew.htm">
+					userAccountNewController
+                </prop>
+
+				<prop key="/myHistMonthlyRpt.htm">
+					myHistoryMonthlyReportController
+                </prop>
+				<prop key="/myMonthlyReportNew.htm">
+					myNewMonthlyReportController
+                </prop>
+
+				<prop key="/MonthlyReport.htm">
+					MonthlyReportController
+                </prop>
+				<prop key="/ExcelController.htm">
+					ExcelController
+                </prop>
+				<prop key="/QuarterlyRpt.htm">
+					QuarterlyReportController
+                </prop>
+				<prop key="/QuarterlyConfirmedRpt.htm">
+					QuarterlyReportConfirmedController
+                </prop>
+				<prop key="/YearlyRpt.htm">
+					YearlyReportController
+                </prop>
+				<prop key="/YearlyConfirmedRpt.htm">
+					YearlyReportConfirmedController
+                </prop>
+
+				<prop key="/theMonthReports.htm">
+					MonthlyReportOfCompsController
+                </prop>
+				<prop key="/MonthlyReportOfCompsConfirmed.htm">
+					MonthlyReportOfCompsConfirmedController
+                </prop>
+				<prop key="/theQuarterReports.htm">
+					QuarterlyReportOfCompsController
+                </prop>
+				<prop key="/theYearReports.htm">
+					YearlyReportOfCompsController
+                </prop>
+				<prop key="/transferMonthRpt.htm">
+					MonthlyReportTransferController
+                </prop>
+
+				<prop key="/changePwd.htm">
+					ChangePasswordController
+                </prop>
+
+				<prop key="/problemsList.htm">
+					ProblemsListController
+                </prop>
+				<prop key="/problemsAdd.htm">
+					ProblemsAddController
+                </prop>
+				<prop key="/problemsEdit.htm">
+					ProblemsEditController
+                </prop>
+				<prop key="/problemsView.htm">
+					ProblemsViewController
+                </prop>
+
+				<prop key="/providesList.htm">
+					ProvidesListController
+                </prop>
+				<prop key="/providesAdd.htm">
+					ProvidesAddController
+                </prop>
+				<prop key="/providesEdit.htm">
+					ProvidesEditController
+                </prop>
+				<prop key="/providesView.htm">
+					ProvidesViewController
+                </prop>
+
+				<prop key="/downLoadFile.htm">
+					DownLoadController
+                </prop>
+
+				<prop key="/SharedThingList.htm">
+					SharedThingListController
+                </prop>
+				<prop key="/SharedThingAdd.htm">
+					SharedThingAddController
+                </prop>
+				<prop key="/SharedThingView.htm">
+					SharedThingViewController
+                </prop>
+				<prop key="/SharedThingEdit.htm">
+					SharedThingEditController
+                </prop>
+			</props>
+		</property>
+
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+
+
+	<bean id="loginController" class="com.mkyong.customer.controller.LoginController">
+		<property name="formView" value="login" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.LoginValidator" />
+		</property>
+	</bean>
+
+	<bean id="loginController_CN2" class="com.mkyong.customer.controller.LoginController_CN">
+		<property name="formView" value="login_CN2" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.LoginValidator" />
+		</property>
+	</bean>
+
+	<bean id="logoutController" class="com.mkyong.customer.controller.LogoutController">
+	</bean>
+
+	<bean id="ChangePasswordController" class="com.mkyong.customer.controller.ChangePasswordController">
+		<property name="formView" value="changePwdForm" />
+		<property name="successView" value="changePwdOk" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.ChangePasswordValidator" />
+		</property>
+	</bean>
+
+
+	<bean id="blankViewController" class="com.mkyong.customer.controller.BlankViewController">
+	</bean>
+
+	<bean id="businessMainController" class="com.mkyong.customer.controller.BusinessMainController">
+	</bean>
+
+	<bean id="adminMainController" class="com.mkyong.customer.controller.AdminMainController">
+		<property name="formView" value="adminMain" />
+		<property name="successView" value="adminMain" />
+	</bean>
+
+	<bean id="warningController" class="com.mod.teacher.controller.TeacherListController">
+		<property name="formView" value="warning" />
+		<property name="successView" value="warning" />
+	</bean>
+
+	<bean id="SharedThingListController"
+		class="com.mkyong.customer.controller.SharedThingListController">
+		<property name="formView" value="SharedThingList" />
+		<property name="successView" value="SharedThingList" />
+	</bean>
+
+	<bean id="SharedThingViewController"
+		class="com.mkyong.customer.controller.SharedThingViewController">
+		<property name="formView" value="SharedThingView" />
+		<property name="successView" value="SharedThingView" />
+	</bean>
+
+	<bean id="SharedThingEditController"
+		class="com.mkyong.customer.controller.SharedThingEditController">
+		<property name="formView" value="SharedThingEdit" />
+		<property name="successView" value="redirect:SharedThingView.htm" />
+
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.SharedThingValidator" />
+		</property>
+
+	</bean>
+
+
+	<bean id="SharedThingAddController" class="com.mkyong.customer.controller.SharedThingAddController">
+		<property name="formView" value="SharedThingAdd" />
+		<property name="successView" value="SharedThingAdd" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.SharedThingValidator" />
+		</property>
+	</bean>
+
+
+
+	<bean id="serviceResourceDataListController"
+		class="com.mkyong.customer.controller.ServiceResourceDataListController">
+		<property name="formView" value="serviceResourceDataList" />
+		<property name="successView" value="serviceResourceDataList" />
+	</bean>
+
+	<bean id="serviceResourceDataViewController"
+		class="com.mkyong.customer.controller.ServiceResourceDataViewController">
+		<property name="formView" value="serviceResourceDataView" />
+		<property name="successView" value="serviceResourceDataView" />
+
+	</bean>
+
+	<bean id="serviceResourceDataEditController"
+		class="com.mkyong.customer.controller.ServiceResourceDataEditController">
+		<property name="formView" value="serviceResourceDataEdit" />
+		<property name="successView" value="serviceResourceDataView" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.ServiceResourceDataValidator" />
+		</property>
+	</bean>
+
+	<bean id="serviceResourceDataAddController"
+		class="com.mkyong.customer.controller.ServiceResourceDataAddController">
+		<property name="formView" value="serviceResourceDataAdd" />
+		<property name="successView" value="serviceResourceDataAdd" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.ServiceResourceDataValidator" />
+		</property>
+	</bean>
+
+	<bean id="serviceResourceDataDelController"
+		class="com.mkyong.customer.controller.ServiceResourceDataDelController">
+		<property name="formView" value="serviceResourceDataDel" />
+		<property name="successView" value="serviceResourceDataDel" />
+	</bean>
+
+
+
+	<bean id="serviceResourceAcceptListController"
+		class="com.mkyong.customer.controller.ServiceResourceAcceptListController">
+		<property name="formView" value="serviceResourceAcceptList" />
+		<property name="successView" value="serviceResourceAcceptList" />
+	</bean>
+
+	<bean id="serviceResourceAcceptViewController"
+		class="com.mkyong.customer.controller.ServiceResourceAcceptViewController">
+		<property name="formView" value="serviceResourceAcceptView" />
+		<property name="successView" value="serviceResourceAcceptView" />
+	</bean>
+
+	<bean id="serviceResourceAcceptEditController"
+		class="com.mkyong.customer.controller.ServiceResourceAcceptEditController">
+		<property name="formView" value="serviceResourceAcceptEdit" />
+		<property name="successView" value="serviceResourceAcceptView" />
+	</bean>
+
+	<bean id="serviceResourceAcceptAddController"
+		class="com.mkyong.customer.controller.ServiceResourceAcceptAddController">
+		<property name="formView" value="serviceResourceAcceptAdd" />
+		<property name="successView" value="serviceResourceAcceptAdd" />
+	</bean>
+
+	<bean id="serviceResourceAcceptDelController"
+		class="com.mkyong.customer.controller.ServiceResourceAcceptDelController">
+		<property name="formView" value="serviceResourceAcceptDel" />
+		<property name="successView" value="serviceResourceAcceptDel" />
+	</bean>
+
+
+
+	<bean id="userServiceResourceAcceptListController"
+		class="com.mkyong.customer.controller.UserServiceResourceAcceptListController">
+		<property name="formView" value="userServiceResourceAcceptList" />
+		<property name="successView" value="userServiceResourceAcceptList" />
+	</bean>
+
+	<bean id="userServiceResourceAcceptViewController"
+		class="com.mkyong.customer.controller.UserServiceResourceAcceptViewController">
+		<property name="formView" value="userServiceResourceAcceptView" />
+		<property name="successView" value="userServiceResourceAcceptView" />
+	</bean>
+
+	<bean id="userServiceResourceAcceptEditController"
+		class="com.mkyong.customer.controller.UserServiceResourceAcceptEditController">
+		<property name="formView" value="userServiceResourceAcceptEdit" />
+		<property name="successView" value="userServiceResourceAcceptView" />
+		<property name="validator">
+			<bean
+				class="com.mkyong.customer.validator.UserServiceResourceAcceptAddValidator" />
+		</property>
+	</bean>
+
+	<bean id="userServiceResourceAcceptAddController"
+		class="com.mkyong.customer.controller.UserServiceResourceAcceptAddController">
+		<property name="formView" value="userServiceResourceAcceptAdd" />
+		<property name="successView" value="userServiceResourceAcceptAdd" />
+		<property name="validator">
+			<bean
+				class="com.mkyong.customer.validator.UserServiceResourceAcceptAddValidator" />
+		</property>
+	</bean>
+
+	<bean id="userServiceResourceAcceptDelController"
+		class="com.mkyong.customer.controller.UserServiceResourceAcceptDelController">
+		<property name="formView" value="userServiceResourceAcceptDel" />
+		<property name="successView" value="userServiceResourceAcceptDel" />
+	</bean>
+
+
+	<bean id="userAccountListController"
+		class="com.mkyong.customer.controller.UserAccountListController">
+		<property name="formView" value="UserAccountList" />
+		<property name="successView" value="UserAccountList" />
+	</bean>
+
+	<bean id="userAccountEditController"
+		class="com.mkyong.customer.controller.UserAccountEditController">
+		<property name="formView" value="UserAccountEditForm" />
+		<property name="successView" value="redirect:user.htm" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.UserAccountValidator" />
+		</property>
+	</bean>
+
+	<bean id="userAccountNewController" class="com.mkyong.customer.controller.UserAccountNewController">
+		<property name="formView" value="UserAccountNewForm" />
+		<property name="successView" value="redirect:user.htm" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.UserAccountNewValidator" />
+		</property>
+	</bean>
+
+	<bean id="myHistoryMonthlyReportController"
+		class="com.mkyong.customer.controller.MyHistoryMonthlyReportController">
+		<property name="formView" value="myHistoryMonthlyReportForm" />
+		<property name="successView" value="myHistoryMonthlyReportForm" />
+	</bean>
+
+
+	<bean id="myNewMonthlyReportController"
+		class="com.mkyong.customer.controller.MyNewMonthlyReportController">
+		<property name="formView" value="myNewMonthlyReportForm" />
+		<property name="successView" value="redirect:myHistMonthlyRpt.htm" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.NewMonthlyReportValidator" />
+		</property>
+	</bean>
+
+	<bean id="MonthlyReportController" class="com.mkyong.customer.controller.MonthlyReportController">
+		<property name="formView" value="myHistoryMonthlyAggregatedForm" />
+		<property name="successView" value="myHistoryMonthlyAggregatedForm" />
+	</bean>
+	<bean id="QuarterlyReportController"
+		class="com.mkyong.customer.controller.QuarterlyReportController">
+	</bean>
+	<bean id="YearlyReportController" class="com.mkyong.customer.controller.YearlyReportController">
+	</bean>
+	<bean id="QuarterlyReportConfirmedController"
+		class="com.mkyong.customer.controller.QuarterlyReportConfirmedController">
+		<property name="formView" value="myHistoryQuarterlyConfirmedForm" />
+		<property name="successView" value="myHistoryQuarterlyConfirmedForm" />
+	</bean>
+	<bean id="YearlyReportConfirmedController"
+		class="com.mkyong.customer.controller.YearlyReportConfirmedController">
+		<property name="formView" value="myHistoryYearlyConfirmedForm" />
+		<property name="successView" value="myHistoryYearlyConfirmedForm" />
+	</bean>
+
+
+
+
+	<bean id="MonthlyReportOfCompsController" class="com.mkyong.customer.controller.MonthlyReportOfComps">
+	</bean>
+
+	<bean id="MonthlyReportOfCompsConfirmedController"
+		class="com.mkyong.customer.controller.MonthlyReportOfCompsConfirmedController">
+	</bean>
+
+
+	<bean id="QuarterlyReportOfCompsController"
+		class="com.mkyong.customer.controller.QuarterlyReportOfCompsController">
+	</bean>
+
+	<bean id="YearlyReportOfCompsController"
+		class="com.mkyong.customer.controller.YearlyReportOfCompsController">
+	</bean>
+
+
+	<bean id="MonthlyReportTransferController"
+		class="com.mkyong.customer.controller.MonthlyReportTransferController">
+	</bean>
+
+	<bean id="ExcelController" class="com.mkyong.common.controller.ExcelController">
+	</bean>
+
+
+	<!--
+		<bean
+		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"
+		/>
+	-->
+
+	<bean id="customerFormController" class="com.mkyong.customer.controller.CustomerController">
+		<property name="formView" value="CustomerForm" />
+		<property name="successView" value="CustomerSuccess" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.CustomerValidator" />
+		</property>
+	</bean>
+
+
+
+
+	<bean id="ProblemsListController" class="com.mkyong.customer.controller.ProblemsListController">
+	</bean>
+	<bean id="ProblemsAddController" class="com.mkyong.customer.controller.ProblemsAddController">
+		<property name="formView" value="problemsAdd" />
+		<property name="successView" value="problemsList" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.ProblemsValidator" />
+		</property>
+	</bean>
+	<bean id="ProblemsEditController" class="com.mkyong.customer.controller.ProblemsEditController">
+		<property name="formView" value="problemsEdit" />
+		<property name="successView" value="problemsEdit" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.ProblemsValidator" />
+		</property>
+	</bean>
+	<bean id="ProblemsViewController" class="com.mkyong.customer.controller.ProblemsViewController">
+		<property name="formView" value="problemsView" />
+		<property name="successView" value="problemsView" />
+	</bean>
+
+
+	<bean id="ProvidesListController" class="com.mkyong.customer.controller.ProvidesListController">
+	</bean>
+	<bean id="ProvidesAddController" class="com.mkyong.customer.controller.ProvidesAddController">
+		<property name="formView" value="providesAdd" />
+		<property name="successView" value="providesList" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.ProvidesValidator" />
+		</property>
+	</bean>
+	<bean id="ProvidesEditController" class="com.mkyong.customer.controller.ProvidesEditController">
+		<property name="formView" value="providesEdit" />
+		<property name="successView" value="providesEdit" />
+		<property name="validator">
+			<bean class="com.mkyong.customer.validator.ProvidesValidator" />
+		</property>
+	</bean>
+	<bean id="ProvidesViewController" class="com.mkyong.customer.controller.ProvidesViewController">
+		<property name="formView" value="providesView" />
+		<property name="successView" value="providesView" />
+	</bean>
+
+
+	<bean id="DownLoadController" class="com.mkyong.customer.controller.DownLoadController">
+		<property name="formView" value="announcementView" />
+		<property name="successView" value="announcementView" />
+	</bean>
+
+	<!--
+		===================================================================
+	-->
+	<bean class="org.springframework.web.servlet.view.XmlViewResolver">
+		<property name="location">
+			<value>
+				/WEB-INF/spring-excel-views.xml
+            </value>
+		</property>
+		<property name="order" value="0" />
+	</bean>
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView">
+		</property>
+		<!--<property name="prefix" value="/WEB-INF/jsp/"></property>-->
+		<property name="prefix" value="/">
+		</property>
+		<property name="suffix" value=".jsp">
+		</property>
+		<property name="order" value="1" />
+	</bean>
+
+	<!--
+		<bean id="beanNameResolver"
+		class="org.springframework.web.servlet.view.BeanNameViewResolver">
+		<property name="order" value="0" /> </bean>
+	-->
+
+	<!--
+		<bean id="executeTimeInterceptor"
+		class="com.interceptor.ExecuteTimeInterceptor"/> <bean
+		id="maintenanceInterceptor"
+		class="com.interceptor.MaintenanceInterceptor"> <property
+		name="maintenanceStartTime" value="23"/> <property
+		name="maintenanceEndTime" value="24"/> <property
+		name="maintenanceMapping" value="/SpringMVC/maintenance.htm"/> </bean>
+	-->
+
+	<bean id="checkSessionInterceptor" class="com.interceptor.CheckSessionInterceptor">
+		<property name="maintenanceMapping" value="index.jsp" />
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+
+
+	<!--################### i18n ###################-->
+
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+		<property name="defaultLocale" value="zh_TW" />
+	</bean>
+
+
+
+
+	<!--<bean id="localeChangeInterceptor"
+		class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+		<property name="paramName" value="language" />
+	</bean>
+	-->
+	
+	<bean id="localeChangeInterceptor"
+		class="com.MyLocaleChangeInterceptor">
+		<property name="paramName" value="language" />
+	</bean>
+	
+	
+	<!-- Register the .properties -->
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames"
+			value="com/mkyong/customer/properties/Customer,com.properties.hj" />
+	</bean>
+
+	<!--
+		<bean id="anotherMessageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames"
+		value="classpath:i18n/newmessages,classpath:i18n/messages" />
+		<property name="defaultEncoding" value="UTF-8" /> </bean>
+	-->
+
+</beans>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyActivityRecMapper">
+	<select id="findActivityRecById" parameterType="string"
+		resultType="ActivityRec">
+		<![CDATA[
+		select
+		uid AS uid
+		,title AS title
+		,content AS content
+		,thedate AS theDate
+		,theuser AS theUser
+		,status AS status
+		from activityREc WHERE uid=#{uid}
+		]]>
+	</select>
+
+	<select id="findActivityRecBySearch" parameterType="com.vo.VOActivityRecSearchCondition"
+		resultType="ActivityRec">
+		<![CDATA[
+		select
+		uid AS uid
+		,title AS title
+		,content AS content
+		,thedate AS theDate
+		,theuser AS theUser
+		,status AS status
+		from activityrec
+		]]>
+		<where>
+			<if test="theDate != ''">
+				thedate like #{theDate}
+			</if>
+			<if test="keyContent != ''">
+				AND (title like #{keyContent2} or content like
+				#{keyContent2})
+			</if>
+		</where>
+		order by thedate desc
+	</select>
+
+	<insert id="insertActivityRec" parameterType="ActivityRec">
+		<![CDATA[
+		INSERT INTO activityrec
+		(uid, Title, content, thedate,theuser,Status)
+		VALUES
+		(#{uid},#{title},#{content},#{theDate},#{theUser},#{status})
+		]]>
+	</insert>
+
+	<update id="updateActivityRec" parameterType="ActivityRec">
+		<![CDATA[
+		UPDATE activityrec SET
+		title=#{title}
+		,content=#{content}
+		,thedate=#{theDate}	
+		,theuser=#{theUser}
+		,status=#{status}	
+		where uid=#{uid}
+		]]>
+	</update>
+
+
+</mapper>

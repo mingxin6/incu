@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+
+				<prop key="compNew_B0.htm">
+					companyNewController_B0
+                </prop>
+
+				<prop key="compList_B0.htm">
+					CompanyListController_B0
+                </prop>
+
+
+
+
+				<prop key="compView_B0.htm">
+					CompanyViewController_B0
+                </prop>
+
+				<prop key="compEdit_B0.htm">
+					CompanyEditController_B0
+                </prop>
+
+				<prop key="compDel_B0.htm">
+					CompanyDelController_B0
+                </prop>
+
+				<prop key="compTrasfer.htm">
+					CompanyTransferController_B
+                </prop>
+
+				<prop key="compB0Add.htm">
+					CompB0AddController_B0
+                </prop>
+
+
+
+			</props>
+		</property>
+
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="checkApplicationInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="checkApplicationInterceptor" class="com.interceptor.CheckApplicationInterceptor">
+	</bean>
+
+	<bean id="companyNewController_B0" class="com.mod.companyB0.controller.CompanyNewController_B0">
+		<property name="formView" value="companyAdd_B0" />
+		<property name="validator">
+			<bean class="com.mod.companyB0.controller.CompanyB0Validator" />
+		</property>
+	</bean>
+
+	<bean id="CompB0AddController_B0" class="com.mod.companyB0.controller.CompB0AddController_B0">
+		<property name="formView" value="companyAdd_B0" />
+		<property name="validator">
+			<bean class="com.mod.companyB0.controller.CompanyB0Validator" />
+		</property>
+	</bean>
+
+
+	<bean id="CompanyListController_B0" class="com.mod.companyB0.controller.CompanyListController_B0">
+	</bean>
+
+	<bean id="CompanyViewController_B0" class="com.mod.companyB0.controller.CompanyViewController_B0">
+	</bean>
+
+	<bean id="CompanyEditController_B0" class="com.mod.companyB0.controller.CompanyEditController_B0">
+		<property name="formView" value="companyEdit_B0" />
+		<property name="validator">
+			<bean class="com.mod.companyB0.controller.CompanyB0Validator" />
+		</property>
+	</bean>
+
+	<bean id="CompanyDelController_B0" class="com.mod.companyB0.controller.CompanyDelController_B0">
+	</bean>
+
+	<bean id="CompanyTransferController_B"
+		class="com.mod.companyB0.controller.CompanyTransferController_B0">
+		<property name="formView" value="companyTransfer_B0" />
+	</bean>
+
+
+
+</beans>

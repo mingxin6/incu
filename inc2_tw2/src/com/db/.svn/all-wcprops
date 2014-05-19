@@ -1,0 +1,245 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/db
+END
+MyCompanyUserMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyCompanyUserMapper.xml
+END
+MyPersonMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyPersonMapper.xml
+END
+MyIpRecordMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyIpRecordMapper.xml
+END
+MyParkingLotMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/inc2_src/!svn/ver/77/tag1/tpe/inc2_tw/src/com/db/MyParkingLotMapper.xml
+END
+MyTeacherMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyTeacherMapper.xml
+END
+MyAdministratorMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyAdministratorMapper.xml
+END
+MySQLAcc.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MySQLAcc.java
+END
+MyFeesMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyFeesMapper.xml
+END
+MyFinancialOfficerMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyFinancialOfficerMapper.xml
+END
+MyUserAndRoleMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/db/MyUserAndRoleMapper.xml
+END
+MyUploadMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyUploadMapper.xml
+END
+DbWhere.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/inc2_src/!svn/ver/66/tag1/tpe/inc2_tw/src/com/db/DbWhere.java
+END
+MyOrgMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyOrgMapper.xml
+END
+MyOutSourceMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyOutSourceMapper.xml
+END
+MyCompanyB0Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyCompanyB0Mapper.xml
+END
+MySQLAccessSec.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MySQLAccessSec.java
+END
+MyAnnouncementMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyAnnouncementMapper.xml
+END
+DB.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/DB.java
+END
+MySecurityCardMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/inc2_src/!svn/ver/77/tag1/tpe/inc2_tw/src/com/db/MySecurityCardMapper.xml
+END
+MyStaffMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/inc2_src/!svn/ver/78/tag1/tpe/inc2_tw/src/com/db/MyStaffMapper.xml
+END
+MyParkingLotBikeMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/inc2_src/!svn/ver/77/tag1/tpe/inc2_tw/src/com/db/MyParkingLotBikeMapper.xml
+END
+MyCompanyMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/inc2_src/!svn/ver/69/tag1/tpe/inc2_tw/src/com/db/MyCompanyMapper.xml
+END
+MyMemberMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyMemberMapper.xml
+END
+MyNotifyMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyNotifyMapper.xml
+END
+db.sql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/inc2_src/!svn/ver/72/tag1/tpe/inc2_tw/src/com/db/db.sql
+END
+CopyOfDB.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/CopyOfDB.java
+END
+MyGrantMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyGrantMapper.xml
+END
+MyTagMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyTagMapper.xml
+END
+MyRoomMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyRoomMapper.xml
+END
+MyOrgPersonMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyOrgPersonMapper.xml
+END
+MyCashierMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyCashierMapper.xml
+END
+MyMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyMapper.xml
+END
+MySQLAccessMyBatis.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/inc2_src/!svn/ver/77/tag1/tpe/inc2_tw/src/com/db/MySQLAccessMyBatis.java
+END
+MyActivityRecMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyActivityRecMapper.xml
+END
+MyReviewerMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyReviewerMapper.xml
+END
+MyReviewPaperMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyReviewPaperMapper.xml
+END
+MySQLAccess.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/inc2_src/!svn/ver/78/tag1/tpe/inc2_tw/src/com/db/MySQLAccess.java
+END
+MyAwardMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/inc2_src/!svn/ver/48/tag1/tpe/inc2_tw/src/com/db/MyAwardMapper.xml
+END
+mybatis-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/inc2_src/!svn/ver/71/tag1/tpe/inc2_tw/src/com/db/mybatis-config.xml
+END
+MyTalkNotesMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/inc2_src/!svn/ver/77/tag1/tpe/inc2_tw/src/com/db/MyTalkNotesMapper.xml
+END

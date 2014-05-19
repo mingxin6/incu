@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyCompanyB0Mapper">
+
+<select id="findCompanyB0ByWhereString" parameterType="com.db.DbWhere"
+		resultType="Company">
+		<![CDATA[
+		select 
+		CompanyStatus AS compStatus
+		,ID AS uid
+		,CompanyName AS compName
+		,compEngName AS	compEngName
+		,companyShortName AS compShortName
+		,logoFileName AS logoFileName
+		,CompanyID AS registerId
+		,EstablishDate AS registerDate
+		,representative AS representative
+		,kind AS kind
+		,domain AS domain
+		,compAddress AS compAddress
+		,ResidentDate AS moveInDate
+		,EmployeeAmount	AS totalEmployees
+		,RegisterCapital AS registerCaptial
+		,actualCaptial AS actualCaptial
+		,compIntroduction AS compIntroduction
+		,CompanyWebURL AS compWebURL
+		,ProjContent AS prod
+		,OfficeLocation AS	room
+		,OfficeSize	AS roomArea
+		,OwnerName AS boss
+		,OwnerTelphone AS phone
+		,OwnerMobilePhone AS mobilePhone
+		,OwnerEmail AS email
+		,AdminOwnerName	AS adminContact
+		,AdminOwnerTelphone AS	adminContactPhone
+		,AdminOwnerMobilePhone AS adminContactMobilePhone
+		,AdminOwnerEmail AS	adminContactEmail
+		,contractNumber AS contractNumber
+		,contractStartDate	AS contractStartDate
+		,contractEndDate AS	contractEndDate
+		,innoKind AS innoKind
+		,Remark AS remark
+		,moveoutDate AS	moveOutDate
+		,moveOutAddesss	AS moveOutAddesss
+		,manager AS manager 
+		,createdBy as createdBy
+		,createdTime as createdTime
+		,lastUpdateUser as lastUpdateUser
+		,lastUpdateTime as lastUpdateTime
+		,reviewPaperUid as reviewPaperUid
+		from isi_companyB0
+		where ${where}
+		]]>
+	</select>
+	
+<update id="updateCompanyB0" parameterType="Company">
+	<![CDATA[
+		UPDATE
+		ISI_COMPANYB0 SET
+		CompanyStatus=#{compStatus}
+		,CompanyName=#{compName}
+		,compEngName=#{compEngName}
+		,companyShortName=#{compShortName}
+		,logoFileName=#{logoFileName}
+		,CompanyID=#{registerId}
+		,EstablishDate=#{registerDate}
+		,representative=#{representative}
+		,kind=#{kind}
+		,domain=#{domain}
+		,compAddress=#{compAddress}
+		,ResidentDate=#{moveInDate}
+		,EmployeeAmount=#{totalEmployees}
+		,RegisterCapital=#{registerCaptial}
+		,actualCaptial=#{actualCaptial}
+		,compIntroduction=#{compIntroduction}
+		,CompanyWebURL=#{compWebURL}
+		,ProjContent=#{prod}
+		,OfficeLocation=#{room}
+		,OfficeSize=#{roomArea}
+		,OwnerName=#{boss}
+		,OwnerTelphone=#{phone}
+		,OwnerMobilePhone=#{mobilePhone}
+		,OwnerEmail=#{email}
+		,AdminOwnerName=#{adminContact}
+		,AdminOwnerTelphone=#{adminContactPhone}
+		,AdminOwnerMobilePhone=#{adminContactMobilePhone}
+		,AdminOwnerEmail=#{adminContactEmail}
+		,contractNumber=#{contractNumber}
+		,contractStartDate=#{contractStartDate}
+		,contractEndDate=#{contractEndDate}
+		,innoKind=#{innoKind}
+		,Remark=#{remark}
+		,moveoutDate=#{moveOutDate}
+		,moveOutAddesss=#{moveOutAddesss}
+		,manager=#{manager}
+		,createdBy=#{createdBy}
+		,createdTime=#{createdTime}
+		,lastUpdateUser=#{lastUpdateUser}
+		,lastUpdateTime=#{lastUpdateTime}
+		,reviewPaperUid=#{reviewPaperUid}
+		where ID=#{uid}
+		]]>
+	</update>
+	
+	<select id="findAllCompanysByCondition_B0" parameterType="com.vo.VOCompListCondition_B"
+		resultType="Company">
+		<![CDATA[
+		select 
+		CompanyStatus AS compStatus
+		,ID AS uid
+		,CompanyName AS compName
+		,compEngName AS	compEngName
+		,companyShortName AS compShortName
+		,logoFileName AS logoFileName
+		,CompanyID AS registerId
+		,EstablishDate AS registerDate
+		,representative AS representative
+		,kind AS kind
+		,domain AS domain
+		,compAddress AS compAddress
+		,ResidentDate AS moveInDate
+		,EmployeeAmount	AS totalEmployees
+		,RegisterCapital AS registerCaptial
+		,actualCaptial AS actualCaptial
+		,compIntroduction AS compIntroduction
+		,CompanyWebURL AS compWebURL
+		,ProjContent AS prod
+		,OfficeLocation AS	room
+		,OfficeSize	AS roomArea
+		,OwnerName AS boss
+		,OwnerTelphone AS phone
+		,OwnerMobilePhone AS mobilePhone
+		,OwnerEmail AS email
+		,AdminOwnerName	AS adminContact
+		,AdminOwnerTelphone AS	adminContactPhone
+		,AdminOwnerMobilePhone AS adminContactMobilePhone
+		,AdminOwnerEmail AS	adminContactEmail
+		,contractNumber AS contractNumber
+		,contractStartDate	AS contractStartDate
+		,contractEndDate AS	contractEndDate
+		,innoKind AS innoKind
+		,Remark AS remark
+		,moveoutDate AS	moveOutDate
+		,moveOutAddesss	AS moveOutAddesss
+		,manager AS manager
+		,memberUid as memberUid
+		,createdBy as createdBy
+		,createdTime as createdTime
+		,lastUpdateUser as lastUpdateUser
+		,lastUpdateTime as lastUpdateTime
+		,reviewPaperUid as reviewPaperUid
+		from isi_companyB0
+		where 1=1 
+		]]>
+		<if test="compName != ''">
+			AND CompanyName LIKE #{compName}
+			</if>
+		order by ID desc
+	</select>
+
+	<select id="findCompanyB0ByMemberUid" parameterType="string"
+		resultType="Company">
+		<![CDATA[
+		select 
+		CompanyStatus AS compStatus
+		,ID AS uid
+		,CompanyName AS compName
+		,compEngName AS	compEngName
+		,companyShortName AS compShortName
+		,logoFileName AS logoFileName
+		,CompanyID AS registerId
+		,EstablishDate AS registerDate
+		,representative AS representative
+		,kind AS kind
+		,domain AS domain
+		,compAddress AS compAddress
+		,ResidentDate AS moveInDate
+		,EmployeeAmount	AS totalEmployees
+		,RegisterCapital AS registerCaptial
+		,actualCaptial AS actualCaptial
+		,compIntroduction AS compIntroduction
+		,CompanyWebURL AS compWebURL
+		,ProjContent AS prod
+		,OfficeLocation AS	room
+		,OfficeSize	AS roomArea
+		,OwnerName AS boss
+		,OwnerTelphone AS phone
+		,OwnerMobilePhone AS mobilePhone
+		,OwnerEmail AS email
+		,AdminOwnerName	AS adminContact
+		,AdminOwnerTelphone AS	adminContactPhone
+		,AdminOwnerMobilePhone AS adminContactMobilePhone
+		,AdminOwnerEmail AS	adminContactEmail
+		,contractNumber AS contractNumber
+		,contractStartDate	AS contractStartDate
+		,contractEndDate AS	contractEndDate
+		,innoKind AS innoKind
+		,Remark AS remark
+		,moveoutDate AS	moveOutDate
+		,moveOutAddesss	AS moveOutAddesss
+		,manager AS manager 
+		,memberUid as memberUid
+		,createdBy as createdBy
+		,createdTime as createdTime
+		,lastUpdateUser as lastUpdateUser
+		,lastUpdateTime as lastUpdateTime
+		,reviewPaperUid as reviewPaperUid
+		from isi_companyB0
+		WHERE memberUid=#{memberUid} 
+		order by createdTime desc
+		]]>
+	</select>
+
+	
+
+	<insert id="insertCompanyB0" parameterType="Company">
+		INSERT INTO
+		isi_companyB0
+		(CompanyStatus, ID, CompanyName,
+		compEngName,companyShortName,logoFileName, CompanyID,
+		EstablishDate,
+		representative, kind, domain,compAddress, ResidentDate,
+		EmployeeAmount, RegisterCapital, actualCaptial,
+		compIntroduction,CompanyWebURL, ProjContent,
+		OfficeLocation,
+		OfficeSize,
+		OwnerName,OwnerTelphone, OwnerMobilePhone,OwnerEmail,
+		AdminOwnerName, AdminOwnerTelphone, AdminOwnerMobilePhone,
+		AdminOwnerEmail,
+		contractNumber, contractStartDate, contractEndDate,
+		innoKind, Remark,
+		moveoutDate, moveOutAddesss, manager,memberUid,reviewPaperUid,
+		createdBy,createdTime,lastUpdateUser,lastUpdateTime)
+		VALUES
+		(
+		#{compStatus},#{uid},#{compName},#{compEngName},#{compShortName},#{logoFileName},#{registerId}
+		,#{registerDate},#{representative},#{kind},#{domain},#{compAddress},#{moveInDate}
+		,#{totalEmployees},#{registerCaptial},#{actualCaptial}
+		,#{compIntroduction},#{compWebURL},#{prod}
+		,#{room},#{roomArea}
+		,#{boss},#{phone},#{mobilePhone},#{email}
+		,#{adminContact},#{adminContactPhone},#{adminContactMobilePhone},#{adminContactEmail}
+		,#{contractNumber},#{contractStartDate},#{contractEndDate}
+		,#{innoKind},#{remark},#{moveOutDate},#{moveOutAddesss},#{manager},#{memberUid},#{reviewPaperUid}
+		,#{createdBy},#{createdTime},#{lastUpdateUser},#{lastUpdateTime}
+		)
+	</insert>
+
+	<insert id="insertCompanyB0Denied" parameterType="Company">
+		INSERT INTO
+		isi_company_denied
+		(CompanyStatus, ID, CompanyName,
+		compEngName,companyShortName,logoFileName, CompanyID,
+		EstablishDate,
+		representative, kind, domain,compAddress, ResidentDate,
+		EmployeeAmount, RegisterCapital, actualCaptial,
+		compIntroduction,CompanyWebURL, ProjContent,
+		OfficeLocation,
+		OfficeSize,
+		OwnerName,OwnerTelphone, OwnerMobilePhone,OwnerEmail,
+		AdminOwnerName, AdminOwnerTelphone, AdminOwnerMobilePhone,
+		AdminOwnerEmail,
+		contractNumber, contractStartDate, contractEndDate,
+		innoKind, Remark,
+		moveoutDate, moveOutAddesss, manager,memberUid,reviewPaperUid,
+		createdBy,createdTime,lastUpdateUser,lastUpdateTime)
+		VALUES
+		(
+		#{compStatus},#{uid},#{compName},#{compEngName},#{compShortName},#{logoFileName},#{registerId}
+		,#{registerDate},#{representative},#{kind},#{domain},#{compAddress},#{moveInDate}
+		,#{totalEmployees},#{registerCaptial},#{actualCaptial}
+		,#{compIntroduction},#{compWebURL},#{prod}
+		,#{room},#{roomArea}
+		,#{boss},#{phone},#{mobilePhone},#{email}
+		,#{adminContact},#{adminContactPhone},#{adminContactMobilePhone},#{adminContactEmail}
+		,#{contractNumber},#{contractStartDate},#{contractEndDate}
+		,#{innoKind},#{remark},#{moveOutDate},#{moveOutAddesss},#{manager},#{memberUid},#{reviewPaperUid}
+		,#{createdBy},#{createdTime},#{lastUpdateUser},#{lastUpdateTime}
+		)
+	</insert>
+
+	<select id="findCompanyB0ByCompId" parameterType="string"
+		resultType="Company">
+		<![CDATA[
+		select 
+		CompanyStatus AS compStatus
+		,ID AS uid
+		,CompanyName AS compName
+		,compEngName AS	compEngName
+		,companyShortName AS compShortName
+		,logoFileName AS logoFileName
+		,CompanyID AS registerId
+		,EstablishDate AS registerDate
+		,representative AS representative
+		,kind AS kind
+		,domain AS domain
+		,compAddress AS compAddress
+		,ResidentDate AS moveInDate
+		,EmployeeAmount	AS totalEmployees
+		,RegisterCapital AS registerCaptial
+		,actualCaptial AS actualCaptial
+		,compIntroduction AS compIntroduction
+		,CompanyWebURL AS compWebURL
+		,ProjContent AS prod
+		,OfficeLocation AS	room
+		,OfficeSize	AS roomArea
+		,OwnerName AS boss
+		,OwnerTelphone AS phone
+		,OwnerMobilePhone AS mobilePhone
+		,OwnerEmail AS email
+		,AdminOwnerName	AS adminContact
+		,AdminOwnerTelphone AS	adminContactPhone
+		,AdminOwnerMobilePhone AS adminContactMobilePhone
+		,AdminOwnerEmail AS	adminContactEmail
+		,contractNumber AS contractNumber
+		,contractStartDate	AS contractStartDate
+		,contractEndDate AS	contractEndDate
+		,innoKind AS innoKind
+		,Remark AS remark
+		,moveoutDate AS	moveOutDate
+		,moveOutAddesss	AS moveOutAddesss
+		,manager AS manager 
+		,memberUid as memberUid
+		,reviewPaperUid as reviewPaperUid
+		,createdBy as createdBy
+		,createdTime as createdTime
+		,lastUpdateUser as lastUpdateUser
+		,lastUpdateTime as lastUpdateTime
+		from isi_companyB0 
+		WHERE ID=#{compId} 
+		]]>
+	</select>
+
+	
+
+	<update id="denyNewApply" parameterType="hashmap">
+		<![CDATA[
+		UPDATE isi_companyB0 SET
+		remark=#{remark}
+		,CompanyStatus=#{compStatus}		
+		where ID=#{compId}
+		]]>
+	</update>
+
+	<delete id="deleteCompanyB0" parameterType="string">
+		<![CDATA[
+		delete from isi_companyB0
+		where ID=#{compId}
+		]]>
+	</delete>
+
+	<update id="updateCompStatusB0" parameterType="hashmap">
+		<![CDATA[
+		UPDATE isi_companyB0 SET
+		CompanyStatus=#{compStatus}		
+		where ID=#{compId}
+		]]>
+	</update>
+	
+	<update id="updateCompStatusB0nSaveReviewPaperUid" parameterType="hashmap">
+		<![CDATA[
+		UPDATE isi_companyB0 SET
+		CompanyStatus=#{compStatus}	
+		,reviewPaperUid=#{reviewPaperUid}	
+		where ID=#{compId}
+		]]>
+	</update>
+	
+</mapper>

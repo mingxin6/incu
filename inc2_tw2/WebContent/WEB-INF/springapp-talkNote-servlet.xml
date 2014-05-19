@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<!-- 要求者-->
+				<!-- AM -->
+				<prop key="requestListAM.htm">
+					requestListAMController
+                </prop>
+				<prop key="requestAddAM.htm">
+					requestAddAMController
+                </prop>
+				<prop key="requestViewAM.htm">
+					requestViewAMController
+                </prop>
+				<prop key="requestCloseAM.htm">
+					requestCloseAMController
+                </prop>
+				<!-- PM -->
+				<prop key="requestListPM.htm">
+					requestListPMController
+                </prop>
+				<prop key="requestAddPM.htm">
+					requestAddPMController
+                </prop>
+				<prop key="requestViewPM.htm">
+					requestViewPMController
+                </prop>
+				<prop key="requestClosePM.htm">
+					requestClosePMController
+                </prop>
+				<!-- Teacher -->
+				<prop key="requestListTeacher.htm">
+					requestListTeacherController
+                </prop>
+				<prop key="requestAddTeacher.htm">
+					requestAddTeacherController
+                </prop>
+				<prop key="requestViewTeacher.htm">
+					requestViewTeacherController
+                </prop>
+				<prop key="requestCloseTeacher.htm">
+					requestCloseTeacherController
+                </prop>
+
+
+
+				<!-- 第三者(中心) -->
+				<prop key="/talkNotesList.htm">
+					TalkNotesListController
+                </prop>
+
+				<prop key="/TalkNotesById.htm">
+					TalkNotesByIdController
+                </prop>
+				<prop key="/TalkNotesById_B.htm">
+					TalkNotesByIdController_B
+                </prop>
+				<prop key="/TalkNotesAdd.htm">
+					talkNotesAddController
+                </prop>
+				<prop key="/TalkNotesAdd_B.htm">
+					talkNotesAddController_B
+                </prop>
+
+				<prop key="/TalkNotesViewFromList.htm">
+					talkNotesViewFromListController
+                </prop>
+				<prop key="/TalkNotesView_B.htm">
+					talkNotesViewController_B
+                </prop>
+
+				<prop key="/talkNotesTagEdit.htm"><!-- ALL 加tag-->
+					talkNotesTagEditController
+				</prop>
+
+				<!-- My AM/PM -->
+
+				<prop key="talkNotesMyList.htm">
+					TalkNotesMyListController
+                </prop>
+
+				<prop key="talkNotesMyView.htm">
+					talkNotesMyViewController
+                </prop>
+				<prop key="talkNotesMyEdit.htm">
+					talkNotesMyEditController
+                </prop>
+
+				<prop key="/talkNotesMyTagEdit.htm"><!-- MIne 加tag-->
+					talkNotesMyTagEditController
+				</prop>
+
+				<!-- My AM -->
+
+				<prop key="talkNotesMyListAM.htm">
+					talkNotesMyListAMController
+                </prop>
+
+				<prop key="talkNotesMyViewAM.htm">
+					talkNotesMyViewAMController
+                </prop>
+				<prop key="talkNotesMyEditAM.htm">
+					talkNotesMyEditAMController
+                </prop>
+
+				<prop key="talkNotesMyTagEditAM.htm">
+					talkNotesMyTagEditAMController
+                </prop>
+
+				<!-- My PM -->
+
+				<prop key="talkNotesMyListPM.htm">
+					talkNotesMyListPMController
+                </prop>
+
+				<prop key="talkNotesMyViewPM.htm">
+					talkNotesMyViewPMController
+                </prop>
+				<prop key="talkNotesMyEditPM.htm">
+					talkNotesMyEditPMController
+                </prop>
+
+				<prop key="talkNotesMyTagEditPM.htm">
+					talkNotesMyTagEditPMController
+                </prop>
+
+				<!--center My Teacher -->
+
+				<prop key="talkNotesMyListTeacher.htm">
+					TalkNotesMyListTeacherController
+                </prop>
+
+				<prop key="talkNotesMyViewTeacher.htm">
+					talkNotesMyViewTeacherController
+                </prop>
+				<prop key="talkNotesMyEditTeacher.htm">
+					talkNotesMyEditTeacherController
+                </prop>
+
+				<prop key="/talkNotesMyTagEditTeacher.htm">
+					talkNotesMyTagEditTeacherController
+                </prop>
+
+
+				<!--center My Other -->
+
+				<prop key="talkNotesMyListOther.htm">
+					TalkNotesMyListOtherController
+                </prop>
+
+				<prop key="talkNotesMyOtherAdd.htm">
+					talkNotesMyOtherAddController
+                </prop>
+
+				<prop key="talkNotesMyViewOther.htm">
+					talkNotesMyViewOtherController
+                </prop>
+				<prop key="talkNotesMyEditOther.htm">
+					talkNotesMyEditOtherController
+                </prop>
+				<prop key="/talkNotesMyTagEditOther.htm">
+					talkNotesMyTagEditOtherController
+                </prop>
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- 要求者-->
+	<!-- AM -->
+	<bean id="requestListAMController" class="com.mod.talkNote.controller.RequestListAMController">
+		<property name="formView" value="requestListAM" />
+	</bean>
+	<bean id="requestAddAMController" class="com.mod.talkNote.controller.RequestAddAMController">
+		<property name="formView" value="requestAddAM" />
+		<property name="validator">
+			<bean class="com.mod.talkNote.controller.TalkNotesValidator" />
+		</property>
+	</bean>
+	<bean id="requestCloseAMController" class="com.mod.talkNote.controller.RequestCloseAMController">
+		<property name="formView" value="requestCloseAM" />
+		<property name="validator">
+			<bean class="com.mod.talkNote.controller.TalkNotesValidator" />
+		</property>
+	</bean>
+	<bean id="requestViewAMController" class="com.mod.talkNote.controller.RequestViewAMController">
+	</bean>
+
+	<!-- PM -->
+	<bean id="requestListPMController" class="com.mod.talkNote.controller.RequestListPMController">
+		<property name="formView" value="requestListPM" />
+	</bean>
+	<bean id="requestAddPMController" class="com.mod.talkNote.controller.RequestAddPMController">
+		<property name="formView" value="requestAddPM" />
+		<property name="validator">
+			<bean class="com.mod.talkNote.controller.TalkNotesValidator" />
+		</property>
+	</bean>
+	<bean id="requestClosePMController" class="com.mod.talkNote.controller.RequestClosePMController">
+		<property name="formView" value="requestClosePM" />
+		<property name="validator">
+			<bean class="com.mod.talkNote.controller.TalkNotesValidator" />
+		</property>
+	</bean>
+	<bean id="requestViewPMController" class="com.mod.talkNote.controller.RequestViewPMController">
+	</bean>
+
+	<!-- business Teacher -->
+	<bean id="requestListTeacherController"
+		class="com.mod.talkNote.controller.RequestListTeacherController">
+		<property name="formView" value="requestListTeacher" />
+	</bean>
+	<bean id="requestAddTeacherController" class="com.mod.talkNote.controller.RequestAddTeacherController">
+		<property name="formView" value="requestAddTeacher" />
+		<property name="validator">
+			<bean class="com.mod.talkNote.controller.TalkNotesValidator" />
+		</property>
+	</bean>
+	<bean id="requestCloseTeacherController"
+		class="com.mod.talkNote.controller.RequestCloseTeacherController">
+		<property name="formView" value="requestCloseTeacher" />
+		<property name="validator">
+			<bean class="com.mod.talkNote.controller.TalkNotesValidator" />
+		</property>
+	</bean>
+	<bean id="requestViewTeacherController"
+		class="com.mod.talkNote.controller.RequestViewTeacherController">
+	</bean>
+
+
+	<!-- center My AM/PM -->
+
+
+	<bean id="TalkNotesMyListController" class="com.mod.talkNote.controller.TalkNotesMyListController">
+	</bean>
+
+	<bean id="talkNotesMyViewController" class="com.mod.talkNote.controller.TalkNotesMyViewController">
+	</bean>
+
+	<bean id="talkNotesMyEditController" class="com.mod.talkNote.controller.TalkNotesMyEditController">
+		<property name="formView" value="talkNotesMyEdit" />
+	</bean>
+
+	<bean id="talkNotesMyTagEditController"
+		class="com.mod.talkNote.controller.TalkNotesMyTagEditController">
+		<property name="formView" value="talkNotesMyTagEdit" />
+	</bean>
+
+	<!-- center My AM -->
+
+
+	<bean id="talkNotesMyListAMController" class="com.mod.talkNote.controller.TalkNotesMyListAMController">
+	</bean>
+
+	<bean id="talkNotesMyViewAMController" class="com.mod.talkNote.controller.TalkNotesMyViewAMController">
+	</bean>
+
+	<bean id="talkNotesMyEditAMController" class="com.mod.talkNote.controller.TalkNotesMyEditAMController">
+		<property name="formView" value="talkNotesMyEditAM" />
+	</bean>
+
+	<bean id="talkNotesMyTagEditAMController"
+		class="com.mod.talkNote.controller.TalkNotesMyTagEditAMController">
+		<property name="formView" value="talkNotesMyTagEditAM" />
+	</bean>
+
+	<!-- center My PM -->
+
+
+	<bean id="talkNotesMyListPMController" class="com.mod.talkNote.controller.TalkNotesMyListPMController">
+	</bean>
+
+	<bean id="talkNotesMyViewPMController" class="com.mod.talkNote.controller.TalkNotesMyViewPMController">
+	</bean>
+
+	<bean id="talkNotesMyEditPMController" class="com.mod.talkNote.controller.TalkNotesMyEditPMController">
+		<property name="formView" value="talkNotesMyEditPM" />
+	</bean>
+
+	<bean id="talkNotesMyTagEditPMController"
+		class="com.mod.talkNote.controller.TalkNotesMyTagEditPMController">
+		<property name="formView" value="talkNotesMyTagEditPM" />
+	</bean>
+
+	<!-- center My Teacher -->
+
+
+	<bean id="TalkNotesMyListTeacherController"
+		class="com.mod.talkNote.controller.TalkNotesMyListTeacherController">
+	</bean>
+
+	<bean id="talkNotesMyViewTeacherController"
+		class="com.mod.talkNote.controller.TalkNotesMyViewTeacherController">
+	</bean>
+
+	<bean id="talkNotesMyEditTeacherController"
+		class="com.mod.talkNote.controller.TalkNotesMyEditTeacherController">
+		<property name="formView" value="talkNotesMyEditTeacher" />
+	</bean>
+
+	<bean id="talkNotesMyTagEditTeacherController"
+		class="com.mod.talkNote.controller.TalkNotesMyTagEditTeacherController">
+		<property name="formView" value="talkNotesMyTagEditTeacher" />
+	</bean>
+
+	<!-- My Other -->
+
+
+	<bean id="TalkNotesMyListOtherController"
+		class="com.mod.talkNote.controller.TalkNotesMyListOtherController">
+	</bean>
+
+	<bean id="talkNotesMyOtherAddController"
+		class="com.mod.talkNote.controller.TalkNotesMyOtherAddController">
+		<property name="formView" value="talkNotesMyOtherAdd" />
+	</bean>
+
+	<bean id="talkNotesMyViewOtherController"
+		class="com.mod.talkNote.controller.TalkNotesMyViewOtherController">
+	</bean>
+
+	<bean id="talkNotesMyEditOtherController"
+		class="com.mod.talkNote.controller.TalkNotesMyEditOtherController">
+		<property name="formView" value="talkNotesMyEditOther" />
+	</bean>
+
+	<bean id="talkNotesMyTagEditOtherController"
+		class="com.mod.talkNote.controller.TalkNotesMyTagEditOtherController">
+		<property name="formView" value="talkNotesMyTagEditOther" />
+	</bean>
+
+	<!-- 第三者(中心) -->
+	<bean id="talkNotesAddController" class="com.mod.talkNote.controller.TalkNotesAddController">
+		<property name="formView" value="talkNotesAdd" />
+		<property name="successView" value="PotentiallyCompanyNotes" />
+		<property name="validator">
+			<bean class="com.mod.talkNote.controller.TalkNotesValidator" />
+		</property>
+	</bean>
+
+	<bean id="talkNotesViewController" class="com.mod.talkNote.controller.TalkNotesViewController">
+	</bean>
+
+	<bean id="talkNotesEditController" class="com.mod.talkNote.controller.TalkNotesEditController">
+		<property name="formView" value="talkNotesEdit" />
+		<property name="successView" value="PotentiallyCompanyNotes" />
+	</bean>
+
+	<bean id="talkNotesTagEditController" class="com.mod.talkNote.controller.TalkNotesTagEditController">
+		<property name="formView" value="talkNotesTagEdit" />
+	</bean>
+
+
+	<bean id="talkNotesViewFromListController"
+		class="com.mod.talkNote.controller.TalkNotesViewFromListController">
+	</bean>
+
+	<bean id="talkNotesViewController_B" class="com.mod.talkNote.controller.TalkNotesViewController_B">
+	</bean>
+
+
+	<bean id="talkNotesAddController_B" class="com.mod.talkNote.controller.TalkNotesAddController_B">
+		<property name="formView" value="talkNotesAdd_B" />
+		<property name="successView" value="PotentiallyCompanyNotes" />
+		<property name="validator">
+			<bean class="com.mod.talkNote.controller.TalkNotesValidator" />
+		</property>
+	</bean>
+
+
+	<bean id="TalkNotesListController" class="com.mod.talkNote.controller.TalkNotesListController">
+	</bean>
+
+
+
+	<bean id="TalkNotesByIdController" class="com.mod.talkNote.controller.TalkNotesByIdController">
+	</bean>
+
+	<bean id="TalkNotesByIdController_B" class="com.mod.talkNote.controller.TalkNotesByIdController_B">
+	</bean>
+
+
+
+</beans>

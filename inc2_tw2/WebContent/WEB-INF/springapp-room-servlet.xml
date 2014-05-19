@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="roomList.htm">
+					roomListController
+                </prop>
+
+				<prop key="roomView.htm">
+					roomViewController
+                </prop>
+
+				<prop key="roomAdd.htm">
+					roomAddController
+                </prop>
+
+
+				<prop key="/roomEdit.htm">
+					roomEditController
+                </prop>
+
+				<prop key="/roomDelete.htm">
+					roomDeleteController
+                </prop>
+
+				<prop key="/roomClear.htm">
+					roomClearController
+                </prop>
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="roomListController" class="com.mod.room.controller.RoomListController">
+		<property name="formView" value="roomList" />
+		<property name="successView" value="roomList" />
+	</bean>
+
+	<bean id="roomViewController" class="com.mod.room.controller.RoomViewController">
+	</bean>
+
+	<bean id="roomAddController" class="com.mod.room.controller.RoomAddController">
+		<property name="validator">
+			<bean class="com.mod.room.controller.RoomValidator" />
+		</property>
+	</bean>
+
+	<bean id="roomEditController" class="com.mod.room.controller.RoomEditController">
+		<property name="validator">
+			<bean class="com.mod.room.controller.RoomValidator" />
+		</property>
+	</bean>
+
+	<bean id="roomDeleteController" class="com.mod.room.controller.RoomDeleteController">
+	</bean>
+
+	<bean id="roomClearController" class="com.mod.room.controller.RoomClearController">
+	</bean>
+
+</beans>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="financialOfficerList.htm">
+					financialOfficerListController
+                </prop>
+
+				<prop key="financialOfficerView.htm">
+					financialOfficerViewController
+                </prop>
+
+				<prop key="financialOfficerAdd.htm">
+					financialOfficerAddController
+                </prop>
+
+				<prop key="/financialOfficerEdit.htm">
+					financialOfficerEditController
+                </prop>
+
+				<prop key="/financialOfficerDelete.htm">
+					financialOfficerDeleteController
+                </prop>
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="financialOfficerListController" class="com.mod.financialOfficer.controller.FinancialOfficerListController">
+		<property name="formView" value="financialOfficerList" />
+		<property name="successView" value="financialOfficerList" />
+	</bean>
+
+	<bean id="financialOfficerViewController" class="com.mod.financialOfficer.controller.FinancialOfficerViewController">
+	</bean>
+
+	<bean id="financialOfficerAddController" class="com.mod.financialOfficer.controller.FinancialOfficerAddController">
+		<property name="formView" value="financialOfficerAdd" />
+		<property name="validator">
+			<bean class="com.mod.financialOfficer.controller.FinancialOfficerValidator" />
+		</property>
+	</bean>
+
+	<bean id="financialOfficerEditController" class="com.mod.financialOfficer.controller.FinancialOfficerEditController">
+			<property name="validator">
+			<bean class="com.mod.financialOfficer.controller.FinancialOfficerValidator" />
+		</property>
+	</bean>
+
+	<bean id="financialOfficerDeleteController" class="com.mod.financialOfficer.controller.FinancialOfficerDeleteController">
+	</bean>
+
+
+</beans>

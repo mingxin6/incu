@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyParkingLotBikeMapper">
+
+	<select id="findAllParkingLotBikes" resultType="ParkingLotBike">
+		<![CDATA[
+		select 
+		uid as uid
+		,parkingLotBikeNo AS parkingLotBikeNo
+		,usedBy AS usedBy
+		,status AS status
+		,remark AS remark
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from ParkingLotBike
+		order by parkingLotBikeNo
+		]]>
+	</select>
+
+	<select id="findParkingLotBikeById" parameterType="string" resultType="ParkingLotBike">
+		<![CDATA[
+		select
+		uid as uid
+		,parkingLotBikeNo AS parkingLotBikeNo
+		,usedBy AS usedBy
+		,status AS status
+		,remark AS remark
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from ParkingLotBike
+		WHERE uid=#{uid}
+		]]>
+	</select>
+
+<select id="findParkingLotBikeByUser" parameterType="string" resultType="ParkingLotBike">
+		<![CDATA[
+		select
+		uid as uid
+		,parkingLotBikeNo AS parkingLotBikeNo
+		,usedBy AS usedBy
+		,status AS status
+		,remark AS remark
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from ParkingLotBike
+		WHERE usedby=#{usedby}
+		]]>
+	</select>
+
+	<insert id="insertParkingLotBikes" parameterType="ParkingLotBike">
+		<![CDATA[
+		INSERT INTO ParkingLotBike
+		(uID, parkingLotBikeNo,usedBy,status,remark,lastUpdateUser,lastUpdateTime)
+		VALUES
+		(
+		#{uid},#{parkingLotBikeNo},#{usedBy},#{status},#{remark},#{lastUpdateUser},#{lastUpdateTime}
+		)
+		]]>
+	</insert>
+
+
+	<update id="updateParkingLotBike" parameterType="ParkingLotBike">
+		<![CDATA[
+		UPDATE ParkingLotBike SET
+		parkingLotBikeNo=#{parkingLotBikeNo}
+		,usedBy=#{usedBy}
+		,status=#{status}
+		,remark=#{remark}
+		,lastUpdateUser=#{lastUpdateUser}	
+		,lastUpdateTime=#{lastUpdateTime}
+		where uid=#{uid}
+		]]>
+	</update>
+
+	<delete id="deleteParkingLotBike" parameterType="string">
+		<![CDATA[
+		DELETE FROM ParkingLotBike where uid =#{uid}
+		]]>
+	</delete>
+
+</mapper>

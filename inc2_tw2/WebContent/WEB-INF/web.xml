@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>inc2_tw</display-name>
+	<context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>inc2_tw</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+    		/WEB-INF/springapp-servlet.xml
+			/WEB-INF/springappsec-servlet.xml
+			/WEB-INF/springapp-activity-servlet.xml
+			/WEB-INF/springapp-administrator-servlet.xml
+			/WEB-INF/springapp-cashier-servlet.xml
+			/WEB-INF/springapp-company-servlet.xml
+			/WEB-INF/springapp-companyB0-servlet.xml
+			/WEB-INF/springapp-companyUser-servlet.xml
+			/WEB-INF/springapp-fees-servlet.xml
+			/WEB-INF/springapp-financialOfficer-servlet.xml
+			/WEB-INF/springapp-member-servlet.xml
+			/WEB-INF/springapp-outsource-servlet.xml
+			/WEB-INF/springapp-parkingLot-servlet.xml
+			/WEB-INF/springapp-parkingLotBike-servlet.xml
+			/WEB-INF/springapp-reviewer-servlet.xml
+			/WEB-INF/springapp-reviewPaper-servlet.xml
+			/WEB-INF/springapp-reviewPaperJob-servlet.xml
+			/WEB-INF/springapp-room-servlet.xml
+			/WEB-INF/springapp-securityCard-servlet.xml
+			/WEB-INF/springapp-staff-servlet.xml
+			/WEB-INF/springapp-tag-servlet.xml
+			/WEB-INF/springapp-talkNote-servlet.xml
+			/WEB-INF/springapp-teacher-servlet.xml
+			/WEB-INF/springapp-user-servlet.xml
+        </param-value>
+	</context-param>
+
+	<!--
+		<context-param> <param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:xxs.properties</param-value> </context-param>
+	-->
+
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/log4j.properties</param-value>
+	</context-param>
+
+	<filter>
+		<filter-name>SetCharacterEncoding</filter-name>
+		<filter-class>com.mkyong.customer.controller.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>
+                UTF-8
+            </param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>SetCharacterEncoding</filter-name>
+		<url-pattern>
+            /*
+        </url-pattern>
+	</filter-mapping>
+
+
+
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+
+	<servlet>
+		<servlet-name>springapp</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>
+			1
+        </load-on-startup>
+	</servlet>
+
+	<servlet>
+		<description>
+            Get Resource Description Information - jQuery Ajax Request
+        </description>
+		<display-name>GetResourceInformation</display-name>
+		<servlet-name>GetResourceInformation</servlet-name>
+		<servlet-class>com.servlets.ResourceDescriptionServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+            Get Full Calendar - jQuery Ajax Request
+        </description>
+		<display-name>GetFullCalendar</display-name>
+		<servlet-name>GetFullCalendar</servlet-name>
+		<servlet-class>com.servlets.FullCalendarServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetDownloadFileList</servlet-name>
+		<servlet-class>com.servlets.DownloadFileListServlet</servlet-class>
+	</servlet>
+
+
+
+	<servlet-mapping>
+		<servlet-name>springapp</servlet-name>
+		<url-pattern>
+            *.htm
+        </url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GetFullCalendar</servlet-name>
+		<url-pattern>
+            /GetFullCalendar
+        </url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetResourceInformation</servlet-name>
+		<url-pattern>
+            /GetResourceInformation
+        </url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetDownloadFileList</servlet-name>
+		<url-pattern>
+            /GetDownloadFileList
+        </url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<welcome-file-list>
+		<welcome-file>
+            index.jsp
+        </welcome-file>
+		<welcome-file>
+            default.html
+        </welcome-file>
+		<welcome-file>
+            default.htm
+        </welcome-file>
+		<welcome-file>
+            default.jsp
+        </welcome-file>
+	</welcome-file-list>
+</web-app>

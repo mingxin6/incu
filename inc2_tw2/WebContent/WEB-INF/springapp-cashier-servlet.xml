@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="cashierList.htm">
+					cashierListController
+                </prop>
+
+				<prop key="cashierView.htm">
+					cashierViewController
+                </prop>
+
+				<prop key="cashierAdd.htm">
+					cashierAddController
+                </prop>
+
+				<prop key="/cashierEdit.htm">
+					cashierEditController
+                </prop>
+
+				<prop key="/cashierDelete.htm">
+					cashierDeleteController
+                </prop>
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="cashierListController" class="com.mod.cashier.controller.CashierListController">
+		<property name="formView" value="cashierList" />
+		<property name="successView" value="cashierList" />
+	</bean>
+
+	<bean id="cashierViewController" class="com.mod.cashier.controller.CashierViewController">
+	</bean>
+
+	<bean id="cashierAddController" class="com.mod.cashier.controller.CashierAddController">
+		<property name="formView" value="cashierAdd" />
+		<property name="validator">
+			<bean class="com.mod.cashier.controller.CashierValidator" />
+		</property>
+	</bean>
+
+	<bean id="cashierEditController" class="com.mod.cashier.controller.CashierEditController">
+		<property name="validator">
+			<bean class="com.mod.cashier.controller.CashierValidator" />
+		</property>
+	</bean>
+
+	<bean id="cashierDeleteController" class="com.mod.cashier.controller.CashierDeleteController">
+	</bean>
+
+
+</beans>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyMapper">
+
+	<insert id="insertSharedThing" parameterType="SharedThing">
+		<![CDATA[
+		INSERT INTO ${table}
+		(ID, Title, Message, CreateName,CreateDate,	Status)
+		VALUES
+		(#{aid},#{title},#{message},#{createName},#{createDate},#{status})
+		]]>
+	</insert>
+
+	<select id="findAllCompanysIndex" resultType="CompanyIndex">
+		<![CDATA[
+			select 
+			a.ID AS uid
+			,a.companyShortName AS compShortName
+			,b.roomNo AS	room
+			,b.roomArea AS roomArea
+			,a.contractStartDate	AS contractStartDate
+			,a.contractEndDate AS	contractEndDate
+			from isi_company AS a 
+			RIGHT JOIN room AS b 
+			ON a.ID=b.COMPID
+		]]>
+	</select>
+
+	<select id="findAllFloorInfo" resultType="FloorInfo">
+		<![CDATA[
+			select 
+			uid AS uid
+			,location AS location
+			,remark AS	remark
+			from floorinfo 
+		]]>
+	</select>
+
+	<select id="findTotalService" resultType="int">
+		<![CDATA[
+		select count(1)
+		from service_resource_accept
+		where ACCEPTSTATUS = 1
+		]]>
+	</select>
+
+</mapper>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyTalkNotesMapper">
+
+	<select id="findTalkNoteCount" resultType="integer">
+		<![CDATA[
+		select count(id) from talknotes
+		]]>
+	</select>
+
+	<select id="findVisitCount" parameterType="string" resultType="string">
+		select count(compId) from talknotes where
+		compId= #{compId} 
+  	</select>
+  	
+	<select id="findVisitCount2" parameterType="map" resultType="string">
+		select count(compId) from talknotes where
+		compId= #{compId} and type=#{type}
+  	</select>
+	
+	<select id="findVisitCount3" parameterType="map" resultType="string">
+		select count(compId) from talknotes where
+		compId= #{compId} and type=#{type} and status = 'STAT_PROC'
+  	</select>
+  	
+	<select id="findTalkNotesByCompanyId" parameterType="string"
+		resultType="TalkNotes">
+		<![CDATA[
+		select
+		id AS talkNoteId
+		,TalkTheme AS talkTheme
+		,TalkContent AS talkContent
+		,talkDateTime AS talkDateTime
+		,TalkAddress AS talkAddress
+		,compId AS compId
+		,compName AS compName
+		,type AS type
+		,consultantId AS consultantId
+		,consultantName AS consultantName
+		,replyContent as replyContent
+		,replyDateTime as replyDateTime
+		,score as score
+		,scoreContent as scoreContent
+		,status AS status
+		from talknotes 
+		WHERE compId=#{compId}
+		order by talkDateTime desc
+		]]>
+	</select>
+
+	<select id="findTalkNotesById" parameterType="string"
+		resultType="TalkNotes">
+		<![CDATA[
+		select
+		id AS talkNoteId
+		,TalkTheme AS talkTheme
+		,TalkContent AS talkContent
+		,talkDateTime AS talkDateTime
+		,TalkAddress AS talkAddress
+		,compId AS compId
+		,compName AS compName
+		,type AS type
+		,consultantId AS consultantId
+		,consultantName AS consultantName
+		,replyContent as replyContent
+		,replyDateTime as replyDateTime
+		,score as score
+		,scoreContent as scoreContent
+		,status AS status
+		from talknotes 
+		WHERE id=#{talkNoteId}
+		]]>
+	</select>
+
+	<select id="findTalkNotesByWhereString" parameterType="com.db.DbWhere"
+		resultType="TalkNotes">
+		<![CDATA[
+		select
+		id AS talkNoteId
+		,TalkTheme AS talkTheme
+		,TalkContent AS talkContent
+		,talkDateTime AS talkDateTime
+		,TalkAddress AS talkAddress
+		,compId AS compId
+		,compName AS compName
+		,type AS type
+		,consultantId AS consultantId
+		,consultantName AS consultantName
+		,replyContent as replyContent
+		,replyDateTime as replyDateTime
+		,score as score
+		,scoreContent as scoreContent
+		,status AS status
+		from talknotes
+		where ${where}
+		]]>
+	</select>
+
+	<select id="findTalkNotesByTagWhereString" parameterType="com.db.DbWhere"
+		resultType="TalkNotes">
+		<![CDATA[
+		select
+		a.id AS talkNoteId
+		,a.TalkTheme AS talkTheme
+		,a.TalkContent AS talkContent
+		,a.talkDateTime AS talkDateTime
+		,a.TalkAddress AS talkAddress
+		,a.compId AS compId
+		,a.compName AS compName
+		,a.type AS type
+		,a.consultantId AS consultantId
+		,a.consultantName AS consultantName
+		,a.replyContent as replyContent
+		,a.replyDateTime as replyDateTime
+		,a.score as score
+		,a.scoreContent as scoreContent
+		,a.status AS status
+		,t.tagNames AS allTagNames
+		from talknotes a 
+		left outer join mytagrec t 
+		on a.id=t.recordUid and t.userUid='${userId}'
+		where ${where}
+		]]>
+	</select>
+
+
+
+	<select id="findTalkNotesBySearch" parameterType="com.vo.VOTalkNotesSearchCondition"
+		resultType="TalkNotes">
+		<![CDATA[
+		select
+		id AS talkNoteId
+		,TalkTheme AS talkTheme
+		,TalkContent AS talkContent
+		,talkDateTime AS talkDateTime
+		,TalkAddress AS talkAddress
+		,compId AS compId
+		,compName AS compName
+		,type AS type
+		,consultantId AS consultantId
+		,consultantName AS consultantName
+		,replyContent as replyContent
+		,replyDateTime as replyDateTime
+		,score as score
+		,scoreContent as scoreContent
+		,status AS status
+		from talknotes
+		]]>
+		<where>
+			<if test="talkDateTime != ''">
+				talkDateTime like #{talkDateTime}
+			</if>
+			<if test="compName != ''">
+				AND compName like #{compName2}
+			</if>
+			<if test="keyContent != ''">
+				AND (TalkTheme like #{keyContent2} or TalkContent like
+				#{keyContent2})
+			</if>
+		</where>
+		order by talkDateTime desc
+	</select>
+
+	<insert id="insertTalkNotes" parameterType="TalkNotes">
+		<![CDATA[
+		INSERT INTO talknotes
+		(id, type, TalkTheme, TalkContent, talkDateTime
+		,MyPersonincharge,OtherPersonincharge,TalkAddress
+		,compId,compName,consultantId,consultantName,status
+		,createdBy,createdTime,lastUpdateUser,lastUpdateTime
+		)VALUES(
+		#{talkNoteId},#{type},#{talkTheme},#{talkContent},#{talkDateTime}
+		,#{myPersonincharge},#{otherPersonincharge},#{talkAddress}
+		,#{compId},#{compName},#{consultantId},#{consultantName},#{status}
+		,#{createdBy},#{createdTime},#{lastUpdateUser},#{lastUpdateTime}
+		)
+		]]>
+	</insert>
+
+	<update id="updateTalkNotes" parameterType="TalkNotes">
+		<![CDATA[
+		UPDATE talknotes SET
+		TalkTheme=#{talkTheme}
+		,TalkContent=#{talkContent}
+		,talkDateTime=#{talkDateTime}	
+		,consultantId=#{consultantId}
+		,consultantName=#{consultantName}
+		,score=#{score}
+		,scoreContent=#{scoreContent}
+		,replyContent=#{replyContent}
+		,replyDateTime=#{replyDateTime}
+		,lastUpdateUser=#{lastUpdateUser}
+		,lastUpdateTime=#{lastUpdateTime}
+		where id=#{talkNoteId}
+		]]>
+	</update>
+
+	<update id="updateTalkNotesScoreAndStatus" parameterType="TalkNotes">
+		<![CDATA[
+		UPDATE talknotes SET
+		score=#{score}
+		,scoreContent=#{scoreContent}
+		,status=#{status}
+		,lastUpdateUser=#{lastUpdateUser}
+		,lastUpdateTime=#{lastUpdateTime}
+		where id=#{talkNoteId}
+		]]>
+	</update>
+
+
+	<update id="updateComapnyIdForStatusTransfer" parameterType="com.vo.VOChangeId">
+		<![CDATA[
+		UPDATE talknotes SET
+		compId=#{newId}
+		,lastUpdateUser=#{lastUpdateUser}
+		,lastUpdateTime=#{lastUpdateTime}		
+		where compId=#{oldId}
+		]]>
+	</update>
+
+
+
+
+
+
+
+
+</mapper>
