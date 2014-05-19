@@ -3,11 +3,7 @@
 <%@ include file="/include.jsp"%>
 
 
-
-
 <div id="banner">
-	
 	<div id="userinfo">${user.userComp}</div>
 	<br class="clearit">
-
 </div>
