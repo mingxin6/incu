@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyMeetingRoomMapper">
+
+	<select id="findAllMeetingRooms" resultType="MeetingRoom">
+		<![CDATA[
+		select 
+		uid as uid
+		,meetingRoomNo AS meetingRoomNo
+		,status AS status
+		,remark AS remark
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from MeetingRoom
+		order by meetingRoomNo
+		]]>
+	</select>
+
+	<select id="findMeetingRoomById" parameterType="string" resultType="MeetingRoom">
+		<![CDATA[
+		select
+		uid as uid
+		,meetingRoomNo AS meetingRoomNo
+		,status AS status
+		,remark AS remark
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from MeetingRoom
+		WHERE uid=#{uid}
+		]]>
+	</select>
+	
+	
+
+	<insert id="insertMeetingRoom" parameterType="MeetingRoom">
+		<![CDATA[
+		INSERT INTO MeetingRoom
+		(uID, meetingRoomNo,status,remark,lastUpdateUser,lastUpdateTime)
+		VALUES
+		(
+		#{uid},#{meetingRoomNo},#{status},#{remark},#{lastUpdateUser},#{lastUpdateTime}
+		)
+		]]>
+	</insert>
+
+
+	<update id="updateMeetingRoom" parameterType="MeetingRoom">
+		<![CDATA[
+		UPDATE MeetingRoom SET
+		meetingRoomNo=#{meetingRoomNo}
+		,status=#{status}
+		,remark=#{remark}
+		,lastUpdateUser=#{lastUpdateUser}	
+		,lastUpdateTime=#{lastUpdateTime}
+		where uid=#{uid}
+		]]>
+	</update>
+
+	<delete id="deleteMeetingRoom" parameterType="string">
+		<![CDATA[
+		DELETE FROM MeetingRoom where uid =#{uid}
+		]]>
+	</delete>
+
+</mapper>

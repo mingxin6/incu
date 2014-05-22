@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="meetingRoomList.htm">
+					meetingRoomListController
+				</prop>
+
+				<prop key="meetingRoomView.htm">
+					meetingRoomViewController
+				</prop>
+
+				<prop key="meetingRoomAdd.htm">
+					meetingRoomAddController
+				</prop>
+
+
+				<prop key="/meetingRoomEdit.htm">
+					meetingRoomEditController
+				</prop>
+
+				<prop key="/meetingRoomDelete.htm">
+					meetingRoomDeleteController
+				</prop>
+
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="checkSessionInterceptor" />
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="meetingRoomListController"
+		class="com.mod.meetingRoom.controller.MeetingRoomListController">
+		<property name="formView" value="meetingRoomList" />
+		<property name="successView" value="meetingRoomList" />
+	</bean>
+
+	<bean id="meetingRoomViewController"
+		class="com.mod.meetingRoom.controller.MeetingRoomViewController">
+	</bean>
+
+	<bean id="meetingRoomAddController" class="com.mod.meetingRoom.controller.MeetingRoomAddController">
+		<property name="validator">
+			<bean class="com.mod.meetingRoom.controller.MeetingRoomValidator" />
+		</property>
+	</bean>
+
+	<bean id="meetingRoomEditController"
+		class="com.mod.meetingRoom.controller.MeetingRoomEditController">
+	</bean>
+
+	<bean id="meetingRoomDeleteController"
+		class="com.mod.meetingRoom.controller.MeetingRoomDeleteController">
+	</bean>
+
+
+
+</beans>
