@@ -21,8 +21,6 @@ import com.model.FullCalendarBean;
 import com.model.ServiceResourceAccept;
 
 public class FullCalendarServlet extends HttpServlet {
-	
-
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
@@ -32,39 +30,37 @@ public class FullCalendarServlet extends HttpServlet {
 			IOException {
 
 		String srdid = request.getParameter("srdid");
-		
+
 		System.out.println("FullCalendarServlet------srdid=" + srdid);
 
 		MySQLAccess db = new MySQLAccess();
 		List<ServiceResourceAccept> sraList = db.readServiceResourceAcceptListForFullCalendar(srdid);
 		List<FullCalendarBean> fcList = new ArrayList();
-		for(Iterator it = sraList.iterator();it.hasNext(); ){
+		for (Iterator it = sraList.iterator(); it.hasNext();) {
 			FullCalendarBean fcBean = new FullCalendarBean();
-			ServiceResourceAccept sraBean = (ServiceResourceAccept)it.next();
+			ServiceResourceAccept sraBean = (ServiceResourceAccept) it.next();
 			String start = sraBean.getNeed_date_start();
 			String end = sraBean.getNeed_date_end();
 			fcBean.setId(sraBean.getSeq());
 			fcBean.setStart(start);
 			fcBean.setEnd(end);
 			fcBean.setTitle(sraBean.getCompany_name());
-			
+
 			SimpleDateFormat sdfParse = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-			SimpleDateFormat sdfFormat = new SimpleDateFormat("HH点mm分");			
+			SimpleDateFormat sdfFormat = new SimpleDateFormat("HH点mm分");
 			Date tempStart = null;
 			Date tempEnd = null;
-			
-			
+
 			try {
 				tempStart = sdfParse.parse(start);
 				tempEnd = sdfParse.parse(end);
-				fcBean.setEventText("需求方："+sraBean.getCompany_name()+"<br />"+
-						"需求时间："+	sdfFormat.format(tempStart)+" 至 "+
-						sdfFormat.format(tempEnd));
+				fcBean.setEventText("需求方：" + sraBean.getCompany_name() + "<br />" + "需求时间："
+						+ sdfFormat.format(tempStart) + " 至 " + sdfFormat.format(tempEnd));
 			} catch (ParseException e) {
-				
+
 				e.printStackTrace();
-			} 			
-				System.out.println("start to end  bean;;;;;");
+			}
+			System.out.println("start to end  bean;;;;;");
 			fcList.add(fcBean);
 		}
 		PrintWriter out = response.getWriter();
@@ -81,18 +77,16 @@ public class FullCalendarServlet extends HttpServlet {
 		JsonObject myObj = new JsonObject();
 		String jsonStr = "";
 		// ---------------------------------------------------------
-	
-			Gson gson = new Gson();
-			jsonStr = gson.toJson(fcList);
+
+		Gson gson = new Gson();
+		jsonStr = gson.toJson(fcList);
 
 		// ---------------------------------------------------------
 		out.println(jsonStr);
-		
+
 		System.out.println("FullCalendarServlet,,,   sraList.toString()=" + jsonStr);
-		
+
 		out.close();
 	}
-
-	
 
 }

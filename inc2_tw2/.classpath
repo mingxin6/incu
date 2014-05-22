@@ -55,7 +55,6 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/org.springframework.jms-3.0.7.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/org.springframework.orm-3.0.7.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/org.springframework.oxm-3.0.7.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/org.springframework.spring-library-3.0.7.RELEASE.libd"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/org.springframework.test-3.0.7.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/org.springframework.transaction-3.0.7.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/org.springframework.web-3.0.7.RELEASE.jar"/>
