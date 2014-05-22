@@ -22,6 +22,7 @@
 			/WEB-INF/springapp-fees-servlet.xml
 			/WEB-INF/springapp-financialOfficer-servlet.xml
 			/WEB-INF/springapp-member-servlet.xml
+			/WEB-INF/springapp-meetingRoom-servlet.xml
 			/WEB-INF/springapp-outsource-servlet.xml
 			/WEB-INF/springapp-parkingLot-servlet.xml
 			/WEB-INF/springapp-parkingLotBike-servlet.xml

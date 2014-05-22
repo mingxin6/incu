@@ -47,6 +47,7 @@
 		<mapper resource="com/db/MyFinancialOfficerMapper.xml" />
 		<mapper resource="com/db/MyGrantMapper.xml" />
 		<mapper resource="com/db/MyIpRecordMapper.xml" />
+		<mapper resource="com/db/MyMeetingRoomMapper.xml" />
 		<mapper resource="com/db/MyMemberMapper.xml" />
 		<mapper resource="com/db/MyNotifyMapper.xml" />
 		<mapper resource="com/db/MyOrgMapper.xml" />

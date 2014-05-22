@@ -32,6 +32,7 @@ import com.model.FinancialOfficer;
 import com.model.FloorInfo;
 import com.model.GrantRecord;
 import com.model.IPREC;
+import com.model.MeetingRoom;
 import com.model.Member;
 import com.model.Notify;
 import com.model.Notifyee;
@@ -545,23 +546,23 @@ public class MySQLAccessMyBatis {
 		int cnt = session.selectOne("com.db.MyTalkNotesMapper.findTalkNoteCount");
 		return cnt;
 	}
-	
+
 	public String findVisitCount(String compId) {
 		String cnt = session.selectOne("com.db.MyTalkNotesMapper.findVisitCount", compId);
 		return cnt;
 	}
-	
+
 	public String findVisitCount2(Map map) {
 		String cnt = session.selectOne("com.db.MyTalkNotesMapper.findVisitCount2", map);
 		return cnt;
 	}
-	
+
 	public String findVisitCount3(Map map) {
 		String cnt = session.selectOne("com.db.MyTalkNotesMapper.findVisitCount3", map);
-		 
+
 		return cnt;
 	}
-	
+
 	public TalkNotes findTalkNotesById(String talkNoteId) {
 		TalkNotes obj = session.selectOne("com.db.MyTalkNotesMapper.findTalkNotesById", talkNoteId);
 		return obj;
@@ -630,6 +631,34 @@ public class MySQLAccessMyBatis {
 	}
 
 	// ************************************************************************
+	// MeetingRoom
+
+	public List findAllMeetingRooms() {
+		List recs = session.selectList("com.db.MyMeetingRoomMapper.findAllMeetingRooms");
+		return recs;
+	}
+
+	public MeetingRoom findMeetingRoomById(String uid) {
+		MeetingRoom obj = session.selectOne("com.db.MyMeetingRoomMapper.findMeetingRoomById", uid);
+		return obj;
+	}
+
+	public int insertMeetingRoom(MeetingRoom meetingRoom) {
+		int n = this.session.insert("com.db.MyMeetingRoomMapper.insertMeetingRoom", meetingRoom);
+		return n;
+	}
+
+	public int updateMeetingRoom(MeetingRoom meetingRoom) {
+		int n = this.session.update("com.db.MyMeetingRoomMapper.updateMeetingRoom", meetingRoom);
+		return n;
+	}
+
+	public int deleteMeetingRoom(String uid) {
+		int n = this.session.delete("com.db.MyMeetingRoomMapper.deleteMeetingRoom", uid);
+		return n;
+	}
+
+	// ************************************************************************
 	// Outsource
 	public List findAllOutsources() {
 		List recs = session.selectList("com.db.MyOutsourceMapper.findAllOutsources");
@@ -668,11 +697,11 @@ public class MySQLAccessMyBatis {
 		ParkingLot obj = session.selectOne("com.db.MyParkingLotMapper.findParkingLotById", uid);
 		return obj;
 	}
+
 	public ParkingLot findParkingLotByUser(String usedby) {
 		ParkingLot obj = session.selectOne("com.db.MyParkingLotMapper.findParkingLotByUser", usedby);
 		return obj;
 	}
-	
 
 	public int insertParkingLots(ParkingLot parkingLot) {
 		int n = this.session.insert("com.db.MyParkingLotMapper.insertParkingLots", parkingLot);
@@ -701,12 +730,12 @@ public class MySQLAccessMyBatis {
 		ParkingLotBike obj = session.selectOne("com.db.MyParkingLotBikeMapper.findParkingLotBikeById", uid);
 		return obj;
 	}
-	
+
 	public ParkingLotBike findParkingLotBikeByUser(String usedby) {
 		ParkingLotBike obj = session.selectOne("com.db.MyParkingLotBikeMapper.findParkingLotBikeByUser", usedby);
 		return obj;
 	}
-	
+
 	public int insertParkingLotBikes(ParkingLotBike parkingLotBike) {
 
 		int n = this.session.insert("com.db.MyParkingLotBikeMapper.insertParkingLotBikes", parkingLotBike);
@@ -832,12 +861,12 @@ public class MySQLAccessMyBatis {
 		SecurityCard obj = session.selectOne("com.db.MySecurityCardMapper.findSecurityCardById", uid);
 		return obj;
 	}
-	
+
 	public SecurityCard findSecurityCardByUser(String user) {
 		SecurityCard obj = session.selectOne("com.db.MySecurityCardMapper.findSecurityCardByUser", user);
 		return obj;
 	}
-	
+
 	public int insertSecurityCards(SecurityCard securityCard) {
 		int n = this.session.insert("com.db.MySecurityCardMapper.insertSecurityCards", securityCard);
 		return n;

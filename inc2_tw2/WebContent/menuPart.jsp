@@ -101,6 +101,8 @@
 								code="parkingBike.management" text="機車停車位管理" /> </a></li>
 					<li><a href="securityCardList.htm"><s:message
 								code="securityCard.management" text="門禁卡管理" /> </a></li>
+					<li><a href="meetingRoomList.htm"><s:message
+								code="meetingRoom.management" text="會議室管理" /> </a></li>
 				</ul></li>
 
 			<%-- 
