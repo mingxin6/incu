@@ -1,4 +1,4 @@
-﻿-- --------------------------------------------------------
+-- --------------------------------------------------------
 -- 主機:                           127.0.0.1
 -- 服務器版本:                        5.5.25 - MySQL Community Server (GPL)
 -- 服務器操作系統:                      Win64
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `activityrec` (
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 正在導出表  yuhua3.activityrec 的資料：~17 rows (大約)
+-- 正在導出表  yuhua3.activityrec 的資料：~9 rows (大約)
 /*!40000 ALTER TABLE `activityrec` DISABLE KEYS */;
 INSERT INTO `activityrec` (`uid`, `title`, `content`, `thedate`, `theuser`, `status`) VALUES
 	(' act1', '台法數位內容產業交流暨媒合會', '<br><img  src="http://127.0.0.1:8082/imgsite/2014-02-17_9-23-39.png"><br><br><img  src="http://127.0.0.1:8082/imgsite/2014-02-17_9-24-12.png"><br><br><img  src="http://127.0.0.1:8082/imgsite/2014-02-17_9-24-43.png"><br><br><img  src="http://127.0.0.1:8082/imgsite/2014-02-17_9-25-19.png">', '2013/03/14', '', ''),
@@ -327,7 +327,7 @@ CREATE TABLE IF NOT EXISTS `fees` (
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=616 DEFAULT CHARSET=utf8 COMMENT='費用';
 
--- 正在導出表  yuhua3.fees 的資料：~422 rows (大約)
+-- 正在導出表  yuhua3.fees 的資料：~421 rows (大約)
 /*!40000 ALTER TABLE `fees` DISABLE KEYS */;
 INSERT INTO `fees` (`uid`, `yearMonth`, `cid`, `compName`, `registerId`, `rent`, `parkingFee`, `managementFee`, `utilityFee`, `consumableFee`, `copyFee`, `sitingFee`, `equipmentRental`, `preTaxTotal`, `tax`, `total`, `yellowcircle`) VALUES
 	(188, '2014/01', 'NSI194', '境佳國際有限公司', '12877482', '16389', '', '2,294', '1,673', '30', '', '', '', '', '', '20,386', NULL),
@@ -899,7 +899,7 @@ CREATE TABLE IF NOT EXISTS `isi_company` (
   UNIQUE KEY `customId` (`customId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='公司資料';
 
--- 正在導出表  yuhua3.isi_company 的資料：~201 rows (大約)
+-- 正在導出表  yuhua3.isi_company 的資料：~215 rows (大約)
 /*!40000 ALTER TABLE `isi_company` DISABLE KEYS */;
 INSERT INTO `isi_company` (`CompanyStatus`, `ID`, `customId`, `CompanyName`, `companyShortName`, `compEngName`, `CompanyID`, `EstablishDate`, `representative`, `kind`, `domain`, `compAddress`, `ResidentDate`, `EmployeeAmount`, `RegisterCapital`, `actualCaptial`, `compIntroduction`, `CompanyWebURL`, `ProjContent`, `OfficeLocation`, `OfficeSize`, `OwnerName`, `OwnerTelphone`, `OwnerMobilePhone`, `OwnerEmail`, `AdminOwnerName`, `AdminOwnerTelphone`, `AdminOwnerMobilePhone`, `AdminOwnerEmail`, `contractNumber`, `contractStartDate`, `contractEndDate`, `innoKind`, `Remark`, `moveoutDate`, `moveOutAddesss`, `manager`, `logoFileName`, `createdBy`, `createdTime`, `lastUpdateUser`, `lastUpdateTime`, `reviewPaperUid`, `reviewPaperScore`, `reviewMeetingScore`, `amid`, `pmId`, `deposit`, `bond`) VALUES
 	('STATUS_MOVEOUT', 'NSI001', 'NSI001', '虛擬動能股份有限公司', '虛擬動能', 'Qoc Gwkvm  Co., Ltd.', '39884396', '2000/03/20', '孫宏文', 'KIND_DEMESTIC', 'DOMAIN_SRV', '新豐市樓大路40號', '2000/09/01', '', '10,000,000', '10,000,000', '', 'http://www.Goie.com', '', '', '', '趙強長', '2123-5852', '0913-954-896', 'dpyz7@test.com', '趙世長', '2141-3188', '0921-953-514', 'l41z7@test.com', '合約字第3605字', '', '', 'INNO_INNO', '', '2003/02/28', '上原市安東區霞安路16號9樓', '', '', NULL, NULL, NULL, NULL, '', NULL, NULL, '', '', '', ''),
@@ -1165,7 +1165,7 @@ INSERT INTO `isi_companyb0` (`CompanyStatus`, `ID`, `customId`, `CompanyName`, `
 	('STATUS_APPLY', 'comp20140420103519596', NULL, '傑司有限公司', '傑司', 'Qprnpb Iihryh  Co., Ltd.', '47968875', '2009/06/15', '孫強強', '', 'DOMAIN_SOFT', '南和市東同路9號8樓', '', '', '', '', '', 'http://www.Mncl.com', '', '', '', '陳芳慈', '2113-6662', '0943-273-195', 'xuh8l@test.com', '錢常宏', '2132-1819', '0922-616-127', 'n8g61@test.com', '合約字第2633字', '', '', '', '', '', '', '', '', '', '20130312103519598', '', '', '', NULL, NULL, ''),
 	('STATUS_APPLYOK', 'comp20140420103522128', NULL, '立芳有限公司', '立芳', 'Loph Fpuerr  Co., Ltd.', '86813561', '2008/09/17', '孫鈞立', '', 'DOMAIN_SRV', '新豐市文東區長中路85號7樓之1', '', '', '', '', '', 'http://www.Cppxr.com', '', '', '', '趙強金', '2214-4983', '0943-383-918', 'vgnv0@test.com', '胡強金', '2432-1698', '0934-757-492', 'rr5gn@test.com', '合約字第8869字', '', '', '', '', '', '', '', '', '', '20130501103522131', '', '', 'rpaper20140420112244907', NULL, NULL, ''),
 	('STATUS_REVIEW', 'comp20140420103524711', NULL, '美宏有限公司', '美宏', 'Btq Meyhtk  Co., Ltd.', '65697677', '2009/04/09', '王鈞文', '', 'DOMAIN_SOFT', '新豐市樓安區大亭路90號', '', '', '', '', '', 'http://www.Vo.com', '', '', '', '李慈自', '2332-7885', '0913-876-392', 'akjdf@test.com', '張玉司', '2131-4681', '0944-221-565', '3zg6n@test.com', '合約字第1418字', '', '', '', '', '', '', '', '', '', '20131102103524713', '', '', '', NULL, NULL, ''),
-	('STATUS_APPLY', 'comp20140420103527061', NULL, '英麗有限公司', '英麗', 'Vtppje Yxuzwu  Co., Ltd.', '71968994', '2010/05/05', '陳自鈞', '', 'DOMAIN_CONT', '南和市高國路603號', '', '', '', '', '', 'http://www.Dstd.com', '', '', '', '劉慈文', '2312-2933', '0932-179-999', 'h6344@test.com', '孫國章', '2333-5435', '0931-962-661', 'xxu05@test.com', '合約字第0407字', '', '', '', '', '', '', '', '', '', '20131010103527064', '', '', '', NULL, NULL, ''),
+	('STATUS_REVIEW', 'comp20140420103527061', NULL, '英麗有限公司', '英麗', 'Vtppje Yxuzwu  Co., Ltd.', '71968994', '2010/05/05', '陳自鈞', '', 'DOMAIN_CONT', '南和市高國路603號', '', '10', '500000', '', '', 'http://www.Dstd.com', '', '', '40', '劉慈文', '2312-2933', '0932-179-999', 'h6344@test.com', '孫國章', '2333-5435', '0931-962-661', 'xxu05@test.com', '合約字第0407字', '', '', '', '', '', '', '', '', '', '20131010103527064', '', '', '', NULL, NULL, ''),
 	('STATUS_REVIEW', 'comp20140420103637178', NULL, '慈玉有限公司', '慈玉', 'Vn Umbcy  Co., Ltd.', '44972596', '2009/08/10', '王長輝', '', 'DOMAIN_SOFT', '南和市霞霞區文長路5號8樓', '', '', '', '', '', 'http://www.Tmwv.com', '', '', '', '陳芳立', '2342-3682', '0933-632-964', 'uortn@test.com', '胡常玉', '2213-2375', '0944-252-319', 'movh1@test.com', '合約字第7824字', '', '', '', '', '', '', '', '', '', '20121206103637181', '', '', '', NULL, NULL, ''),
 	('STATUS_APPLY', 'comp20140420103639030', NULL, '章傑有限公司', '章傑', 'Jzy Andr  Co., Ltd.', '36484219', '2008/06/19', '陳芳輝', '', 'DOMAIN_SOFT', '新豐市樓高區建國路313號6樓', '', '', '', '', '', 'http://www.Eovzhq.com', '', '', '', '伍慈傑', '2231-1218', '0923-427-583', '7zqm5@test.com', '張芳世', '2314-8353', '0934-347-877', 'fhkmm@test.com', '合約字第3159字', '', '', '', '', '', '', '', '', '', '20120628103639033', '', '', '', NULL, NULL, ''),
 	('STATUS_APPLY', 'comp20140420103641651', NULL, '章慈有限公司', '章慈', 'Kn Zy  Co., Ltd.', '84358458', '2008/07/08', '孫玉文', '', 'DOMAIN_SOFT', '南和市大東區古山路81號4樓', '', '', '', '', '', 'http://www.Fa.com', '', '', '', '錢麗雄', '2234-3762', '0944-744-533', 'h32vt@test.com', '劉常英', '2314-2971', '0941-815-216', 'o17vb@test.com', '合約字第9163字', '', '', '', '', '', '', '', '', '', '20130615103641653', '', '', '', NULL, NULL, ''),
@@ -1249,6 +1249,63 @@ CREATE TABLE IF NOT EXISTS `managementdept` (
 -- 正在導出表  yuhua3.managementdept 的資料：~0 rows (大約)
 /*!40000 ALTER TABLE `managementdept` DISABLE KEYS */;
 /*!40000 ALTER TABLE `managementdept` ENABLE KEYS */;
+
+
+-- 導出  表 yuhua3.meetingroom 結構
+CREATE TABLE IF NOT EXISTS `meetingroom` (
+  `uid` varchar(50) NOT NULL,
+  `meetingRoomNo` varchar(50) DEFAULT NULL,
+  `status` varchar(50) DEFAULT NULL,
+  `remark` text,
+  `createdBy` varchar(50) DEFAULT NULL,
+  `createdTime` varchar(50) DEFAULT NULL,
+  `lastUpdateUser` varchar(50) DEFAULT NULL,
+  `lastUpdateTime` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='會議室';
+
+-- 正在導出表  yuhua3.meetingroom 的資料：~3 rows (大約)
+/*!40000 ALTER TABLE `meetingroom` DISABLE KEYS */;
+INSERT INTO `meetingroom` (`uid`, `meetingRoomNo`, `status`, `remark`, `createdBy`, `createdTime`, `lastUpdateUser`, `lastUpdateTime`) VALUES
+	('MeetingRoom20140522221513086', 'A101', 'ok', '', NULL, NULL, '', ''),
+	('MeetingRoom20140522221541795', 'A102', 'ok', '', NULL, NULL, '', ''),
+	('MeetingRoom20140522221551811', 'A103', 'ok', '', NULL, NULL, '', '');
+/*!40000 ALTER TABLE `meetingroom` ENABLE KEYS */;
+
+
+-- 導出  表 yuhua3.meetingroomorder 結構
+CREATE TABLE IF NOT EXISTS `meetingroomorder` (
+  `uid` varchar(50) NOT NULL,
+  `meetingRoomNo` varchar(50) DEFAULT NULL,
+  `start` varchar(50) DEFAULT NULL,
+  `end` varchar(50) DEFAULT NULL,
+  `title` varchar(50) DEFAULT NULL,
+  `url` varchar(50) DEFAULT NULL,
+  `eventText` text,
+  `compName` varchar(50) DEFAULT NULL,
+  `person` varchar(50) DEFAULT NULL,
+  `phone` varchar(50) DEFAULT NULL,
+  `createdTime` varchar(50) DEFAULT NULL,
+  `status` varchar(50) DEFAULT NULL,
+  `createdBy` varchar(50) DEFAULT NULL,
+  `lastUpdateUser` varchar(50) DEFAULT NULL,
+  `lastUpdateTime` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='會議室';
+
+-- 正在導出表  yuhua3.meetingroomorder 的資料：~9 rows (大約)
+/*!40000 ALTER TABLE `meetingroomorder` DISABLE KEYS */;
+INSERT INTO `meetingroomorder` (`uid`, `meetingRoomNo`, `start`, `end`, `title`, `url`, `eventText`, `compName`, `person`, `phone`, `createdTime`, `status`, `createdBy`, `lastUpdateUser`, `lastUpdateTime`) VALUES
+	('mro20140523215940510', 'M3', '2014-05-14 10:00', '2014-05-14 12:00', '4w5', '', '', '', 'rhrt', '6556', NULL, 'NEW', NULL, '', ''),
+	('mro20140523230320635', 'M2', '2014-06-12 08:00', '2014-06-12 10:00', '師刺', '', '', '', '', '', NULL, 'NEW', NULL, '', ''),
+	('mro20140523230701553', 'M1', '2014-05-16 14:00', '2014-05-16 16:00', '妻育', '', '', '', '', '', NULL, 'NEW', NULL, '', ''),
+	('mro20140523231105543', 'M1', '2014-05-01 12:00', '2014-05-01 14:00', 'kbj', '', '', '', '', '', NULL, 'NEW', NULL, '', ''),
+	('mro20140524100321069', 'M1', '2014-05-16 10:00', '2014-05-16 12:00', 'fbfg', '', '', '', '', '', NULL, 'NEW', NULL, '', ''),
+	('mro20140524102903414', 'M1', '2014-05-07 10:00', '2014-05-07 12:00', 'iugiu', '', '', '', '', '', NULL, 'NEW', NULL, '', ''),
+	('mro20140524150046777', 'A103', '2014-05-25 14:00', '2014-05-25 16:00', '會會會議', '', '', 'jhvhj', '吳昇', '66778899', NULL, 'NEW', NULL, '', ''),
+	('mro20140524215506175', 'A101', '2014-05-21 10:00', '2014-05-21 12:00', 'v', '', '', 'pppp', 'kbk', 'jh', NULL, 'NEW', NULL, '', ''),
+	('mro20140524215602377', 'A101', '2014-05-24 08:00', '2014-05-24 09:00', 'rtr', '', '', 'ooppp', 'xxx', '444', NULL, 'NEW', NULL, '', '');
+/*!40000 ALTER TABLE `meetingroomorder` ENABLE KEYS */;
 
 
 -- 導出  表 yuhua3.member 結構
@@ -1822,11 +1879,12 @@ CREATE TABLE IF NOT EXISTS `reviewpaper` (
   `lastUpdateTime` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='書審案';
 
--- 正在導出表  yuhua3.reviewpaper 的資料：~2 rows (大約)
+-- 正在導出表  yuhua3.reviewpaper 的資料：~3 rows (大約)
 /*!40000 ALTER TABLE `reviewpaper` DISABLE KEYS */;
 INSERT INTO `reviewpaper` (`reviewPaperUid`, `title`, `thedate`, `remark`, `status`, `createdBy`, `createdTime`, `lastUpdateUser`, `lastUpdateTime`) VALUES
 	('rpaper20140420112244907', '2014年第一次審查', '2014/02/13', '', 'STAT_CLOSE', '何新一', '20140420112244939', '何新一', '20140420112244940'),
-	('rpaper20140420112351756', '2014年第二次審查', '2014/02/26', '', 'STAT_PROC', '何新一', '20140420112351757', '何新一', '20140420112351758');
+	('rpaper20140420112351756', '2014年第二次審查', '2014/02/26', '', 'STAT_PROC', '何新一', '20140420112351757', '何新一', '20140420112351758'),
+	('rpaper20140429133943927', '2014年第三次審查', '2014/05/16', '', 'STAT_PROC', '何新一', '20140429133943944', '何新一', '20140429133943945');
 /*!40000 ALTER TABLE `reviewpaper` ENABLE KEYS */;
 
 
@@ -1848,7 +1906,7 @@ CREATE TABLE IF NOT EXISTS `reviewpaperresult` (
   `lastUpdateTime` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='書審結果紀錄';
 
--- 正在導出表  yuhua3.reviewpaperresult 的資料：~16 rows (大約)
+-- 正在導出表  yuhua3.reviewpaperresult 的資料：~18 rows (大約)
 /*!40000 ALTER TABLE `reviewpaperresult` DISABLE KEYS */;
 INSERT INTO `reviewpaperresult` (`reviewPaperResultUid`, `reviewPaperUid`, `type`, `reviewerUid`, `reviewerName`, `companyUid`, `companyName`, `score`, `remark`, `status`, `createdBy`, `createdTime`, `lastUpdateUser`, `lastUpdateTime`) VALUES
 	('rp20140420112244956', 'rpaper20140420112244907', 'PAPER', 'Reviewer20140327142913302', '張成功', 'comp20140420103522128', '立芳有限公司', '88', '', '', '何新一', '20140420112244957', '何新一', '20140420112244958'),
@@ -1866,7 +1924,9 @@ INSERT INTO `reviewpaperresult` (`reviewPaperResultUid`, `reviewPaperUid`, `type
 	('rp20140420113616456', 'rpaper20140420112244907', 'PAPER', 'Reviewer20140327142913302', '張成功', 'comp20140420110317821', '立強有限公司', '88', '', '', '何新一', '20140420113616457', '何新一', '20140420113616458'),
 	('rp20140420113616459', 'rpaper20140420112244907', 'PAPER', 'Reviewer20140327143000325', '王勝利', 'comp20140420110317821', '立強有限公司', '89', '', '', '何新一', '20140420113616460', '何新一', '20140420113616461'),
 	('rp20140420113616462', 'rpaper20140420112244907', 'MEETING', 'Reviewer20140327142936203', '李仁一', 'comp20140420110317821', '立強有限公司', '88', '', '', '何新一', '20140420113616463', '何新一', '20140420113616464'),
-	('rp20140420113616465', 'rpaper20140420112244907', 'MEETING', 'Reviewer20140327143044265', '趙四維', 'comp20140420110317821', '立強有限公司', '88', '', '', '何新一', '20140420113616466', '何新一', '20140420113616467');
+	('rp20140420113616465', 'rpaper20140420112244907', 'MEETING', 'Reviewer20140327143044265', '趙四維', 'comp20140420110317821', '立強有限公司', '88', '', '', '何新一', '20140420113616466', '何新一', '20140420113616467'),
+	('rp20140429133943974', 'rpaper20140429133943927', 'PAPER', 'Reviewer20140327143149410', '吳立功', 'comp20140420103527061', '英麗有限公司', '99', '', '', '何新一', '20140429133943975', '何新一', '20140429133943976'),
+	('rp20140429133943977', 'rpaper20140429133943927', 'MEETING', 'Reviewer20140327143000325', '王勝利', 'comp20140420103527061', '英麗有限公司', '80', '', '', '何新一', '20140429133943978', '何新一', '20140429133943979');
 /*!40000 ALTER TABLE `reviewpaperresult` ENABLE KEYS */;
 
 
@@ -2243,7 +2303,7 @@ CREATE TABLE IF NOT EXISTS `talknotes` (
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='輔導記錄';
 
--- 正在導出表  yuhua3.talknotes 的資料：~68 rows (大約)
+-- 正在導出表  yuhua3.talknotes 的資料：~87 rows (大約)
 /*!40000 ALTER TABLE `talknotes` DISABLE KEYS */;
 INSERT INTO `talknotes` (`Id`, `type`, `TalkTheme`, `TalkContent`, `talkDateTime`, `TalkStartTime`, `TalkEndTime`, `MyPersonincharge`, `OtherPersonincharge`, `TalkAddress`, `compId`, `compName`, `consultantId`, `consultantName`, `replyContent`, `replyDateTime`, `score`, `scoreContent`, `status`, `createdBy`, `createdTime`, `lastUpdateUser`, `lastUpdateTime`) VALUES
 	('TalkNote10', 'OTHER', '申請政府資源計畫', '<p class="2" style="margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;\r\nmargin-left:0cm;mso-para-margin-top:0cm;mso-para-margin-right:0cm;mso-para-margin-bottom:\r\n.25gd;mso-para-margin-left:0cm;line-height:22.0pt;mso-line-height-rule:exactly"><span style="font-family:標楷體;mso-bidi-font-family:&quot;Times New Roman&quot;">壹、時　間：<span lang="EN-US">102</span>年<span lang="EN-US">1</span>月<span lang="EN-US">17</span>日<span lang="EN-US">(</span>星期四<span lang="EN-US">)</span>上午<span lang="EN-US">10</span>：<span lang="EN-US">30<o:p></o:p></span></span></p>\r\n\r\n<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;\r\nmargin-left:3.0cm;mso-para-margin-top:0cm;mso-para-margin-right:0cm;mso-para-margin-bottom:\r\n.25gd;mso-para-margin-left:3.0cm;text-align:justify;text-justify:inter-ideograph;\r\ntext-indent:-3.0cm;line-height:22.0pt;mso-line-height-rule:exactly;layout-grid-mode:\r\nchar;mso-layout-grid-align:none;text-autospace:none"><strong><span style="font-size:\r\n14.0pt;font-family:標楷體;mso-font-kerning:0pt">貳、地　點：</span></strong><span style="font-size:14.0pt;font-family:標楷體">育成中心<span lang="EN-US">3</span>樓企業培育室<span lang="EN-US"><o:p></o:p></span></span></p>\r\n\r\n<p class="MsoNormal" style="margin-bottom:3.0pt;mso-para-margin-bottom:.25gd;\r\ntext-align:justify;text-justify:inter-ideograph;line-height:22.0pt;mso-line-height-rule:\r\nexactly;layout-grid-mode:char;mso-layout-grid-align:none;text-autospace:none"><strong><span style="font-size:14.0pt;font-family:標楷體;mso-font-kerning:0pt">參、主　席：</span></strong><span style="font-size:14.0pt;font-family:標楷體">徐志謙<span lang="EN-US">&nbsp; </span></span><span lang="EN-US" style="font-size:14.0pt;font-family:標楷體;mso-font-kerning:0pt;mso-bidi-font-weight:\r\nbold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><span style="font-size:14.0pt;\r\nfont-family:標楷體;mso-font-kerning:0pt;mso-bidi-font-weight:bold">記錄：</span><span style="font-size:14.0pt;font-family:標楷體">徐志謙</span><span lang="EN-US" style="font-size:14.0pt;font-family:標楷體;mso-font-kerning:0pt;mso-bidi-font-weight:\r\nbold"><o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;\r\nmargin-left:13.9pt;mso-para-margin-top:0cm;mso-para-margin-right:0cm;\r\nmso-para-margin-bottom:.25gd;mso-para-margin-left:13.9pt;text-align:justify;\r\ntext-justify:inter-ideograph;text-indent:-13.9pt;line-height:22.0pt;mso-line-height-rule:\r\nexactly;layout-grid-mode:char;mso-layout-grid-align:none;text-autospace:none"><strong><span style="font-size:14.0pt;font-family:標楷體;mso-font-kerning:0pt">肆、出席單位及人員：</span></strong><span lang="EN-US" style="font-size:14.0pt;font-family:標楷體;mso-font-kerning:0pt;\r\nmso-bidi-font-weight:bold">(</span><span style="font-size:14.0pt;font-family:\r\n標楷體;mso-font-kerning:0pt;mso-bidi-font-weight:bold">職稱略<span lang="EN-US">)</span></span><span lang="EN-US" style="font-size:14.0pt;font-family:標楷體"> <o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;\r\nmargin-left:13.9pt;mso-para-margin-top:0cm;mso-para-margin-right:0cm;\r\nmso-para-margin-bottom:.25gd;mso-para-margin-left:13.9pt;text-align:justify;\r\ntext-justify:inter-ideograph;text-indent:-13.9pt;line-height:22.0pt;mso-line-height-rule:\r\nexactly;layout-grid-mode:char;mso-layout-grid-align:none;text-autospace:none"><span style="font-size:14.0pt;font-family:標楷體">資策會 徐志謙、雙碼科技有限公司葉俊才總經理</span><span lang="EN-US" style="font-size:14.0pt;font-family:標楷體;mso-font-kerning:0pt;\r\nmso-bidi-font-weight:bold"><o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;\r\nmargin-left:13.9pt;mso-para-margin-top:0cm;mso-para-margin-right:0cm;\r\nmso-para-margin-bottom:.25gd;mso-para-margin-left:13.9pt;text-align:justify;\r\ntext-justify:inter-ideograph;text-indent:-13.9pt;line-height:22.0pt;mso-line-height-rule:\r\nexactly;layout-grid-mode:char;mso-layout-grid-align:none;text-autospace:none"><strong><span style="font-size:14.0pt;font-family:標楷體;mso-font-kerning:0pt">伍、討論事項及裁示：</span></strong><span lang="EN-US" style="font-size:14.0pt;font-family:標楷體;mso-font-kerning:0pt;\r\nmso-bidi-font-weight:bold"><o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal" style="margin-top:0cm;margin-right:28.55pt;margin-bottom:\r\n0cm;margin-left:24.0pt;margin-bottom:.0001pt;text-align:justify;text-justify:\r\ninter-ideograph;text-indent:-24.0pt;mso-line-height-alt:0pt;mso-list:l2 level1 lfo1"><!--[if !supportLists]--><span lang="EN-US" style="font-size: 14pt; font-family: 標楷體;">一、<span style="font-size: 7pt; line-height: normal; font-family: \'Times New Roman\';">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size:14.0pt;font-family:標楷體">申請政府資源計畫<span lang="EN-US"><o:p></o:p></span></span></p>\r\n\r\n<p class="MsoNormal" style="margin-left:48.0pt;text-indent:-24.0pt;mso-list:l0 level1 lfo2"><!--[if !supportLists]--><span lang="EN-US" style="font-size: 14pt; font-family: 標楷體;">(一)<span style="font-size: 7pt; line-height: normal; font-family: \'Times New Roman\';">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size: 14pt; font-family: 標楷體;">方碼科技成立以來，一直專注於二維條碼之軟體製作。近年隨著智慧型手機的成長，行動條碼終於躍然而上，成為目前<span lang="EN-US">O2O</span>模式的重要媒介。除了從最開始的資訊傳遞，到之後的行銷角度出發，由於製作成本低，小小的圖示就能讓消費者透過手機鏡頭掃描獲取整體的產品詳細資料、或是購物優惠等，在在提升二維條碼的應用廣度。<span lang="EN-US"><o:p></o:p></span></span></p>\r\n\r\n<p class="MsoNormal" style="margin-left:48.0pt;text-indent:-24.0pt;mso-list:l0 level1 lfo2"><!--[if !supportLists]--><span lang="EN-US" style="font-size: 14pt; font-family: 標楷體;">(二)<span style="font-size: 7pt; line-height: normal; font-family: \'Times New Roman\';">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size: 14pt; font-family: 標楷體;">而由此基礎上，申請政府研發補助來強化未來的產品研發佈局，是非常好的方式，目前除了能夠申請技術成分高的<span lang="EN-US">SBIR</span>計畫，另也能考慮<span lang="EN-US">SIIR </span>服務業計畫，此著眼點在於後端市場面的銜接，是真正考驗著方碼科技成長的關鍵。<span lang="EN-US"><o:p></o:p></span></span></p>\r\n\r\n<p class="MsoNormal" style="margin-left:48.0pt;text-indent:-24.0pt;mso-list:l0 level1 lfo2"><!--[if !supportLists]--><span lang="EN-US" style="font-size: 14pt; font-family: 標楷體;">(三)<span style="font-size: 7pt; line-height: normal; font-family: \'Times New Roman\';">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size: 14pt; font-family: 標楷體;">二維條碼的價值必須體現在行銷面上的應用，而若能真正善用二維條碼與行動裝置的無縫結合，並在商業模式上思考<span lang="EN-US">O2O</span>與電子商務上的運作策略，此為方碼科技在申請政府資源上的一個利基點。<span lang="EN-US"><o:p></o:p></span></span></p>\r\n\r\n<p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph;\r\nmso-line-height-alt:0pt"><span lang="EN-US" style="font-size: 14pt; font-family: 標楷體;">&nbsp;</span></p>\r\n\r\n<p class="MsoNormal" style="margin-top:0cm;margin-right:28.55pt;margin-bottom:\r\n0cm;margin-left:24.0pt;margin-bottom:.0001pt;text-align:justify;text-justify:\r\ninter-ideograph;text-indent:-24.0pt;mso-line-height-alt:0pt;mso-list:l2 level1 lfo1"><!--[if !supportLists]--><span lang="EN-US" style="font-size:14.0pt;font-family:標楷體;mso-bidi-font-family:標楷體;\r\nmso-bidi-font-weight:bold">二、<span style="font-size: 7pt; line-height: normal; font-family: \'Times New Roman\';">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size:14.0pt;font-family:標楷體;mso-font-kerning:0pt;mso-bidi-font-weight:\r\nbold">計畫書撰寫指導</span><span lang="EN-US" style="font-size:14.0pt;font-family:標楷體;\r\nmso-bidi-font-weight:bold"><o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;\r\nmargin-left:48.0pt;mso-para-margin-top:0cm;mso-para-margin-right:0cm;\r\nmso-para-margin-bottom:.25gd;mso-para-margin-left:48.0pt;text-align:justify;\r\ntext-justify:inter-ideograph;text-indent:-24.0pt;line-height:22.0pt;mso-line-height-rule:\r\nexactly;mso-list:l1 level1 lfo3"><!--[if !supportLists]--><span lang="EN-US" style="font-size: 14pt; font-family: 標楷體;">(一)<span style="font-size: 7pt; line-height: normal; font-family: \'Times New Roman\';">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size: 14pt; font-family: 標楷體;">在計畫書撰寫上，首要仍是在於申請主題為何<span lang="EN-US">? </span>由大環境的動機帶出研發產品或是新服務模式的設計背景，而後鋪陳出企業的產品如何解決這個缺陷，並且所能創造的效益，甚至是貢獻。<span lang="EN-US"><o:p></o:p></span></span></p>\r\n\r\n<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;\r\nmargin-left:48.0pt;mso-para-margin-top:0cm;mso-para-margin-right:0cm;\r\nmso-para-margin-bottom:.25gd;mso-para-margin-left:48.0pt;text-align:justify;\r\ntext-justify:inter-ideograph;text-indent:-24.0pt;line-height:22.0pt;mso-line-height-rule:\r\nexactly;mso-list:l1 level1 lfo3"><!--[if !supportLists]--><span lang="EN-US" style="font-size: 14pt; font-family: 標楷體;">(二)<span style="font-size: 7pt; line-height: normal; font-family: \'Times New Roman\';">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size: 14pt; font-family: 標楷體;">由願景、使命、目標、策略、任務，如此一個邏輯下來，所要持續強調的，不外乎是我們的產品或服務能夠如何的切入市場，滿足客戶的需求，同時創造自身的獨特定位，並符合社會對企業的期待。<span lang="EN-US"><o:p></o:p></span></span></p>\r\n\r\n<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;\r\nmargin-left:48.0pt;mso-para-margin-top:0cm;mso-para-margin-right:0cm;\r\nmso-para-margin-bottom:.25gd;mso-para-margin-left:48.0pt;text-align:justify;\r\ntext-justify:inter-ideograph;text-indent:-24.0pt;line-height:22.0pt;mso-line-height-rule:\r\nexactly;mso-list:l1 level1 lfo3"><!--[if !supportLists]--><span lang="EN-US" style="font-size: 14pt; font-family: 標楷體;">(三)<span style="font-size: 7pt; line-height: normal; font-family: \'Times New Roman\';">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size: 14pt; font-family: 標楷體;">因應目前方碼科技所提出的快速報到系統，建議即在於呼應政府目前的十大重點服務業項目，可從會展產業為切入點，協助提升展覽過程中繁雜人群的報到程式，同時尚能累積訪客至各攤位的頻率資訊，由<span lang="EN-US">Big data</span>之操作角度以達活化報到系統的附加價值，勝於同業對手。<span lang="EN-US"><o:p></o:p></span></span></p>\r\n\r\n<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;\r\nmargin-left:48.0pt;mso-para-margin-top:0cm;mso-para-margin-right:0cm;\r\nmso-para-margin-bottom:.25gd;mso-para-margin-left:48.0pt;text-align:justify;\r\ntext-justify:inter-ideograph;text-indent:-24.0pt;line-height:22.0pt;mso-line-height-rule:\r\nexactly;mso-list:l1 level1 lfo3"><!--[if !supportLists]--><span lang="EN-US" style="font-size:14.0pt;font-family:標楷體;mso-bidi-font-family:標楷體">(四)<span style="font-size: 7pt; line-height: normal; font-family: \'Times New Roman\';">&nbsp;&nbsp;&nbsp;&nbsp;\r\n</span></span><!--[endif]--><span style="font-size: 14pt; font-family: 標楷體;">基於上述論點，情境分析是相當能動之以情、訴之以理的鋪陳方式，確實地能讓外界更能瞭解報到系統的效用，而非單純以功能面取勝，此亦為現今所謂<span lang="EN-US">”</span>說得一口好故事<span lang="EN-US">”</span>的行銷做法，也能做為計畫書中，如何說服評審委員的有利論調。</span><strong><span lang="EN-US" style="font-size:14.0pt;\r\nfont-family:標楷體"><o:p></o:p></span></strong></p>\r\n\r\n<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;\r\nmargin-left:13.9pt;mso-para-margin-top:0cm;mso-para-margin-right:0cm;\r\nmso-para-margin-bottom:.25gd;mso-para-margin-left:13.9pt;text-align:justify;\r\ntext-justify:inter-ideograph;text-indent:-13.9pt;line-height:22.0pt;mso-line-height-rule:\r\nexactly;layout-grid-mode:char;mso-layout-grid-align:none;text-autospace:none"><strong><span style="font-size:14.0pt;font-family:標楷體;mso-font-kerning:0pt">陸、臨時動議<span lang="EN-US"><o:p></o:p></span></span></strong></p>\r\n\r\n<p class="2" style="margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;\r\nmargin-left:0cm;mso-para-margin-top:0cm;mso-para-margin-right:0cm;mso-para-margin-bottom:\r\n.25gd;mso-para-margin-left:0cm;line-height:22.0pt;mso-line-height-rule:exactly"><span style="font-family:標楷體;mso-bidi-font-family:&quot;Times New Roman&quot;">柒、散會<span lang="EN-US">(</span>上午<span lang="EN-US">12</span>：<span lang="EN-US">00)<o:p></o:p></span></span></p>', '2013/01/28', NULL, NULL, NULL, NULL, NULL, 'NSI202', '帝若國際有限公司', 'Staff20140328180419820', '何新一', '', '', '', NULL, 'STAT_CLOSE', NULL, NULL, NULL, NULL),
@@ -2416,7 +2476,7 @@ CREATE TABLE IF NOT EXISTS `uploadedfiles` (
   PRIMARY KEY (`uID`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 正在導出表  yuhua3.uploadedfiles 的資料：~104 rows (大約)
+-- 正在導出表  yuhua3.uploadedfiles 的資料：~113 rows (大約)
 /*!40000 ALTER TABLE `uploadedfiles` DISABLE KEYS */;
 INSERT INTO `uploadedfiles` (`uID`, `recordID`, `type`, `modifiedFileName`, `originalFileName`) VALUES
 	('06e988cf-cee7-4fb2-ac1a-b4064a9571b8', 'TalkNote20140330195935620', 'REQ', '20140330195935623_工作表.xlsx', '工作表.xlsx'),
@@ -2441,6 +2501,7 @@ INSERT INTO `uploadedfiles` (`uID`, `recordID`, `type`, `modifiedFileName`, `ori
 	('2a5119a5-e5e1-4fcd-948c-894b0366b587', 'comp20140327092111607', 'FILE_OTHER', '20140327101712461_mysql problem.png', 'mysql problem.png'),
 	('2af8d5b0-0f32-4274-9a43-f649200c57a3', 'rp20140327170939853', NULL, '20140327173320479_mydownload.png', 'mydownload.png'),
 	('32ffbf48-c230-4225-9ef0-8730bf0cac3c', 'rp20140328111344331', NULL, '20140330074701972_mysql problem.png', 'mysql problem.png'),
+	('33824c47-f2c2-4c3d-8930-6cbfcb76af6d', 'rp20140429133943974', '', '20140506145051159_簡報.pptx', '簡報.pptx'),
 	('3d64916e-6163-4322-b3da-4406910a7690', 'rp20140330093127702', NULL, '20140330093542637_工作表.xlsx', '工作表.xlsx'),
 	('3fef37ab-de98-4c60-960f-a141071a7387', 'Act20140218173712803', NULL, '201402181737408754656299504_1020929_紅樓場內活動_司儀講稿.docx', '1020929_紅樓場內活動_司儀講稿.docx'),
 	('4027c8ae-23d9-47cf-aeca-c60d5da1f74f', 'comp20140330095305939', 'FILE_OTHER', '20140330095403340_design.vsd', 'design.vsd'),
@@ -2448,6 +2509,7 @@ INSERT INTO `uploadedfiles` (`uID`, `recordID`, `type`, `modifiedFileName`, `ori
 	('447d1a07-891d-485b-bcf6-70f6b2a4f1eb', 'comp20140401165716064', 'FILE_LETTER', '20140401174225745_mydownload.png', 'mydownload.png'),
 	('498fa5c0-8010-4c58-b36a-513061442010', 'rp20140327145331560', NULL, '20140327151220836_mysql problem.png', 'mysql problem.png'),
 	('4e183472-50f2-4341-901f-92a89817cb36', 'comp20140330075640494', 'FILE_OTHER', '20140330084906324_工作表.xlsx', '工作表.xlsx'),
+	('51ad6674-ca0d-4ec6-8ce1-42b6534ff8e0', 'comp20140420103527061', 'FILE_LETTER', '20140429133702000_企業設立函文.docx', '企業設立函文.docx'),
 	('53a32732-fcee-4875-8695-67ad8e711dfd', 'rp20140401071804245', '', '20140401072738717_工作表.xlsx', '工作表.xlsx'),
 	('53eb4c6d-b4ac-4976-9546-1f27ffdf8b1b', 'Act20140218172325891', NULL, '201402181723253443738901474_(F)參展得獎廠商名錄_1110更新(含攤位編號).xls', '(F)參展得獎廠商名錄_1110更新(含攤位編號).xls'),
 	('5552b941-53d4-4f8a-b6ca-d73a05a05dec', 'rp20140324134940836', NULL, '20140324135033089_mydownload.png', 'mydownload.png'),
@@ -2457,6 +2519,7 @@ INSERT INTO `uploadedfiles` (`uID`, `recordID`, `type`, `modifiedFileName`, `ori
 	('65258d56-156f-49bc-a9e9-8c68bb7b3348', 'TalkNote20140406104437563', 'REQ', '20140406104437566_mydownload.png', 'mydownload.png'),
 	('65c30b1a-0562-4f4f-be07-93906ab43b22', 'rp20140328111344334', NULL, '20140330074720209_mydownload.png', 'mydownload.png'),
 	('6878404a-3838-458b-a2ea-929ecd1ae406', 'comp20140330095305939', 'FILE_OTHER', '20140330095831123_工作表.xlsx', '工作表.xlsx'),
+	('6dd2c524-da11-46f5-b095-d3b0fef3f8a1', 'comp20140420103527061', 'FILE_OTHER', '20140429133759335_簡報.pptx', '簡報.pptx'),
 	('6f18b4b2-a49e-4bb5-b4e4-9f8a96efee4b', 'TalkNote20140330140518865', 'RPLY', '20140330193709612_工作表.xlsx', '工作表.xlsx'),
 	('728d64e8-3cad-435e-a1a3-67990362980d', 'Act20140218172325891', NULL, '201402181732326544124718999_TICC 1F 全平配圖立牌 150x160cm-01.jpg', 'TICC 1F 全平配圖立牌 150x160cm-01.jpg'),
 	('75caa280-4328-443b-b33b-eb7994d6e28d', 'TalkNote7', NULL, '20140319211442998_Book1.xls', 'Book1.xls'),
@@ -2502,10 +2565,12 @@ INSERT INTO `uploadedfiles` (`uID`, `recordID`, `type`, `modifiedFileName`, `ori
 	('bb501558-0888-413e-b7a4-26a7d958db15', 'rp20140327122537202', NULL, '20140327140349520_mydownload.png', 'mydownload.png'),
 	('bd793692-68e4-4f36-8d68-a9a217716ce6', 'Act20140218172325891', NULL, '201402181732321261513634051_頒獎座位表.pdf', '頒獎座位表.pdf'),
 	('bdd99fca-edc4-4a07-8d1f-6cc34ecb26ee', 'Act20140218172325891', NULL, '2014021817232510091370036107_1119頒獎次序表V2.xlsx', '1119頒獎次序表V2.xlsx'),
+	('bfa7c150-7e63-41a4-b7d7-5f77bbfcbb41', 'comp20140420103527061', 'FILE_BP', '20140429133702003_营运计划书.docx', '营运计划书.docx'),
 	('c222522a-6557-4202-b9cd-4387a1936694', 'rp20140401071804248', '', '20140405190814722_mysql problem.png', 'mysql problem.png'),
 	('c3c0cfde-deb6-4e88-96a8-f8e0e0ba540f', 'TalkNote20140330133103843', 'RPLY', '20140330213834004_mysql problem.png', 'mysql problem.png'),
 	('c3ec5d41-6a7c-4f30-88c9-3fc1528af7a7', '09d0d9ef-4ac1-41cc-a33a-77a31b40b972', NULL, '2014020521415618804011251446_timeset (1).txt', 'timeset (1).txt'),
 	('c77a14e3-31b2-48f1-be17-d2e02b47161d', 'comp20140401164159332', 'FILE_LETTER', '20140405185045560_mysql problem.png', 'mysql problem.png'),
+	('c8518dd6-7c7f-4f19-b592-ce08b1b43fb7', 'comp20140420103527061', 'FILE_401', '20140429133702006_401 报表.docx', '401 报表.docx'),
 	('c95d5a77-7117-4ff0-a671-3ce1ebd0add6', 'rp20140330075453534', NULL, '20140330075534256_mydownload.png', 'mydownload.png'),
 	('d4c7b105-8d39-4a23-a4a0-00e4ae97b571', 'comp20140327183038487', 'FILE_OTHER', '20140327183130187_mydownload.png', 'mydownload.png'),
 	('d57b68e8-33e2-47f5-a68c-2a43d5f24d5c', 'rp20140323234349387', NULL, '20140323234448220_Shp1.xml', 'Shp1.xml'),
@@ -2513,10 +2578,13 @@ INSERT INTO `uploadedfiles` (`uID`, `recordID`, `type`, `modifiedFileName`, `ori
 	('d7afdddd-58f2-4a22-8632-ec722154aed8', 'rp20140330093127696', NULL, '20140330093523741_mysql problem.png', 'mysql problem.png'),
 	('da8fcef6-36f6-402f-ba6f-e25aee400fba', 'rp20140330093127699', NULL, '20140330093506462_mydownload.png', 'mydownload.png'),
 	('dc9f9b3a-10ac-4c48-ad57-c9f3994b6c3b', 'TalkNote20140330140518865', NULL, '20140330175220148_mydownload.png', 'mydownload.png'),
+	('dfaf982f-68fe-46e6-bd0e-7f3f591c5770', 'comp20140420103527061', 'FILE_CERT', '20140429133702004_会计师签证.docx', '会计师签证.docx'),
 	('e400aa29-17ef-4734-9e1d-cb6f50c3f1dd', 'rp20140331105310842', '', '20140331105930547_工作表.xlsx', '工作表.xlsx'),
 	('ebc23e2e-ef2b-46f4-b7df-4ad8ab697de7', 'comp20140401164159332', 'FILE_CERT', '20140405185045579_工作表.xlsx', '工作表.xlsx'),
+	('ebce2fb5-b2a3-4202-9258-1958e0bfa2a3', 'comp20140420103527061', 'FILE_APPL', '20140429133701960_進駐申請書.docx', '進駐申請書.docx'),
 	('ecf9d470-6449-4e1d-b12c-46f5a1342066', 'comp20140330092600933', 'FILE_OTHER', '20140330092823663_mydownload.png', 'mydownload.png'),
 	('f0e20026-484a-40f2-89a9-55cc7a3eb0c4', 'rp20140407115932118', '', '20140407120658318_mydownload.png', 'mydownload.png'),
+	('f4e702ba-dfd4-4407-ad23-5f52d2e5c9ff', 'comp20140420103524711', 'FILE_APPL', '20140506144626210_進駐申請書.docx', '進駐申請書.docx'),
 	('f4f457f7-453e-4d1d-b8de-a046cfd7a250', 'comp20140330092950122', 'FILE_OTHER', '20140330093038897_mydownload.png', 'mydownload.png'),
 	('f5e8d117-b41a-4c18-a892-1277fbc43e21', 'Act20140218173712803', NULL, '201402181737402953202844308_1020929_MITAction聯合培育優質人才_議程說明.docx', '1020929_MITAction聯合培育優質人才_議程說明.docx'),
 	('f8b60bd2-5041-4c63-83de-fa4c90f0cbef', 'comp20140331190440880', 'FILE_BP', '20140331213329117_mydownload.png', 'mydownload.png'),
