@@ -18,6 +18,14 @@ public class MySQLAccessMeetingRoom {
 		return recs;
 	}
 
+	public ArrayList findAllMeetingRoomsOK() {
+		MySQLAccessMyBatis o = new MySQLAccessMyBatis();
+		o.openSession();
+		ArrayList recs = (ArrayList) o.findAllMeetingRoomsOK();
+		o.closeSession();
+		return recs;
+	}
+	
 	public MeetingRoom findMeetingRoomById(String uid) {
 		MySQLAccessMyBatis o = new MySQLAccessMyBatis();
 		o.openSession();

@@ -13,8 +13,7 @@
 <table width="1000" border="0" cellpadding="0" border="0"
 	style="margin: 20px auto 0;">
 	<tr>
-		<td width="239" align="left">
-			<c:choose>
+		<td width="239" align="left"><c:choose>
 				<c:when test="${mylang=='zh_TW'}">
 					<img src="images/nsi_header.png" height="70">
 				</c:when>
@@ -24,11 +23,8 @@
 				<c:otherwise>
 					<img src="images/nsi_header.png" height="70">
 				</c:otherwise>
-			</c:choose>
-		</td>
-		<td>
-			&nbsp;
-		</td>
+			</c:choose></td>
+		<td>&nbsp;</td>
 	</tr>
 </table>
 
@@ -85,11 +81,7 @@
 		Current Locale : ${pageContext.response.locale} 
 		--%>
 
-		<br>
-
-
-
-		您好, ${user.userName}
+		<br> 您好, ${user.userName}
 		<c:if test="${user.userComp!=user.userName}">
 			<br />${user.userComp}
 		</c:if>
@@ -183,3 +175,12 @@
 
 </div>
 
+<script type='text/javascript'>
+	$(document).ready(function() {
+		var tempheight = $("#container").height();
+		if (tempheight < 680) {
+			$("#container").height(400 + tempheight);
+
+		}
+	});
+</script>

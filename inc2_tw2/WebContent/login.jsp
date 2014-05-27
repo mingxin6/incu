@@ -38,15 +38,32 @@
 
 
 				<form:form method="POST" commandName="voLogin">
-					<form:errors path="*" cssClass="error" element="div" />						
-							帳號：<form:input path="userLoginId" cssClass="username" />
+					<%
+						String str;
+							if ((str = (String) session.getAttribute("check_error")) != null) {
+								out.println("<b style=\"color:red;\">" + str + "</b><br/>");
+								session.removeAttribute("check_error");
+							}
+					%>
+					<form:errors path="*" cssClass="error" element="div" />
+					<strong>帳&nbsp;&nbsp;&nbsp;號：</strong>
+					<form:input path="userLoginId" cssClass="username" />
 					<form:errors path="userLoginId" cssClass="error" />
 					<br />
-                  	 		密碼：<form:password path="userLoginPwd"
-						cssClass="password" />
+					<strong>密&nbsp;&nbsp;&nbsp;碼：</strong>
+					<form:password path="userLoginPwd" cssClass="password" />
 					<form:errors path="userLoginPwd" cssClass="error" />
 					<br />
-					<input name="" type="submit" value="登  入" class="loginBtn" />
+					<p class="yzm">驗證碼：</p>
+					<form:input path="userLoginCheck" cssClass="loginCheck" />
+
+					<img style="cursor: pointer;" title="点击图片刷新验证码" width="90px"
+						height="40px" src="captcha-image.htm"
+						onclick="javascript:window.location.href='login.htm'" />
+					<span>&nbsp;</span>
+					<form:errors path="userLoginCheck" cssClass="error" />
+					<br />
+					<input name="" type="submit" value="登 入" class="loginBtn" />
 				</form:form>
 
 			</div>

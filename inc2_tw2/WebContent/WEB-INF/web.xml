@@ -8,6 +8,12 @@
 		<param-name>webAppRootKey</param-name>
 		<param-value>inc2_tw</param-value>
 	</context-param>
+
+	<context-param>
+		<param-name>rowsPerPage</param-name>
+		<param-value>10</param-value>
+	</context-param>
+
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
@@ -39,10 +45,8 @@
         </param-value>
 	</context-param>
 
-	<!--
-		<context-param> <param-name>log4jConfigLocation</param-name>
-		<param-value>classpath:xxs.properties</param-value> </context-param>
-	-->
+	<!-- <context-param> <param-name>log4jConfigLocation</param-name> <param-value>classpath:xxs.properties</param-value> 
+		</context-param> -->
 
 	<context-param>
 		<param-name>log4jConfigLocation</param-name>
@@ -82,9 +86,8 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<load-on-startup>
 			1
-        </load-on-startup>
+		</load-on-startup>
 	</servlet>
-
 	<servlet>
 		<description>
             Get Resource Description Information - jQuery Ajax Request
@@ -102,6 +105,22 @@
 		<servlet-class>com.servlets.FullCalendarServlet</servlet-class>
 	</servlet>
 	<servlet>
+		<description>
+            NewMeetingServlet - jQuery Ajax Request
+        </description>
+		<display-name>NewMeetingServlet</display-name>
+		<servlet-name>NewMeetingServlet</servlet-name>
+		<servlet-class>com.servlets.NewMeetingServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+            DeleteMeetingServlet - jQuery Ajax Request
+        </description>
+		<display-name>DeleteMeetingServlet</display-name>
+		<servlet-name>DeleteMeetingServlet</servlet-name>
+		<servlet-class>com.servlets.DeleteMeetingServlet</servlet-class>
+	</servlet>
+	<servlet>
 		<servlet-name>GetDownloadFileList</servlet-name>
 		<servlet-class>com.servlets.DownloadFileListServlet</servlet-class>
 	</servlet>
@@ -114,11 +133,22 @@
             *.htm
         </url-pattern>
 	</servlet-mapping>
-
 	<servlet-mapping>
 		<servlet-name>GetFullCalendar</servlet-name>
 		<url-pattern>
-            /GetFullCalendar
+            /fcc
+        </url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>NewMeetingServlet</servlet-name>
+		<url-pattern>
+            /nm
+        </url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteMeetingServlet</servlet-name>
+		<url-pattern>
+            /dm
         </url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>

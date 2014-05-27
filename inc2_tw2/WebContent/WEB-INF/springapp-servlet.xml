@@ -9,86 +9,96 @@
 			<props>
 				<prop key="/login.htm">
 					loginController
-                </prop>
+				</prop>
 
 				<prop key="/login_CN2.htm">
 					loginController_CN2
-                </prop>
+				</prop>
+
+
+				<prop key="/captcha-image.htm">
+					captchaImageCreateController
+				</prop>
+
+				<prop key="/solrj_search.htm">
+					solrjController
+				</prop>
+
 
 				<prop key="/logout.htm">
 					logoutController
-                </prop>
+				</prop>
 
 				<prop key="/blank.htm">
 					blankViewController
-                </prop>
+				</prop>
 
 				<prop key="/adminMain.htm">
 					adminMainController
-                </prop>
+				</prop>
 
 				<prop key="/businessMain.htm">
 					businessMainController
-                </prop>
+				</prop>
 
 
 
 				<prop key="warning.htm">
 					warningController
-                </prop>
+				</prop>
 
 				<prop key="/serviceResourceDataList.htm">
 					serviceResourceDataListController
-                </prop>
+				</prop>
 				<prop key="/serviceResourceDataView.htm">
 					serviceResourceDataViewController
-                </prop>
+				</prop>
 				<prop key="/serviceResourceDataEdit.htm">
 					serviceResourceDataEditController
-                </prop>
+				</prop>
 				<prop key="/serviceResourceDataAdd.htm">
 					serviceResourceDataAddController
-                </prop>
+				</prop>
 				<prop key="/serviceResourceDataDel.htm">
 					serviceResourceDataDelController
-                </prop>
+				</prop>
 
 				<prop key="/serviceResourceAcceptList.htm">
 					serviceResourceAcceptListController
-                </prop>
+				</prop>
 				<prop key="/serviceResourceAcceptView.htm">
 					serviceResourceAcceptViewController
-                </prop>
+				</prop>
 				<prop key="/serviceResourceAcceptEdit.htm">
 					serviceResourceAcceptEditController
-                </prop>
+				</prop>
 				<prop key="/serviceResourceAcceptAdd.htm">
 					serviceResourceAcceptAddController
-                </prop>
+				</prop>
 				<prop key="/serviceResourceAcceptDel.htm">
 					serviceResourceAcceptDelController
-                </prop>
+				</prop>
 
 				<prop key="/userServiceResourceAcceptList.htm">
 					userServiceResourceAcceptListController
-                </prop>
+				</prop>
 				<prop key="/userServiceResourceAcceptView.htm">
 					userServiceResourceAcceptViewController
-                </prop>
+				</prop>
 				<prop key="/userServiceResourceAcceptEdit.htm">
 					userServiceResourceAcceptEditController
-                </prop>
+				</prop>
 				<prop key="/userServiceResourceAcceptAdd.htm">
 					userServiceResourceAcceptAddController
-                </prop>
+				</prop>
 				<prop key="/userServiceResourceAcceptDel.htm">
 					userServiceResourceAcceptDelController
-                </prop>
+				</prop>
 
 
 				<prop key="/customer.htm">
 					customerFormController
-                </prop>
+				</prop>
 
 
 
@@ -96,102 +106,102 @@
 
 				<prop key="/user.htm">
 					userAccountListController
-                </prop>
+				</prop>
 				<prop key="/userEdit.htm">
 					userAccountEditController
-                </prop>
+				</prop>
 				<prop key="/userNew.htm">
 					userAccountNewController
-                </prop>
+				</prop>
 
 				<prop key="/myHistMonthlyRpt.htm">
 					myHistoryMonthlyReportController
-                </prop>
+				</prop>
 				<prop key="/myMonthlyReportNew.htm">
 					myNewMonthlyReportController
-                </prop>
+				</prop>
 
 				<prop key="/MonthlyReport.htm">
 					MonthlyReportController
-                </prop>
+				</prop>
 				<prop key="/ExcelController.htm">
 					ExcelController
-                </prop>
+				</prop>
 				<prop key="/QuarterlyRpt.htm">
 					QuarterlyReportController
-                </prop>
+				</prop>
 				<prop key="/QuarterlyConfirmedRpt.htm">
 					QuarterlyReportConfirmedController
-                </prop>
+				</prop>
 				<prop key="/YearlyRpt.htm">
 					YearlyReportController
-                </prop>
+				</prop>
 				<prop key="/YearlyConfirmedRpt.htm">
 					YearlyReportConfirmedController
-                </prop>
+				</prop>
 
 				<prop key="/theMonthReports.htm">
 					MonthlyReportOfCompsController
-                </prop>
+				</prop>
 				<prop key="/MonthlyReportOfCompsConfirmed.htm">
 					MonthlyReportOfCompsConfirmedController
-                </prop>
+				</prop>
 				<prop key="/theQuarterReports.htm">
 					QuarterlyReportOfCompsController
-                </prop>
+				</prop>
 				<prop key="/theYearReports.htm">
 					YearlyReportOfCompsController
-                </prop>
+				</prop>
 				<prop key="/transferMonthRpt.htm">
 					MonthlyReportTransferController
-                </prop>
+				</prop>
 
 				<prop key="/changePwd.htm">
 					ChangePasswordController
-                </prop>
+				</prop>
 
 				<prop key="/problemsList.htm">
 					ProblemsListController
-                </prop>
+				</prop>
 				<prop key="/problemsAdd.htm">
 					ProblemsAddController
-                </prop>
+				</prop>
 				<prop key="/problemsEdit.htm">
 					ProblemsEditController
-                </prop>
+				</prop>
 				<prop key="/problemsView.htm">
 					ProblemsViewController
-                </prop>
+				</prop>
 
 				<prop key="/providesList.htm">
 					ProvidesListController
-                </prop>
+				</prop>
 				<prop key="/providesAdd.htm">
 					ProvidesAddController
-                </prop>
+				</prop>
 				<prop key="/providesEdit.htm">
 					ProvidesEditController
-                </prop>
+				</prop>
 				<prop key="/providesView.htm">
 					ProvidesViewController
-                </prop>
+				</prop>
 
 				<prop key="/downLoadFile.htm">
 					DownLoadController
-                </prop>
+				</prop>
 
 				<prop key="/SharedThingList.htm">
 					SharedThingListController
-                </prop>
+				</prop>
 				<prop key="/SharedThingAdd.htm">
 					SharedThingAddController
-                </prop>
+				</prop>
 				<prop key="/SharedThingView.htm">
 					SharedThingViewController
-                </prop>
+				</prop>
 				<prop key="/SharedThingEdit.htm">
 					SharedThingEditController
-                </prop>
+				</prop>
 			</props>
 		</property>
 
@@ -204,6 +214,37 @@
 	</bean>
 
 
+	<bean id="captchaImageCreateController"
+		class="com.mkyong.common.controller.CaptchaImageCreateController">
+		<property name="captchaProducer" ref="captchaProducer" />
+	</bean>
+
+	<bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+		<property name="config">
+			<bean class="com.google.code.kaptcha.util.Config">
+				<constructor-arg type="java.util.Properties">
+					<props>
+						<!-- <prop key="kaptcha.image.width">300</prop> <prop key="kaptcha.image.height">50</prop> -->
+						<prop key="kaptcha.textproducer.font.color">red</prop>
+						<prop key="kaptcha.textproducer.char.space">5</prop>
+						<!-- <prop key="kaptcha.textproducer.char.string">0123456789</prop> 
+							<prop key="kaptcha.textproducer.char.length">4</prop> -->
+					</props>
+				</constructor-arg>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="solrjController" class="com.mkyong.customer.controller.SolrjController">
+		<property name="httpSolrServer" ref="HttpSolrServer" />
+		<property name="formView" value="solrSearch" />
+	</bean>
+
+	<!-- solrJ -->
+	<bean id="HttpSolrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">
+		<constructor-arg index="0" type="java.lang.String"
+			value="http://192.168.5.22:8080/solr" />
+	</bean>
 
 	<bean id="loginController" class="com.mkyong.customer.controller.LoginController">
 		<property name="formView" value="login" />
@@ -478,11 +519,8 @@
 	</bean>
 
 
-	<!--
-		<bean
-		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"
-		/>
-	-->
+	<!-- <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" 
+		/> -->
 
 	<bean id="customerFormController" class="com.mkyong.customer.controller.CustomerController">
 		<property name="formView" value="CustomerForm" />
@@ -544,14 +582,12 @@
 		<property name="successView" value="announcementView" />
 	</bean>
 
-	<!--
-		===================================================================
-	-->
+	<!-- =================================================================== -->
 	<bean class="org.springframework.web.servlet.view.XmlViewResolver">
 		<property name="location">
 			<value>
 				/WEB-INF/spring-excel-views.xml
-            </value>
+			</value>
 		</property>
 		<property name="order" value="0" />
 	</bean>
@@ -561,7 +597,7 @@
 		<property name="viewClass"
 			value="org.springframework.web.servlet.view.JstlView">
 		</property>
-		<!--<property name="prefix" value="/WEB-INF/jsp/"></property>-->
+		<!--<property name="prefix" value="/WEB-INF/jsp/"></property> -->
 		<property name="prefix" value="/">
 		</property>
 		<property name="suffix" value=".jsp">
@@ -569,21 +605,14 @@
 		<property name="order" value="1" />
 	</bean>
 
-	<!--
-		<bean id="beanNameResolver"
-		class="org.springframework.web.servlet.view.BeanNameViewResolver">
-		<property name="order" value="0" /> </bean>
-	-->
+	<!-- <bean id="beanNameResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver"> 
+		<property name="order" value="0" /> </bean> -->
 
-	<!--
-		<bean id="executeTimeInterceptor"
-		class="com.interceptor.ExecuteTimeInterceptor"/> <bean
-		id="maintenanceInterceptor"
-		class="com.interceptor.MaintenanceInterceptor"> <property
-		name="maintenanceStartTime" value="23"/> <property
-		name="maintenanceEndTime" value="24"/> <property
-		name="maintenanceMapping" value="/SpringMVC/maintenance.htm"/> </bean>
-	-->
+	<!-- <bean id="executeTimeInterceptor" class="com.interceptor.ExecuteTimeInterceptor"/> 
+		<bean id="maintenanceInterceptor" class="com.interceptor.MaintenanceInterceptor"> 
+		<property name="maintenanceStartTime" value="23"/> <property name="maintenanceEndTime" 
+		value="24"/> <property name="maintenanceMapping" value="/SpringMVC/maintenance.htm"/> 
+		</bean> -->
 
 	<bean id="checkSessionInterceptor" class="com.interceptor.CheckSessionInterceptor">
 		<property name="maintenanceMapping" value="index.jsp" />
@@ -595,7 +624,7 @@
 	</bean>
 
 
-	<!--################### i18n ###################-->
+	<!--################### i18n ################### -->
 
 	<bean id="localeResolver"
 		class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
@@ -605,18 +634,14 @@
 
 
 
-	<!--<bean id="localeChangeInterceptor"
-		class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+	<!--<bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"> 
+		<property name="paramName" value="language" /> </bean> -->
+
+	<bean id="localeChangeInterceptor" class="com.MyLocaleChangeInterceptor">
 		<property name="paramName" value="language" />
 	</bean>
-	-->
-	
-	<bean id="localeChangeInterceptor"
-		class="com.MyLocaleChangeInterceptor">
-		<property name="paramName" value="language" />
-	</bean>
-	
-	
+
+
 	<!-- Register the .properties -->
 
 	<bean id="messageSource"
@@ -625,12 +650,8 @@
 			value="com/mkyong/customer/properties/Customer,com.properties.hj" />
 	</bean>
 
-	<!--
-		<bean id="anotherMessageSource"
-		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-		<property name="basenames"
-		value="classpath:i18n/newmessages,classpath:i18n/messages" />
-		<property name="defaultEncoding" value="UTF-8" /> </bean>
-	-->
+	<!-- <bean id="anotherMessageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource"> 
+		<property name="basenames" value="classpath:i18n/newmessages,classpath:i18n/messages" 
+		/> <property name="defaultEncoding" value="UTF-8" /> </bean> -->
 
 </beans>

@@ -50,6 +50,10 @@ public class CompanyListController extends SimpleFormController {
 
 	@Override
 	protected Object formBackingObject(HttpServletRequest request) throws Exception {
+		
+		//String pageNumber=request.getParameter("pageNumber");
+		//request.setAttribute("pageNumber", pageNumber);
+		
 		HttpSession session = request.getSession(false);
 		VOCompListCondition voCompListCondition = (VOCompListCondition) session.getAttribute("compListCondition");
 		if (voCompListCondition == null)

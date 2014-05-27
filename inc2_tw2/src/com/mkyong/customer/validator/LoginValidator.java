@@ -53,6 +53,12 @@ public class LoginValidator implements Validator {
 			return;
 		}
 		
+		if (voLogin.getUserLoginCheck().equals("")) {
+			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "userLoginCheck", "required.loginCheck", "验证码不能空白.");
+			//帳號不能空白.
+			return;
+		}
+		
 		//
 		// if(!(cust.getPassword().equals(cust.getConfirmPassword()))){
 		// errors.rejectValue("password", "notmatch.password");

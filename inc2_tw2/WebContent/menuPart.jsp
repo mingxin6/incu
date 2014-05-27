@@ -81,6 +81,8 @@
 			<li><a href="activityRecList.htm"><s:message
 						code="menuPart.activity" text="活動管理" /> </a></li>
 
+			<li><a href="meetingRoomOrder.htm"><s:message
+						code="meetingRoom.order" text="會議室登記" /> </a></li>
 
 			<li><a href="#"><s:message code="incubate.resource"
 						text="育成資源" /> </a>
@@ -111,6 +113,8 @@
 				</a>
 			</li>
 			--%>
+			<li><a href="solrj_search.htm"><s:message
+						code="menuPart.solrj" text="加值服務" /> </a></li>
 
 			<li><a class="trigger" href="#"><s:message
 						code="menuPart.system.setting" text="系統設定" /> </a>
@@ -213,6 +217,9 @@
 				</ul>
 			</li>
 			 -->
+
+			<li><a href="solrj_search.htm"><s:message
+						code="menuPart.solrj" text="加值服務" /> </a></li>
 
 			<li><a class="trigger" href="#"><s:message
 						code="menuPart.system.setting" text="系統設定" /> </a>

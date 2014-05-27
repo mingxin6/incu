@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.MyMeetingRoomOrderMapper">
+
+	<select id="findAllMeetingRoomOrders" resultType="MeetingRoomOrder">
+		<![CDATA[
+		select 
+		uid as id
+		,meetingRoomNo AS meetingRoomNo
+		,start AS start
+		,end AS end
+		,title AS title
+		,url AS url
+		,eventText AS eventText
+		,compName AS compName
+		,person AS person
+		,phone AS phone
+		,status AS myStatus
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from MeetingRoomOrder
+		order by meetingRoomNo
+		]]>
+	</select>
+
+	<select id="findMeetingRoomOrderById" parameterType="string"
+		resultType="MeetingRoomOrder">
+		<![CDATA[
+		select
+		uid as id
+		,meetingRoomNo AS meetingRoomNo
+		,start AS start
+		,end AS end
+		,title AS title
+		,url AS url
+		,eventText AS eventText
+		,compName AS compName
+		,person AS person
+		,phone AS phone
+		,status AS myStatus
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from MeetingRoomOrder
+		WHERE uid=#{uid}
+		]]>
+	</select>
+
+	<select id="findMeetingRoomOrderByRoomNo" parameterType="string"
+		resultType="MeetingRoomOrder">
+		<![CDATA[
+		select
+		uid as id
+		,meetingRoomNo AS meetingRoomNo
+		,start AS start
+		,end AS end
+		,title AS title
+		,url AS url
+		,eventText AS eventText
+		,compName AS compName
+		,person AS person
+		,phone AS phone
+		,status AS myStatus
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from MeetingRoomOrder
+		WHERE meetingRoomNo=#{meetingRoomNo}
+		]]>
+	</select>
+
+	<insert id="insertMeetingRoomOrder" parameterType="MeetingRoomOrder">
+		<![CDATA[
+		INSERT INTO MeetingRoomOrder
+		(uID, meetingRoomNo,start,end,title,url,eventText,compName,person,phone
+		,status,lastUpdateUser,lastUpdateTime)
+		VALUES
+		(
+		#{id},#{meetingRoomNo},#{start},#{end},#{title},#{url},#{eventText},#{compName},#{person},#{phone}
+		,#{myStatus},#{lastUpdateUser},#{lastUpdateTime}
+		)
+		]]>
+	</insert>
+
+	<delete id="deleteMeetingRoomOrder" parameterType="string">
+		<![CDATA[
+		DELETE FROM MeetingRoomOrder where uid =#{uid}
+		]]>
+	</delete>
+
+</mapper>

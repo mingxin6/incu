@@ -45,6 +45,10 @@ public class CheckSessionInterceptor extends HandlerInterceptorAdapter {
 		if (request.getRequestURI().contains("login"))
 			return true;
 
+		
+		if (request.getRequestURI().contains("image"))
+			return true;
+
 		if (request.getRequestURI().contains("userNew0.htm"))
 			return true;
 

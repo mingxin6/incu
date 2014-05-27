@@ -23,32 +23,25 @@ public class MeetingRoomListController extends SimpleFormController {
 	}
 
 	@Override
-	protected ModelAndView onSubmit(HttpServletRequest request,
-			HttpServletResponse response, Object command, BindException errors)
-			throws Exception {
+	protected ModelAndView onSubmit(HttpServletRequest request, HttpServletResponse response, Object command,
+			BindException errors) throws Exception {
 		VOYearMonthCondition voYearMonthCondition = (VOYearMonthCondition) command;
-		ArrayList ar = new ArrayList();
+
 		MySQLAccessMeetingRoom o = new MySQLAccessMeetingRoom();
-		try {
-			ar = o.findAllMeetingRooms();
-			for (int i = 0; i < ar.size(); i++) {
-				A a = (A) ar.get(i);
-				a.setEntityStatusRS(request);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
+		ArrayList ar = o.findAllMeetingRooms();
+		for (int i = 0; i < ar.size(); i++) {
+			A a = (A) ar.get(i);
+			a.setEntityStatusRS(request);
 		}
+
 		request.setAttribute("meetingRoomList", ar);
-		return new ModelAndView("meetingRoomList", "voYearMonthCondition",
-				voYearMonthCondition);
+		return new ModelAndView("meetingRoomList", "voYearMonthCondition", voYearMonthCondition);
 	}
 
 	@Override
-	protected Object formBackingObject(HttpServletRequest request)
-			throws Exception {
+	protected Object formBackingObject(HttpServletRequest request) throws Exception {
 		HttpSession session = request.getSession(false);
-		VOYearMonthCondition voYearMonthCondition = (VOYearMonthCondition) session
-				.getAttribute("voYearMonthCondition");
+		VOYearMonthCondition voYearMonthCondition = (VOYearMonthCondition) session.getAttribute("voYearMonthCondition");
 		if (voYearMonthCondition == null)
 			voYearMonthCondition = new VOYearMonthCondition();
 		return voYearMonthCondition;
@@ -60,8 +53,7 @@ public class MeetingRoomListController extends SimpleFormController {
 		ArrayList ar = new ArrayList();
 
 		HttpSession session = request.getSession(false);
-		VOYearMonthCondition voYearMonthCondition = (VOYearMonthCondition) session
-				.getAttribute("voYearMonthCondition");
+		VOYearMonthCondition voYearMonthCondition = (VOYearMonthCondition) session.getAttribute("voYearMonthCondition");
 		if (voYearMonthCondition == null)
 			voYearMonthCondition = new VOYearMonthCondition();
 

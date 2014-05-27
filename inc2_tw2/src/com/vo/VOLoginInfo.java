@@ -4,7 +4,8 @@ public class VOLoginInfo {
 
 	public String userLoginId = "";
 	public String userLoginPwd = "";
-
+	public String userLoginCheck = "";
+	
 	public String getUserLoginId() {
 		return userLoginId;
 	}
@@ -21,4 +22,11 @@ public class VOLoginInfo {
 		this.userLoginPwd = userLoginPwd;
 	}
 
+	public String getUserLoginCheck() {
+		return userLoginCheck;
+	}
+
+	public void setUserLoginCheck(String userLoginCheck) {
+		this.userLoginCheck = userLoginCheck;
+	}
 }

@@ -33,6 +33,7 @@ import com.model.FloorInfo;
 import com.model.GrantRecord;
 import com.model.IPREC;
 import com.model.MeetingRoom;
+import com.model.MeetingRoomOrder;
 import com.model.Member;
 import com.model.Notify;
 import com.model.Notifyee;
@@ -638,6 +639,11 @@ public class MySQLAccessMyBatis {
 		return recs;
 	}
 
+	public List findAllMeetingRoomsOK() {
+		List recs = session.selectList("com.db.MyMeetingRoomMapper.findAllMeetingRoomsOK");
+		return recs;
+	}
+
 	public MeetingRoom findMeetingRoomById(String uid) {
 		MeetingRoom obj = session.selectOne("com.db.MyMeetingRoomMapper.findMeetingRoomById", uid);
 		return obj;
@@ -655,6 +661,34 @@ public class MySQLAccessMyBatis {
 
 	public int deleteMeetingRoom(String uid) {
 		int n = this.session.delete("com.db.MyMeetingRoomMapper.deleteMeetingRoom", uid);
+		return n;
+	}
+
+	// ************************************************************************
+	// MeetingRoomOrder
+
+	public List findAllMeetingRoomOrders() {
+		List recs = session.selectList("com.db.MyMeetingRoomOrderMapper.findAllMeetingRoomOrders");
+		return recs;
+	}
+
+	public MeetingRoomOrder findMeetingRoomOrderById(String uid) {
+		MeetingRoomOrder obj = session.selectOne("com.db.MyMeetingRoomOrderMapper.findMeetingRoomOrderById", uid);
+		return obj;
+	}
+
+	public List findMeetingRoomOrderByRoomNo(String meetingRoomNo) {
+		List recs = session.selectList("com.db.MyMeetingRoomOrderMapper.findMeetingRoomOrderByRoomNo", meetingRoomNo);
+		return recs;
+	}
+
+	public int insertMeetingRoomOrder(MeetingRoomOrder meetingRoomOrder) {
+		int n = this.session.insert("com.db.MyMeetingRoomOrderMapper.insertMeetingRoomOrder", meetingRoomOrder);
+		return n;
+	}
+
+	public int deleteMeetingRoomOrder(String uid) {
+		int n = this.session.delete("com.db.MyMeetingRoomOrderMapper.deleteMeetingRoomOrder", uid);
 		return n;
 	}
 

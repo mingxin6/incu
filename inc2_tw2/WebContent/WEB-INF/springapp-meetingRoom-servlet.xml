@@ -28,6 +28,10 @@
 					meetingRoomDeleteController
 				</prop>
 
+				<prop key="/meetingRoomOrder.htm">
+					meetingRoomOrderController
+				</prop>
+
 			</props>
 		</property>
 		<property name="interceptors">
@@ -62,6 +66,9 @@
 		class="com.mod.meetingRoom.controller.MeetingRoomDeleteController">
 	</bean>
 
-
+	<bean id="meetingRoomOrderController"
+		class="com.mod.meetingRoom.controller.MeetingRoomOrderController">
+		<property name="formView" value="meetingRoomOrder" />
+	</bean>
 
 </beans>

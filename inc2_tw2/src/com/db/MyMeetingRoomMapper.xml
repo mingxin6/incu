@@ -19,6 +19,21 @@
 		]]>
 	</select>
 
+<select id="findAllMeetingRoomsOK" resultType="MeetingRoom">
+		<![CDATA[
+		select 
+		uid as uid
+		,meetingRoomNo AS meetingRoomNo
+		,status AS status
+		,remark AS remark
+		,lastUpdateUser AS lastUpdateUser
+		,lastUpdateTime AS lastUpdateTime
+		from MeetingRoom
+		where status='ok'
+		order by meetingRoomNo
+		]]>
+	</select>
+	
 	<select id="findMeetingRoomById" parameterType="string" resultType="MeetingRoom">
 		<![CDATA[
 		select

@@ -3,9 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-	<!-- 
-	<properties resource="application.properties" />
--->
+	<!-- <properties resource="application.properties" /> -->
 
 	<settings>
 		<setting name="cacheEnabled" value="false" />
@@ -23,12 +21,9 @@
 				<property name="url" value="jdbc:mysql://localhost/yuhua3" />
 				<property name="username" value="root" />
 				<property name="password" value="123" />
-				<!--
-					<property name="driver" value="${jdbc.driverClassName}" />
-					<property name="url" value="${jdbc.url}" /> <property
-					name="username" value="${jdbc.username}" /> <property
-					name="password" value="${jdbc.password}" />
-				-->
+				<!-- <property name="driver" value="${jdbc.driverClassName}" /> <property 
+					name="url" value="${jdbc.url}" /> <property name="username" value="${jdbc.username}" 
+					/> <property name="password" value="${jdbc.password}" /> -->
 			</dataSource>
 		</environment>
 	</environments>
@@ -48,6 +43,7 @@
 		<mapper resource="com/db/MyGrantMapper.xml" />
 		<mapper resource="com/db/MyIpRecordMapper.xml" />
 		<mapper resource="com/db/MyMeetingRoomMapper.xml" />
+		<mapper resource="com/db/MyMeetingRoomOrderMapper.xml" />
 		<mapper resource="com/db/MyMemberMapper.xml" />
 		<mapper resource="com/db/MyNotifyMapper.xml" />
 		<mapper resource="com/db/MyOrgMapper.xml" />

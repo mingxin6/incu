@@ -47,6 +47,18 @@ public class LoginController extends SimpleFormController {
 		session.setAttribute(Const.LocaleSessionKey, locale);
 
 		VOLoginInfo voLogin = (VOLoginInfo) command;
+		
+		
+		//*************************************************
+		String check = (String)request.getSession().getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
+		if(!check.equals(voLogin.getUserLoginCheck())){
+			String redict = "login.htm";
+			session.setAttribute("check_error", "验证码输入错误！");
+			return new ModelAndView(new RedirectView(redict));
+		}
+		//************************************************
+		
+
 		String loginid = voLogin.getUserLoginId();
 		String loginPwd = voLogin.getUserLoginPwd();
 
@@ -63,12 +75,12 @@ public class LoginController extends SimpleFormController {
 
 	@Override
 	protected Object formBackingObject(HttpServletRequest request) throws Exception {
-		HttpSession session = request.getSession(false);
-		if (session != null) {
-			session.invalidate();
-			session = null;
-			System.out.println("session reset !!");
-		}
+//		HttpSession session = request.getSession(false);
+//		if (session != null) {
+//			session.invalidate();
+//			session = null;
+//			System.out.println("session reset !!");
+//		}
 		return new VOLoginInfo();
 	}
 }
