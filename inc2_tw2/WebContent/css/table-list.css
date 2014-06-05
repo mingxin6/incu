@@ -1,0 +1,58 @@
+/*** Table Styles **/
+
+.table-list {
+	border-collapse: collapse;
+	/* 	animation: float 5s infinite; */
+}
+
+.table-list th {
+	text-align: center;
+	/* text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); */
+	vertical-align: middle;
+/* 	background: #636363; */
+	border-bottom: 4px solid #9ea7af;
+	border-right: 1px solid #C7D3E9;
+	color: white;
+	height: 60px;
+	background: url(../images/thBg.jpg) repeat-x;
+}
+
+
+.table-list  tr:hover td {
+	background: #4E5066;
+	color: #FFFFFF;
+	/* 	border-top: 1px solid #22262e; */
+	/* 	border-bottom: 1px solid #22262e; */
+}
+
+.table-list  tr:hover td a {
+	color: #FFFFFF;
+}
+
+.table-list  tr:first-child {
+	border-top: none;
+}
+
+.table-list  tr:last-child {
+	border-bottom: none;
+}
+
+.table-list  tr:nth-child(odd) td {
+	background: #EBEBEB;
+}
+
+.table-list  tr:nth-child(odd):hover td {
+	background: #4E5066;
+}
+
+.table-list  td {
+	background: #FFFFFF;
+	padding: 15px 5px;
+	/* 	text-align: left; */
+	vertical-align: middle;
+	/* 	font-weight: 300; */
+	font-size: 12px;
+	/* 	font-family: SimSun, Verdana, Arial, Helvetica, sans-serif; */
+	/* 	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1); */
+	/* 	border-right: 1px solid #C1C3D1; */
+}

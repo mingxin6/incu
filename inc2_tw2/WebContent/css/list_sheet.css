@@ -3,9 +3,11 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: "微软雅黑", "宋体";
+/* 	font-family: "微软雅黑", "宋体"; */
+	font-family: FangSong, FangSong_GB2312, DFKai-SB, KaiTi, KaiTi_GB2312,
+		NSimSun, SimSun;
 	font-size: 14px;
-	color: #333;
+	/*color: #333;*/
 	background: url(../images/content_bg.png);
 }
 

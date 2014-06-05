@@ -10,31 +10,8 @@
     margin: 16px;
 }
 
-h2 {
-    /*	clear: both;*/
-}
 
-/*----------------------------------------------------*/
-.collapse-wrapper {
-    border: 1px solid 0487 ba;
-    padding: 10px;
-    margin: 10px;
-}
 
-.collapse-expanded .collapse-toggle::after {
-    content: " -"
-}
-
-.collapse-collapsed .collapse-toggle::after {
-    content: " +"
-}
-
-.collapse-box {
-    border: 1px solid 0487 ba;
-    margin: 10px;
-}
-
-/*----------------------------------------------------*/
 body {
     /*	background:#000;
     margin: 50px 0px;
@@ -46,7 +23,7 @@ div#container {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width:1280px;
     text-align: left;
 
 }

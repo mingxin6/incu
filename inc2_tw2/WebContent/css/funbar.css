@@ -1,0 +1,56 @@
+.funbar {
+	height: 50px;
+	background: #DDDDDD;
+	overflow: auto;
+}
+
+.funbar table td {
+	padding-right: 10px;
+	vertical-align: middle;
+}
+
+.funbar .funitem {
+	float: left;
+	padding-top: 15px;
+	margin-left:10px;
+}
+
+.hellodiv {
+	/* 	box-sizing: border-box; */
+	/* height: 60px; */
+	float: right;
+	/* margin-top: 20px; */
+	/* 	position: relative; */
+	/* 	top: -20px; */
+	/* right: 30px; */
+	padding-top: 7px;
+}
+
+.hellodiv .homeimg {
+	float: left;
+	padding-right: 7px;
+}
+
+.hellodiv .langchoice {
+	float: left;
+	padding-top: 10px;
+}
+
+.hellodiv .exitimg {
+	float: left;
+	padding-top: 6px;
+	padding-left: 10px;
+	margin-right:10px;
+}
+
+.hellodiv table td {
+	padding-left: 10px;
+	vertical-align: middle;
+	/* 	font-family: Verdana, Arial, Helvetica, sans-serif; */
+	color: #ffffff;
+	font-size: 13px;
+}
+
+.hellodiv table td a {
+	color: #ffffff;
+}

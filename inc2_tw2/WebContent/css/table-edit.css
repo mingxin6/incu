@@ -1,0 +1,23 @@
+.table-edit tr th {
+	text-align: left;
+	vertical-align: top;
+}
+
+.table-edit tr th,.table-edit tr td {
+	padding: 2px;
+}
+
+.table-edit input {
+	border: 0px;
+	border-bottom: 1px solid rgb(184, 184, 184);
+	font-size: 12px;
+	width: 200px
+}
+
+
+
+.table-edit select {
+	padding: 2px;
+	font-size: 12px;
+	width: 100px;
+}

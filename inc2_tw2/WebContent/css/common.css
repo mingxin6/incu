@@ -1,0 +1,36 @@
+body {
+	font-family: FangSong, FangSong_GB2312, DFKai-SB, KaiTi, KaiTi_GB2312,
+		NSimSun, SimSun;
+	font-weight: normal;
+}
+
+div#container {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1280px;
+	text-align: left;
+}
+
+.title1 {
+/* 	float: left; */
+padding-top:10px;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+div .header {
+	padding: 10px;
+	padding-left: 0px;
+	font-size: 20px;
+	/* text-decoration: underline; */
+	padding-bottom: 5px;
+	border-bottom: 1px solid rgb(241, 75, 11);
+	width: 150;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+.clear {
+	clear: both;
+}

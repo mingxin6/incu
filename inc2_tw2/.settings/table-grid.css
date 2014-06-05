@@ -1,0 +1,14 @@
+
+.tableWithLineBorder {
+	border: 1px solid black;
+	border-spacing: 0px;
+}
+
+.tableWithLineBorder tr th,.tableWithLineBorder tr td {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.tableWithLineBorder tr th {
+	font-size: 16px;
+}

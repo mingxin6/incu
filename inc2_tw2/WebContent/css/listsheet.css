@@ -1,784 +1,817 @@
 @charset "utf-8";
 /* CSS Document */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "微软雅黑", "宋体";
-    font-size: 14px;
-    color: #333;
-    background: url(../images/content_bg.png);
+	margin: 0;
+	padding: 0;
+	/*     font-family: "微软雅黑", "宋体"; */
+	font-family: FangSong, FangSong_GB2312, DFKai-SB, KaiTi, KaiTi_GB2312,
+		NSimSun, SimSun;
+	font-weight: normal;
 }
 
-div, p, h1, h2, h3, h4, h5, ul, li, ol, input, select {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    list-style: none;
+font-size
+
+
+:
+
+ 
+
+14
+px
+
+
+;
+/*color: #333;*/
+background
+
+
+:
+
+ 
+
+url
+
+
+(../
+images
+/content_bg
+
+
+.png
+
+
+);
+}
+div,p,h1,h2,h3,h4,h5,ul,li,ol,input,select {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 #listTit {
-    width: 1190px;
-    height: 52px;
-    background: url(../images/homeBg.png) no-repeat;
-    margin: 20px auto 20px;
-    padding-left: 60px;
-    line-height: 52px;
-    font-size: 18px;
-    color: #150150;
+	width: 1190px;
+	height: 52px;
+	background: url(../images/homeBg.png) no-repeat;
+	margin: 20px auto 20px;
+	padding-left: 60px;
+	line-height: 52px;
+	font-size: 18px;
+	color: #150150;
 }
 
 #listTit span {
-    color: #0057aa;
+	color: #0057aa;
 }
 
 #listCon {
-    width: 1250px;
-    height: auto;
-    background: #fff;
-    -webkit-box-shadow: 5px 5px 25px #333;
-    border-radius: 15px;
-    margin: 20px auto 0;
-    padding: 10px 0;
+	width: 1250px;
+	height: auto;
+	background: #fff;
+	-webkit-box-shadow: 5px 5px 25px #333;
+	border-radius: 15px;
+	margin: 20px auto 0;
+	padding: 10px 0;
 }
 
 .temCon {
-    width: 1208px;
-    height: 54px;
-    background: url(../images/temCon.png) no-repeat;
-    margin: 0 auto 20px;
-    font-size: 16px;
-    line-height: 54px;
-    padding-left: 20px;
+	width: 1208px;
+	height: 54px;
+	background: url(../images/temCon.png) no-repeat;
+	margin: 0 auto 20px;
+	font-size: 16px;
+	line-height: 54px;
+	padding-left: 20px;
 }
 
 .temCon td {
-    height: 54px;
+	height: 54px;
 }
 
-.sely, .selm {
-    width: 84px;
-    height: 24px;
-    border: 1px solid #ababab;
-    padding-left: 4px;
+.sely,.selm {
+	width: 84px;
+	height: 24px;
+	border: 1px solid #ababab;
+	padding-left: 4px;
 }
 
 .selm {
-    width: 54px;
+	width: 54px;
 }
 
 .temBtn {
-    display: inline-block;
-    width: 82px;
-    height: 26px;
-    background: url(../images/filterBtn.png) no-repeat;
-    cursor: pointer;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
+	display: inline-block;
+	width: 82px;
+	height: 26px;
+	background: url(../images/filterBtn.png) no-repeat;
+	cursor: pointer;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
 }
 
 .temBtn:hover {
-    background: url(../images/filterBtn2.png) no-repeat;
+	background: url(../images/filterBtn2.png) no-repeat;
 }
 
 .listBtn {
-    width: 1228px;
-    margin: 10px auto;
+	width: 1228px;
+	margin: 10px auto;
 }
 
 .exportBtn {
-    display: block;
-    width: 180px;
-    height: 36px;
-    background: url(../images/addIcon.png) no-repeat;
-    border: 0;
-    margin: 0 90px 0 10px;
-    cursor: pointer;
-    color: #0e4773;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 36px;
-    text-decoration: none;
+	display: block;
+	width: 180px;
+	height: 36px;
+	background: url(../images/addIcon.png) no-repeat;
+	border: 0;
+	margin: 0 90px 0 10px;
+	cursor: pointer;
+	color: #0e4773;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 36px;
+	text-decoration: none;
 }
 
 .exportBtn:hover {
-    filter: alpha(opacity=70);
-    opacity: 0.7;
+	filter: alpha(opacity = 70);
+	opacity: 0.7;
 }
 
 .temTable {
-    border: #e6e6e6;
-    margin: 20px auto 0;
+	border: #e6e6e6;
+	margin: 20px auto 0;
 }
 
 .temTable th {
-    background: url(../images/temTh.jpg) repeat-x;
-    overflow: hidden;
-    font-size: 16px;
-    color: #fff;
-    border: 1px solid #f4f4f4;
-    border-top: 0;
-    border-right: 0;
-    height: 30px;
+	background: url(../images/temTh.jpg) repeat-x;
+	overflow: hidden;
+	font-size: 16px;
+	color: #fff;
+	border: 1px solid #f4f4f4;
+	border-top: 0;
+	border-right: 0;
+	height: 30px;
 }
 
 .temTable td {
-    border: 1px solid #f4f4f4;
-    border-top: 0;
-    border-right: 0;
-    background: #e8e8e8;
-    font-size: 12px;
+	border: 1px solid #f4f4f4;
+	border-top: 0;
+	border-right: 0;
+	background: #e8e8e8;
+	font-size: 12px;
 }
 
 .copyRight {
-    width: 1250px;
-    height: 24px;
-    margin: 20px auto;
-    text-align: center;
-    line-height: 24px;
+	width: 1250px;
+	height: 24px;
+	margin: 20px auto;
+	text-align: center;
+	line-height: 24px;
 }
 
 /*以下是listApply=====================================================================================================*/
-.throughBtn, .deleteBtn, .RefuseBtn {
-    display: inline-block;
-    width: 70px;
-    height: 30px;
-    line-height: 30px;
-    background: url(../images/tdBtn.png) no-repeat;
-    color: #fff;
-    cursor: pointer;
-    font-size: 14px;
+.throughBtn,.deleteBtn,.RefuseBtn {
+	display: inline-block;
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+	background: url(../images/tdBtn.png) no-repeat;
+	color: #fff;
+	cursor: pointer;
+	font-size: 14px;
 }
 
 .throughBtn:hover {
-    background-position: 0 -90px;
-    color: #666;
+	background-position: 0 -90px;
+	color: #666;
 }
 
 .deleteBtn {
-    background-position: 0 -29px;
+	background-position: 0 -29px;
 }
 
 .deleteBtn:hover {
-    background-position: 0 -90px;
+	background-position: 0 -90px;
 }
 
 .RefuseBtn {
-    background-position: 0 -59px;
+	background-position: 0 -59px;
 }
 
 .RefuseBtn:hover {
-    background-position: 0 -90px;
+	background-position: 0 -90px;
 }
 
 /*以下是listPark======================================================================================================*/
 .addBtn {
-    display: block;
-    width: 180px;
-    height: 36px;
-    background: url(../images/addIcon.png) no-repeat;
-    border: 0;
-    margin-left: 10px;
-    color: #0e4773;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 36px;
-    text-decoration: none;
+	display: block;
+	width: 180px;
+	height: 36px;
+	background: url(../images/addIcon.png) no-repeat;
+	border: 0;
+	margin-left: 10px;
+	color: #0e4773;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 36px;
+	text-decoration: none;
 }
 
 .addBtn:hover {
-    filter: alpha(opacity=70);
-    opacity: 0.7;
+	filter: alpha(opacity = 70);
+	opacity: 0.7;
 }
 
 .editBtn {
-    display: inline-block;
-    width: 70px;
-    height: 30px;
-    line-height: 30px;
-    background: url(../images/editBtn.png) no-repeat;
-    color: #fff;
-    cursor: pointer;
+	display: inline-block;
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+	background: url(../images/editBtn.png) no-repeat;
+	color: #fff;
+	cursor: pointer;
 }
 
 .editBtn:hover {
-    background: url(../images/hoverBtn.png) no-repeat;
+	background: url(../images/hoverBtn.png) no-repeat;
 }
 
 /*以下是园区管理=======================================================================================================*/
 .rulesBtn {
-    display: block;
-    width: 180px;
-    height: 36px;
-    background: url(../images/addIcon.png) no-repeat;
-    border: 0;
-    margin-left: 10px;
-    color: #0e4773;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 36px;
-    text-decoration: none;
+	display: block;
+	width: 180px;
+	height: 36px;
+	background: url(../images/addIcon.png) no-repeat;
+	border: 0;
+	margin-left: 10px;
+	color: #0e4773;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 36px;
+	text-decoration: none;
 }
 
 .rulesBtn:hover {
-    filter: alpha(opacity=70);
-    opacity: 0.7;
+	filter: alpha(opacity = 70);
+	opacity: 0.7;
 }
 
 /*以下是业务表单,文档共享，设备共享======================================================================================*/
 .addFormBtn {
-    display: block;
-    width: 140px;
-    height: 36px;
-    background: url(../images/addFormBtn.png) no-repeat;
-    border: 0;
-    margin-left: 10px;
+	display: block;
+	width: 140px;
+	height: 36px;
+	background: url(../images/addFormBtn.png) no-repeat;
+	border: 0;
+	margin-left: 10px;
 }
 
 .addFormBtn:hover {
-    filter: alpha(opacity=70);
-    opacity: 0.7;
+	filter: alpha(opacity = 70);
+	opacity: 0.7;
 }
 
 /*以下是常见问题=======================================================================================================*/
 .questionsBtn {
-    display: block;
-    width: 180px;
-    height: 36px;
-    background: url(../images/addIcon.png) no-repeat;
-    border: 0;
-    margin-left: 10px;
-    color: #0e4773;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 36px;
-    text-decoration: none;
+	display: block;
+	width: 180px;
+	height: 36px;
+	background: url(../images/addIcon.png) no-repeat;
+	border: 0;
+	margin-left: 10px;
+	color: #0e4773;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 36px;
+	text-decoration: none;
 }
 
 .questionsBtn:hover {
-    filter: alpha(opacity=70);
-    opacity: 0.7;
+	filter: alpha(opacity = 70);
+	opacity: 0.7;
 }
 
 /*以下是listNotice====================================================================================================*/
 .noticeBtn {
-    display: block;
-    width: 180px;
-    height: 36px;
-    background: url(../images/addIcon.png) no-repeat;
-    border: 0;
-    margin-left: 10px;
-    color: #0e4773;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 36px;
-    text-decoration: none;
+	display: block;
+	width: 180px;
+	height: 36px;
+	background: url(../images/addIcon.png) no-repeat;
+	border: 0;
+	margin-left: 10px;
+	color: #0e4773;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 36px;
+	text-decoration: none;
 }
 
 .noticeBtn:hover {
-    filter: alpha(opacity=70);
-    opacity: 0.7;
+	filter: alpha(opacity = 70);
+	opacity: 0.7;
 }
 
 /*以下是活动信息=======================================================================================================*/
 .addCom {
-    display: block;
-    width: 180px;
-    height: 36px;
-    background: url(../images/addIcon.png) no-repeat;
-    border: 0;
-    margin-left: 10px;
-    color: #0e4773;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 36px;
-    text-decoration: none;
+	display: block;
+	width: 180px;
+	height: 36px;
+	background: url(../images/addIcon.png) no-repeat;
+	border: 0;
+	margin-left: 10px;
+	color: #0e4773;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 36px;
+	text-decoration: none;
 }
 
 .addCom:hover {
-    filter: alpha(opacity=70);
-    opacity: 0.7;
+	filter: alpha(opacity = 70);
+	opacity: 0.7;
 }
 
 /*以下是listData======================================================================================================*/
 .addIcon {
-    display: block;
-    width: 180px;
-    height: 36px;
-    background: url(../images/addIcon.png) no-repeat;
-    border: 0;
-    margin-left: 10px;
-    text-align: center;
-    line-height: 36px;
-    font-size: 16px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #144d7b;
-    letter-spacing: 4px;
+	display: block;
+	width: 180px;
+	height: 36px;
+	background: url(../images/addIcon.png) no-repeat;
+	border: 0;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 36px;
+	font-size: 16px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #144d7b;
+	letter-spacing: 4px;
 }
 
 .addIcon:hover {
-    filter: alpha(opacity=70);
-    opacity: 0.7;
+	filter: alpha(opacity = 70);
+	opacity: 0.7;
 }
 
 /*以下是listUser======================================================================================================*/
 .midCon {
-    width: 1188px;
-    height: 104px;
-    background: url(../images/midCon.png) no-repeat;
-    margin: 10 auto;
-    padding: 5px;
-    font-size: 14px;
+	width: 1188px;
+	height: 104px;
+	background: url(../images/midCon.png) no-repeat;
+	margin: 10 auto;
+	padding: 5px;
+	font-size: 14px;
 }
 
-.listTxt, .listSel {
-    width: 190px;
-    height: 24px;
-    border: 1px solid #ababab;
-    padding-left: 10px;
+.listTxt,.listSel {
+	width: 190px;
+	height: 24px;
+	border: 1px solid #ababab;
+	padding-left: 10px;
 }
 
 .listSel {
-    margin: 15px 0;
+	margin: 15px 0;
 }
 
 .filterBtn {
-    width: 82px;
-    height: 26px;
-    background: url(../images/filterBtn.png) no-repeat;
-    border: 0;
-    margin-left: 82px;
-    text-indent: 900;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
+	width: 82px;
+	height: 26px;
+	background: url(../images/filterBtn.png) no-repeat;
+	border: 0;
+	margin-left: 82px;
+	text-indent: 900;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
 }
 
 .filterBtn:hover {
-    background: url(../images/filterBtn2.png);
+	background: url(../images/filterBtn2.png);
 }
 
 .UserBtn {
-    display: block;
-    width: 180px;
-    height: 36px;
-    background: url(../images/addIcon.png) no-repeat;
-    border: 0;
-    margin-left: 10px;
-    color: #144d7b;
-    line-height: 36px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
+	display: block;
+	width: 180px;
+	height: 36px;
+	background: url(../images/addIcon.png) no-repeat;
+	border: 0;
+	margin-left: 10px;
+	color: #144d7b;
+	line-height: 36px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
 }
 
 .UserBtn:hover {
-    filter: alpha(opacity=70);
-    opacity: 0.7;
+	filter: alpha(opacity = 70);
+	opacity: 0.7;
 }
 
 div.midCon table {
-    padding: 0;
-    margin: 0;
-    border-spacing: 0;
-    border-collapse: separate;
+	padding: 0;
+	margin: 0;
+	border-spacing: 0;
+	border-collapse: separate;
 }
 
 div.midCon table tr {
-    padding: 0;
-    margin: 0;
-    border-spacing: 0;
-    border-collapse: separate;
+	padding: 0;
+	margin: 0;
+	border-spacing: 0;
+	border-collapse: separate;
 }
 
 div.midCon table tr td {
-    padding: 0;
-    margin: 0;
-    border-spacing: 0;
-    border-collapse: separate;
+	padding: 0;
+	margin: 0;
+	border-spacing: 0;
+	border-collapse: separate;
 }
 
 div.midCon table tr td select {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 /*以下是listChange====================================================================================================*/
 .changeName {
-    width: 100px;
-    height: 30px;
-    font-size: 24px;
-    color: #fff;
-    position: absolute;
-    left: 210px;
-    top: 180px;
+	width: 100px;
+	height: 30px;
+	font-size: 24px;
+	color: #fff;
+	position: absolute;
+	left: 210px;
+	top: 180px;
 }
 
-.newP, .newP2 {
-    width: 280px;
-    height: 38px;
-    background: url(../images/inputBg.png) no-repeat;
-    font-size: 14px;
-    line-height: 38px;
-    padding-left: 20px;
-    margin: 15px 0;
+.newP,.newP2 {
+	width: 280px;
+	height: 38px;
+	background: url(../images/inputBg.png) no-repeat;
+	font-size: 14px;
+	line-height: 38px;
+	padding-left: 20px;
+	margin: 15px 0;
 }
 
 .newBtn {
-    width: 122px;
-    height: 38px;
-    background: url(../images/login2Bg.png) no-repeat;
-    font-size: 14px;
-    cursor: pointer;
-    margin: 50px 0 0 300px;
+	width: 122px;
+	height: 38px;
+	background: url(../images/login2Bg.png) no-repeat;
+	font-size: 14px;
+	cursor: pointer;
+	margin: 50px 0 0 300px;
 }
 
 .newBtn:hover {
-    background: url(../images/login3Bg.png) no-repeat;
+	background: url(../images/login3Bg.png) no-repeat;
 }
 
 /*listcommunication==================================================================================================*/
 .addCom {
-    display: block;
-    width: 180px;
-    height: 36px;
-    background: url(../images/addIcon.png) no-repeat;
-    border: 0;
+	display: block;
+	width: 180px;
+	height: 36px;
+	background: url(../images/addIcon.png) no-repeat;
+	border: 0;
 }
 
 .addCom:hover {
-    filter: alpha(opacity=70);
-    opacity: 0.7;
+	filter: alpha(opacity = 70);
+	opacity: 0.7;
 }
 
 .btnEdit {
-    display: block;
-    width: 100px;
-    height: 40px;
-    background: url(../images/btnEdit.png) no-repeat;
-    font-size: 14px;
-    color: #fff;
-    border-right-color: #e6e6e6;
-    line-height: 40px;
+	display: block;
+	width: 100px;
+	height: 40px;
+	background: url(../images/btnEdit.png) no-repeat;
+	font-size: 14px;
+	color: #fff;
+	border-right-color: #e6e6e6;
+	line-height: 40px;
 }
 
 .btnEdit:hover {
-    background-position: 0 -40px;
+	background-position: 0 -40px;
 }
 
-.btnInformation, .btnDownload {
-    display: block;
-    width: 110px;
-    height: 40px;
-    background: url(../images/btnCom.png) no-repeat;
-    font-size: 14px;
-    color: #fff;
-    line-height: 40px;
-    padding-left: 30px;
+.btnInformation,.btnDownload {
+	display: block;
+	width: 110px;
+	height: 40px;
+	background: url(../images/btnCom.png) no-repeat;
+	font-size: 14px;
+	color: #fff;
+	line-height: 40px;
+	padding-left: 30px;
 }
 
-.btnInformation:hover, .btnDownload:hover {
-    background-position: 0 -80px;
+.btnInformation:hover,.btnDownload:hover {
+	background-position: 0 -80px;
 }
 
 .btnDownload {
-    background-position: 0 -40px;
+	background-position: 0 -40px;
 }
 
 /*记录表css*/
-.reIcon, .adIcon {
-    display: inline-block;
-    width: 170px;
-    height: 40px;
-    background: url(../images/icon3.png) no-repeat;
-    margin: 0 10px;
-    font-size: 16px;
-    color: #fff;
-    font-weight: 100;
-    text-align: center;
-    line-height: 30px;
+.reIcon,.adIcon {
+	display: inline-block;
+	width: 170px;
+	height: 40px;
+	background: url(../images/icon3.png) no-repeat;
+	margin: 0 10px;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 100;
+	text-align: center;
+	line-height: 30px;
 }
 
 .adIcon {
-    background-position: 0 -41px;
+	background-position: 0 -41px;
 }
 
-.reIcon:hover, .adIcon:hover {
-    background-position: 0 -121px;
+.reIcon:hover,.adIcon:hover {
+	background-position: 0 -121px;
 }
 
 /*添加css*/
-.formIcon, .okIcon {
-    display: inline-block;
-    width: 147px;
-    background: url(../images/icon4.png) no-repeat;
-    color: #fff;
-    font-size: 16px;
-    text-align: center;
-    line-height: 36px;
+.formIcon,.okIcon {
+	display: inline-block;
+	width: 147px;
+	background: url(../images/icon4.png) no-repeat;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	line-height: 36px;
 }
 
 .formIcon {
-    height: 35px;
-    margin: 0 0 10px 10px;
+	height: 35px;
+	margin: 0 0 10px 10px;
 }
 
 .okIcon {
-    height: 37px;
-    background-position: 0 -36px;
-    margin-bottom: 10px;
+	height: 37px;
+	background-position: 0 -36px;
+	margin-bottom: 10px;
 }
 
-.formIcon:hover, .okIcon:hover {
-    background-position: 0 -72px;
+.formIcon:hover,.okIcon:hover {
+	background-position: 0 -72px;
 }
 
 .listTable {
-    border: #e6e6e6;
-    margin: 0 auto;
+	border: #e6e6e6;
+	margin: 0 auto;
 }
 
 .listTable th {
-    background: #69F;
-    color: #fff;
-    border: 1px solid #CCC;
+	background: #69F;
+	color: #fff;
+	border: 1px solid #CCC;
 }
 
 .listTable td {
-    border: 1px solid #ccc;
-    background: #eee;
+	border: 1px solid #ccc;
+	background: #eee;
 }
 
 /*修改业务表单*/
 .upIcon {
-    display: block;
-    width: 146px;
-    height: 37px;
-    background: url(../images/icon4.png) no-repeat 0 -72px;
-    margin: 10px 0 10px 10px;
-    cursor: pointer;
-    font-size: 16px;
+	display: block;
+	width: 146px;
+	height: 37px;
+	background: url(../images/icon4.png) no-repeat 0 -72px;
+	margin: 10px 0 10px 10px;
+	cursor: pointer;
+	font-size: 16px;
 }
 
 .upIcon:hover {
-    background-position: 0 -36px;
+	background-position: 0 -36px;
 }
 
 .deIcon {
-    display: block;
-    width: 84px;
-    height: 27px;
-    background: url(../images/icon1.png) no-repeat;
-    cursor: pointer;
-    color: #fff;
+	display: block;
+	width: 84px;
+	height: 27px;
+	background: url(../images/icon1.png) no-repeat;
+	cursor: pointer;
+	color: #fff;
 }
 
 .deIcon:hover {
-    background-position: 0 -27px;
+	background-position: 0 -27px;
 }
 
 /*修改来宾信息*/
 .saIcon {
-    display: inline-block;
-    width: 147px;
-    height: 37px;
-    background: url(../images/icon4.png) no-repeat 0 -72px;
-    color: #fff;
-    text-align: center;
-    line-height: 37px;
-    margin-bottom: 10px;
-    font-size: 16px;
+	display: inline-block;
+	width: 147px;
+	height: 37px;
+	background: url(../images/icon4.png) no-repeat 0 -72px;
+	color: #fff;
+	text-align: center;
+	line-height: 37px;
+	margin-bottom: 10px;
+	font-size: 16px;
 }
 
 .saIcon:hover {
-    background-position: 0 -36px;
+	background-position: 0 -36px;
 }
 
 /*新增通知公告*/
-.refIcon, .saveIcon {
-    display: inline-block;
-    height: 36px;
-    background: url(../images/addIcon.png) no-repeat;
-    color: #fff;
-    line-height: 32px;
-    margin: 10px 0;
-    font-size: 16px;
+.refIcon,.saveIcon {
+	display: inline-block;
+	height: 36px;
+	background: url(../images/addIcon.png) no-repeat;
+	color: #fff;
+	line-height: 32px;
+	margin: 10px 0;
+	font-size: 16px;
 }
 
 .refIcon {
-    padding-left: 50px;
-    width: 98px;
-    margin-left: 10px;
+	padding-left: 50px;
+	width: 98px;
+	margin-left: 10px;
 }
 
 .saveIcon {
-    padding-left: 26px;
-    width: 128px;
+	padding-left: 26px;
+	width: 128px;
 }
 
-.refIcon:hover, .saveIcon:hover {
-    background-position: 0 -36px;
+.refIcon:hover,.saveIcon:hover {
+	background-position: 0 -36px;
 }
 
 .saveIcon {
-    background: url(../images/saveIcon.png) no-repeat;
+	background: url(../images/saveIcon.png) no-repeat;
 }
 
 /*新增使用者*/
 .suIcon {
-    display: block;
-    width: 82px;
-    height: 25px;
-    background: url(../images/icon2.png) no-repeat;
-    cursor: pointer;
-    color: #fff;
+	display: block;
+	width: 82px;
+	height: 25px;
+	background: url(../images/icon2.png) no-repeat;
+	cursor: pointer;
+	color: #fff;
 }
 
 .suIcon:hover {
-    background-position: 0 -25px;
+	background-position: 0 -25px;
 }
 
 /*==========================代替原来的待办事项页面========================================*/
 #container .conWrap {
-    width: 1340px;
-    height: auto;
-    background: #fff;
-    padding-bottom: 20px;
-    position: relative;
-    border: 2px solid #0487ba;
-    margin: 20px auto 0;
+	width: 1340px;
+	height: auto;
+	background: #fff;
+	padding-bottom: 20px;
+	position: relative;
+	border: 2px solid #0487ba;
+	margin: 20px auto 0;
 }
 
 #container .conWrap .pict {
-    height: 650px;
+	height: 650px;
 }
 
 #container .conWrap .pict .current {
-    width: 1240px;
-    height: 550px;
-    background: url(../images/level3.jpg) no-repeat;
-    padding: 100px 0 0 100px;
+	width: 1240px;
+	height: 550px;
+	background: url(../images/level3.jpg) no-repeat;
+	padding: 100px 0 0 100px;
 }
 
 #container .conWrap .pict .current table {
-    font-size: 10px;
-    color: #F60;
+	font-size: 10px;
+	color: #F60;
 }
 
 #container #fourF {
-    background: #fff url(../images/level4.jpg) no-repeat;
+	background: #fff url(../images/level4.jpg) no-repeat;
 }
 
 #container #fiveF {
-    background: #fff url(../images/level5.jpg) no-repeat;
+	background: #fff url(../images/level5.jpg) no-repeat;
 }
 
 /*#container #threeF{display:none;}*/
 #container .conWrap h2 {
-    height: 550px;
-    text-align: center;
-    position: absolute;
-    right: 0;
-    top: 100px;
+	height: 550px;
+	text-align: center;
+	position: absolute;
+	right: 0;
+	top: 100px;
 }
 
 #container .conWrap h2 .button li {
-    width: 150px;
-    height: 50px;
-    background: url(../images/zhuangtaiqian.png) no-repeat;
-    cursor: pointer;
-    padding-top: 20px;
-    font-size: 24px;
+	width: 150px;
+	height: 50px;
+	background: url(../images/zhuangtaiqian.png) no-repeat;
+	cursor: pointer;
+	padding-top: 20px;
+	font-size: 24px;
 }
 
 #container .conWrap h2 .button li.current {
-    background: url(../images/zhuangtaihou.png) no-repeat;
+	background: url(../images/zhuangtaihou.png) no-repeat;
 }
 
 #container .conWrap h2 .beizhu {
-    width: 150px;
-    height: auto;
-    border: 1px solid #0487ba;
-    font-size: 16px;
-    font-weight: 100;
-    text-align: left;
+	width: 150px;
+	height: auto;
+	border: 1px solid #0487ba;
+	font-size: 16px;
+	font-weight: 100;
+	text-align: left;
 }
 
 #container .conWrap h2 .beizhu li {
-    display: none;
+	display: none;
 }
 
 #container .conWrap h2 .beizhu li.current {
-    display: block;
+	display: block;
 }
 
 #container .conWrap .pict li {
-    display: none;
+	display: none;
 }
 
 #container .conWrap .pict li.current {
-    display: block;
+	display: block;
 }
 
 #container .conWrap .pict .current table td p {
-    width: 49px;
-    white-space: nowrap;
-    overflow: hidden;
+	width: 49px;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 #container .conclu {
-    width: 1200px;
-    height: 50px;
-    margin: 20px auto 50px;
+	width: 1200px;
+	height: 50px;
+	margin: 20px auto 50px;
 }
 
 #container .conclu ol li {
-    width: 290px;
-    height: 60px;
-    background: url(../images/conclu_libg.png) no-repeat;
-    float: left;
-    margin-left: 10px;
-    font-size: 18px;
-    text-align: center;
-    padding-top: 20px;
-    color: #fff;
+	width: 290px;
+	height: 60px;
+	background: url(../images/conclu_libg.png) no-repeat;
+	float: left;
+	margin-left: 10px;
+	font-size: 18px;
+	text-align: center;
+	padding-top: 20px;
+	color: #fff;
 }
 
 #container .conclu ol li.linetw {
-    background-position: 0 -80px;
+	background-position: 0 -80px;
 }
 
 #container .conclu ol li.lineth {
-    background-position: 0 -160px;
+	background-position: 0 -160px;
 }
 
 #container .conclu ol li.linefo {
-    background-position: 0 -240px;
+	background-position: 0 -240px;
 }
 
 /*企业用户界面样式*/
 #listCon .detail {
-    width: 100%;
-    height: 120px;
+	width: 100%;
+	height: 120px;
 }
 
 #listCon .detail li {
-    float: left;
-    width: 150px;
-    height: 80px;
-    text-align: center;
-    background: #eaf5ff;
-    margin: 10px 0 0 70px;
-    padding-top: 20px;
+	float: left;
+	width: 150px;
+	height: 80px;
+	text-align: center;
+	background: #eaf5ff;
+	margin: 10px 0 0 70px;
+	padding-top: 20px;
 }

@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>會議室登記</title>
 
 <link type="text/css" href="pkg/jquery/mu.css" rel="stylesheet" />
 <link rel="stylesheet" href="css/list_sheet.css">

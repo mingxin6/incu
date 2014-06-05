@@ -135,9 +135,12 @@
 /* 	border: solid 1px #F82723; */
 /* } */
 .red.active {
-	background-color: #C00D09;
-	color: White;
-	border: solid 1px #A90B08;
+/* background-color: #5063EB; */
+color: red;
+font-weight:bold;
+/* border: solid 1px #5063EB; */
+border-radius: 10px;
+}
 }
 
 /* .pager.red .btn { */
